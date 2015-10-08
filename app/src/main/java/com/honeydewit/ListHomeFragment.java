@@ -157,7 +157,7 @@ public class ListHomeFragment extends Fragment {
 
         private void createListAdapter(boolean showErrors) {
             //reload data here
-            if(getActivity().)
+            //if(getActivity().)
             if(hdewContext.getCurrentList().getListTypeId() == Constants.SHOPPING_LIST_TYPE_CDE) {
                 adapter = new ListItemAdapter(getActivity(), R.layout.listrow, hdewContext.getCurrentList().getItems(showErrors));
             }
