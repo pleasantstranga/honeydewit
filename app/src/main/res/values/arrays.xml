@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="reminder_array">
+        <item>None</item>
+        <item>On Time</item>
+        <item>5 Minutes Before</item>
+        <item>15 Minutes Before</item>
+        <item>1 Hour Before</item>
+        <item>1 Day Before</item>
+        <item>2 Days Before</item>
+        <item>1 Week Before</item>
+        <item>Customize</item>
+    </string-array>  
+     <string-array name="frequencies_array">
+        <item>Daily</item>
+        <item>Weekly</item>
+        <item>Monthly</item>
+        <item>Yearly</item>
+    </string-array> 
+    <string-array name="weeks_array">
+        <item>first</item>
+        <item>second</item>
+        <item>third</item>
+        <item>fourth</item>
+        <item>last</item>
+    </string-array>
+     <string-array name="day_array">
+        <item>Sunday</item>
+        <item>Monday</item>
+        <item>Tuesday</item>
+        <item>Wednesday</item>
+        <item>Thursday</item>
+        <item>Friday</item>
+        <item>Saturday</item>
+        <item>Day</item>
+        <item>Weekday</item>
+        <item>Weekend Day</item>
+    </string-array>
+    <string-array name="list_home_drawer_menu_array">
+        <item>@string/renameList</item>
+        <item>@string/addReminder</item>
+        <item>@string/shareList</item>
+        <item>@string/deleteList</item>
+        <item>@string/selectAll</item>
+        <item>@string/unselectAll</item>
+        <item>@string/addItem</item>
+    </string-array>
+</resources>

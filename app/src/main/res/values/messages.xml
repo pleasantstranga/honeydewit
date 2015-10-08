@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="listExists">A list already exists with the name ?. Please try a different name.</string>
+    <string name="nameRequired">Please enter a name.</string>
+    <string name="min3CharRequired">Please enter a name with a minimum of 3 characters.</string>
+    <string name="deleteItemWarning">By clicking \"Ok\" you will permanently delete the item.</string>
+    <string name="quantityRequired">Please enter a valid quantity greater than 0.</string>
+    <string name="listExistsMessage">A list named \"^\" already exists. Please rename the file or replace the existing.</string>
+	<string name="eventNameRequired">Please enter an event name.</string>
+	<string name="eventMin3CharRequired">Please enter a name with a minimum of 3 characters.</string>
+	<string name="eventDateLaterStart">The end date should be later than the start date</string>
+	<string name="repeatMessage">To add repeat events please open event in standard calendar app.</string>
+	<string name="confirmCancel">You are about to cancel your changes. Is this OK?</string>
+	<string name="selectionContinueMessage">You must make a selection to continue.</string>
+	<string name="dateEndError">Please select a date end that is after the start date.</string>
+	<string name="eventSaved">Event Saved</string>
+	<string name="eventRemoved">An external application has removed this event from your calendar.</string>
+	<string name="endDateError">End Date should be later than Start Date</string>
+	<string name="deleteEventsMessage">You have calendar events associated with this list. Do you want to delete these events?</string>
+	<string name="honeDewItImporting">HoneyDew It is importing list</string>
+	<string name="importMessage">HoneyDew It supports importing data from either an .xls,.xlsx, .txt or .csv file. Just open the file on your phone and click the HoneyDewIt icon. The first row in all files must have an \"item\" header. There is also an option to add the following: \"quantity\", \"description\", \"discount\", \"unit\" type,  as well as \"price\" per item. If you do not supply a quantity then a default quantity of 1 will be set. If using a .txt or .csv file please separate values by a \^. If you are importing from an .xls or .xlsx file then you have the ability to create separate lists for each sheet in the workbook. Please look at the images below for a sample of all files.</string>
+	<string name="importError">There was an error reading the file. This can sometimes happen if the file is corrupt or has the incorrect file extension.</string>
+	<string name="invalidPrice">Please enter a valid price.</string>
+	<string name="invalidDiscount">Please enter a valid number for discount.</string>
+	<string name="nextInstance">The next instance is ^</string>
+	<string name="saveOnBack">You are about to leave the current screen. Do you want to save?</string>
+	<string name="editEventOutsideMsg">Editing this event outside of this application can cause adverse effects.</string>
+	<string name="cantDeleteItem">You cannot delete this item as it has been edited outside this application.</string>
+	<string name="cancelledImport">You have cancelled the import. If you didn\'t mean to try again.</string>
+	<string name="noSheetsSeleceted">You have not selected any Sheets. If this was in error please try again</string>
+	<string name="errorImporting">There was an error importing.</string>
+	<string name="errorImportingFix">There were some errors when importing your list. You can fix the errors or remove the items with errors from the list</string>
+	<string name="errorExists">There were errors importing this item. Please click to fix.</string>
+	<string name="importCancelled">Import Cancelled</string>
+	<string name="expectedDate">Expected Date:</string>
+	<string name="commonErrorRedirect">There was a problem with your request. You will be redirected back to the home screen.</string>
+	<string name="errorLoadingList">There was an error loading the list. Please try again</string>
+    <string name="errorImportingMessage">There were some errors importing. None of the sheets were imported.Please fix the issues and try again.</string>
+    <string name="importFinished">Your import has finished.</string>
+    <string name="unexpectedError">Unfortunately there was an unexpected error. Click "Send Report" to send an error report to AJB Technologies. Click on "Home" to be taken to HoneyDew-It home screen.</string>
+	<string name="chooseCalculatorDialogTitle">^ Calculator</string>
+	<string name="chooseCalculatorDialogMessage">Please choose the appropriate calculator to calculate ^</string>
+
+</resources>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape>
+            <solid android:color="@color/shadow_color"/>
+           <stroke android:width="2dp" android:color="@color/shadow_color" />
+            
+        </shape>
+    </item>
+</selector><!-- From: file:/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/src/main/res/drawable/calendar_grid_style.xml -->

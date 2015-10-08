@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+    <style name="defaultTitle" parent="HoneyDewActionBarTheme">
+        <item name="android:windowBackground">@drawable/background_gradient</item>
+        <item name="android:dialogTheme">@style/defaultDialog</item>
+        <item name="android:editTextStyle">@style/edittext_style</item>
+        <item name="android:buttonStyle">@style/button_style</item>
+        <item name="android:imageButtonStyle">@style/image_button_style</item>
+        <item name="android:textViewStyle">@style/textview_style</item>
+        <item name="android:layout_margin">@dimen/margin</item>
+        <item name="android:buttonBarButtonStyle">@style/button_style</item>
+        <item name="android:listViewStyle">@style/listViewStyle</item>
+    </style>
+    <style name="largeTitle" parent="HoneyDewActionBarThemeLarge">
+        <item name="android:windowBackground">@drawable/background_gradient</item>
+        <item name="android:dialogTheme">@style/defaultDialog</item>
+        <item name="android:editTextStyle">@style/edittext_style</item>
+        <item name="android:buttonStyle">@style/button_style</item>
+        <item name="android:imageButtonStyle">@style/image_button_style</item>
+        <item name="android:textViewStyle">@style/textview_style</item>
+        <item name="android:layout_margin">@dimen/margin</item>
+        <item name="android:buttonBarButtonStyle">@style/button_style</item>
+        <item name="android:listViewStyle">@style/listViewStyle</item>
+    </style>
+    <style name="calculatorStyle" parent="HoneyDewActionBarTheme">
+        <item name="android:windowBackground">@drawable/background_gradient</item>
+        <item name="android:dialogTheme">@style/defaultDialog</item>
+        <item name="android:editTextStyle">@style/edittext_style</item>
+        <item name="android:buttonStyle">@style/button_style</item>
+        <item name="android:textViewStyle">@style/textview_style</item>
+        <item name="android:layout_margin">@dimen/margin</item>
+        <item name="android:listViewStyle">@style/listViewStyle</item>
+    </style>
+    <style name="defaultDialog" parent="@android:style/Theme.DeviceDefault.Dialog">
+        <item name="android:background">@drawable/dialog</item>
+        <item name="android:windowBackground">@drawable/dialog</item>
+        <item name="android:minWidth" type="dimen">200dp</item>
+        <item name="android:padding">@dimen/dialog_padding</item>
+        <item name="android:buttonStyle">@style/button_style</item>
+        <item name="android:buttonBarButtonStyle">@style/button_style</item>
+        <item name="android:textViewStyle">@style/textview_style</item>
+        <item name="android:listViewStyle">@style/listViewStyle</item>
+    </style>
+
+
+
+    <style name="HoneyDewActionBarTheme" parent="@android:style/Theme.Holo.Light.DarkActionBar">
+        <item name="android:actionBarStyle">@style/HoneyDewActionBar</item>
+        <item name="android:actionMenuTextColor">@color/edit_text_color</item>
+        <item name="android:layout_margin">@dimen/margin</item>
+        <item name="android:listViewStyle">@style/listViewStyle</item>
+
+    </style>
+    <style name="HoneyDewActionBarThemeLarge" parent="@android:style/Theme.Holo.Light.DarkActionBar">
+        <item name="android:actionBarStyle">@style/HoneyDewActionBarLarge</item>
+        <item name="android:actionMenuTextColor">@color/edit_text_color</item>
+        <item name="android:layout_margin">@dimen/margin</item>
+        <item name="android:listViewStyle">@style/listViewStyle</item>
+
+    </style>
+
+
+</resources>

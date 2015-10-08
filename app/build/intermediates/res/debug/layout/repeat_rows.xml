@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+     
+ 	<RadioGroup xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/repeatRadioGrp"
+            android:orientation="horizontal"
+            android:layout_weight="3">
+ 
+        <RadioButton
+            android:id="@+id/repeatByDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/repeatUntil" 
+            android:checked="true" 
+            android:layout_weight="1"/>
+ 
+        <RadioButton
+            android:id="@+id/repeatRepetitions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/repeatRep" 
+            android:layout_weight="2"/>
+ 
+	</RadioGroup>
+ 
+
+    
+ <!-- From: file:/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/src/main/res/layout/repeat_rows.xml -->

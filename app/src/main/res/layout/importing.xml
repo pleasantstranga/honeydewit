@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android" 
+    android:layout_width="fill_parent" 
+    android:layout_height="wrap_content" 
+    android:orientation="vertical"
+    >
+	<ScrollView
+	    style="@style/scrollbar_shape_style"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:orientation="vertical" >
+		
+		<TableLayout android:id="@+id/importTable" android:layout_width="match_parent" android:layout_height="wrap_content">
+			<TableRow android:id="@+id/titleHeaderRow" >
+	   	 		<TextView android:id="@+id/importMessage" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/importMessage" android:textAppearance="?android:attr/textAppearanceMedium" />
+			</TableRow>
+		    <TableRow android:id="@+id/excelRow" >
+				<TextView android:textStyle="bold" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/xlsFile"/>
+			</TableRow>
+			 <TableRow android:id="@+id/excelImgRow" >
+				<ImageView android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/excel_screenshot" android:contentDescription="@string/txtCsvFile"/>
+			</TableRow>
+			 <TableRow android:id="@+id/textCsvRow" >
+				<TextView android:textStyle="bold"  android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/txtCsvFile"/>
+			</TableRow>
+			 <TableRow android:id="@+id/textCsvImgRow" >
+				<ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/csv_txt_screenshot" android:contentDescription="@string/txtCsvFile"/>
+			</TableRow>
+			<TableRow android:id="@+id/checkBoxRow" >
+				<CheckBox android:button="@drawable/custom_checkbox_design" android:id="@+id/hideImporting" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/hideImportDialog"/>
+			</TableRow>
+			<TableRow android:id="@+id/buttonRow" >
+				<Button android:id="@+id/ok" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ok"/>		
+			</TableRow>
+		</TableLayout>
+	</ScrollView>
+	<LinearLayout  android:id="@+id/footerView" android:layout_width="fill_parent" android:layout_height="wrap_content" android:baselineAligned="true">
+        <Button android:layout_height="match_parent" android:layout_width="0dip" android:id="@+id/saveBtn" android:text="@android:string/ok" android:layout_weight="1" />
+    </LinearLayout>
+</LinearLayout>

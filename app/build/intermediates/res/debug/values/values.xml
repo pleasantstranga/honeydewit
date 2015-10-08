@@ -1,0 +1,733 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- From: file:/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/src/main/res/values/arrays.xml -->
+    <eat-comment/>
+    <string-array name="day_array">
+        <item>Sunday</item>
+        <item>Monday</item>
+        <item>Tuesday</item>
+        <item>Wednesday</item>
+        <item>Thursday</item>
+        <item>Friday</item>
+        <item>Saturday</item>
+        <item>Day</item>
+        <item>Weekday</item>
+        <item>Weekend Day</item>
+    </string-array>
+    <string-array name="frequencies_array">
+        <item>Daily</item>
+        <item>Weekly</item>
+        <item>Monthly</item>
+        <item>Yearly</item>
+    </string-array>
+    <string-array name="list_home_drawer_menu_array">
+        <item>@string/renameList</item>
+        <item>@string/addReminder</item>
+        <item>@string/shareList</item>
+        <item>@string/deleteList</item>
+        <item>@string/selectAll</item>
+        <item>@string/unselectAll</item>
+        <item>@string/addItem</item>
+    </string-array>
+    <string-array name="reminder_array">
+        <item>None</item>
+        <item>On Time</item>
+        <item>5 Minutes Before</item>
+        <item>15 Minutes Before</item>
+        <item>1 Hour Before</item>
+        <item>1 Day Before</item>
+        <item>2 Days Before</item>
+        <item>1 Week Before</item>
+        <item>Customize</item>
+    </string-array>
+    <string-array name="weeks_array">
+        <item>first</item>
+        <item>second</item>
+        <item>third</item>
+        <item>fourth</item>
+        <item>last</item>
+    </string-array>
+    <!-- From: file:/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/src/main/res/values/colors.xml -->
+    <eat-comment/>
+    <color name="backgroundEnd">#B0BEC5</color>
+    <color name="backgroundStart">#B0BEC5</color>
+    <color name="bg_handle_pressed">#a0a0a0</color>
+    <color name="black">#000000</color>
+    <color name="black_overlay">#66000000</color>
+    <color name="blue">#33b5e5</color>
+    <color name="brush_chooser_color">#FFFFFF</color>
+    <color name="button_background">#EEEEEE</color>
+    <color name="button_pressed_background">#B0BEC5</color>
+    <color name="calendarCellDefaultBG">#EEEEEE</color>
+    <color name="calendarCurrentDateBG">#33b5e5</color>
+    <color name="calendarHeaderCellDefaultBG">#B0BEC5</color>
+    <color name="calendarSelectedDateBG">#33b5e5</color>
+    <!-- From: file:/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values/common_colors.xml -->
+    <eat-comment/>
+    <color name="common_action_bar_splitter">#d2d2d2</color>
+    <color name="common_signin_btn_dark_text_default">@android:color/white</color>
+    <color name="common_signin_btn_dark_text_disabled">#FFAAAAAA</color>
+    <color name="common_signin_btn_dark_text_focused">@android:color/white</color>
+    <color name="common_signin_btn_dark_text_pressed">@android:color/white</color>
+    <color name="common_signin_btn_default_background">#FFDD4B39</color>
+    <color name="common_signin_btn_light_text_default">#FF737373</color>
+    <color name="common_signin_btn_light_text_disabled">#FFAAAAAA</color>
+    <color name="common_signin_btn_light_text_focused">#FF737373</color>
+    <color name="common_signin_btn_light_text_pressed">@android:color/white</color>
+    <!-- From: file:/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/src/main/res/values/colors.xml -->
+    <eat-comment/>
+    <color name="darkblue">#0099cc</color>
+    <color name="dialog_background">#B0BEC5</color>
+    <color name="editTextBackground">#FFFFFF</color>
+    <color name="edit_text_color">#636363</color>
+    <color name="error_text_color">#FF0000</color>
+    <color name="gobuttoncolor">#00ff00</color>
+    <color name="gobuttontextcolor">#FCFBE3</color>
+    <color name="grayEnd">#ffffff</color>
+    <color name="grayStart">#adadad</color>
+    <color name="red">#ff4444</color>
+    <color name="shadow_color">#455A64</color>
+    <color name="spinner_text_background">#FFFFFF</color>
+    <color name="spinner_text_color">#FFFFFF</color>
+    <!-- From: file:/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-wallet/7.0.0/res/values/wallet_colors.xml -->
+    <eat-comment/>
+    <color name="wallet_bright_foreground_disabled_holo_light">#ffb2b2b2</color>
+    <color name="wallet_bright_foreground_holo_dark">#fff3f3f3</color>
+    <color name="wallet_bright_foreground_holo_light">#ff000000</color>
+    <color name="wallet_dim_foreground_disabled_holo_dark">#80bebebe</color>
+    <color name="wallet_dim_foreground_holo_dark">#bebebe</color>
+    <color name="wallet_dim_foreground_inverse_disabled_holo_dark">#80323232</color>
+    <color name="wallet_dim_foreground_inverse_holo_dark">#323232</color>
+    <color name="wallet_highlighted_text_holo_dark">#6633b5e5</color>
+    <color name="wallet_highlighted_text_holo_light">#6633b5e5</color>
+    <color name="wallet_hint_foreground_holo_dark">#808080</color>
+    <color name="wallet_hint_foreground_holo_light">#808080</color>
+    <color name="wallet_holo_blue_light">#ff33b5e5</color>
+    <color name="wallet_link_text_light">#0000ee</color>
+    <declare-styleable name="AdsAttrs"><attr format="string" name="adSize"/><attr format="string" name="adSizes"/><attr format="string" name="adUnitId"/></declare-styleable>
+    <declare-styleable name="ButtonBarContainerTheme"><attr format="reference" name="metaButtonBarStyle"/><attr format="reference" name="metaButtonBarButtonStyle"/></declare-styleable>
+    <declare-styleable name="CalendarView"><attr format="boolean" name="saveMonthOnConfigChange"/></declare-styleable>
+    <declare-styleable name="CustomWalletTheme"><attr format="enum" name="windowTransitionStyle"><enum name="slide" value="1"/><enum name="none" value="2"/></attr></declare-styleable>
+    <declare-styleable name="DragSortListView"><attr format="dimension" name="collapsed_height"/><attr format="float" name="drag_scroll_start"/><attr format="float" name="max_drag_scroll_speed"/><attr format="color" name="float_background_color"/><attr name="remove_mode"><enum name="clickRemove" value="0"/><enum name="flingRemove" value="1"/></attr><attr format="boolean" name="track_drag_sort"/><attr format="float" name="float_alpha"/><attr format="float" name="slide_shuffle_speed"/><attr format="integer" name="remove_animation_duration"/><attr format="integer" name="drop_animation_duration"/><attr format="boolean" name="drag_enabled"/><attr format="boolean" name="sort_enabled"/><attr format="boolean" name="remove_enabled"/><attr name="drag_start_mode"><enum name="onDown" value="0"/><enum name="onMove" value="1"/><enum name="onLongPress" value="2"/></attr><attr format="integer" name="drag_handle_id"/><attr format="integer" name="fling_handle_id"/><attr format="integer" name="click_remove_id"/><attr format="boolean" name="use_default_controller"/></declare-styleable>
+    <declare-styleable name="LoadingImageView"><attr format="enum" name="imageAspectRatioAdjust"><enum name="none" value="0"/><enum name="adjust_width" value="1"/><enum name="adjust_height" value="2"/></attr><attr format="float" name="imageAspectRatio"/><attr format="boolean" name="circleCrop"/></declare-styleable>
+    <declare-styleable name="MapAttrs"><attr format="enum" name="mapType"><enum name="none" value="0"/><enum name="normal" value="1"/><enum name="satellite" value="2"/><enum name="terrain" value="3"/><enum name="hybrid" value="4"/></attr><attr format="float" name="cameraBearing"/><attr format="float" name="cameraTargetLat"/><attr format="float" name="cameraTargetLng"/><attr format="float" name="cameraTilt"/><attr format="float" name="cameraZoom"/><attr format="boolean" name="liteMode"/><attr format="boolean" name="uiCompass"/><attr format="boolean" name="uiRotateGestures"/><attr format="boolean" name="uiScrollGestures"/><attr format="boolean" name="uiTiltGestures"/><attr format="boolean" name="uiZoomControls"/><attr format="boolean" name="uiZoomGestures"/><attr format="boolean" name="useViewLifecycle"/><attr format="boolean" name="zOrderOnTop"/><attr format="boolean" name="uiMapToolbar"/></declare-styleable>
+    <declare-styleable name="WalletFragmentOptions"><attr format="enum" name="appTheme"><enum name="holo_dark" value="0"/><enum name="holo_light" value="1"/></attr><attr format="enum" name="environment"><enum name="production" value="1"/><enum name="sandbox" value="0"/><enum name="strict_sandbox" value="2"/></attr><attr format="reference" name="fragmentStyle"/><attr format="enum" name="fragmentMode"><enum name="buyButton" value="1"/><enum name="selectionDetails" value="2"/></attr></declare-styleable>
+    <declare-styleable name="WalletFragmentStyle"><attr format="dimension" name="buyButtonHeight"><enum name="match_parent" value="-1"/><enum name="wrap_content" value="-2"/></attr><attr format="dimension" name="buyButtonWidth"><enum name="match_parent" value="-1"/><enum name="wrap_content" value="-2"/></attr><attr format="enum" name="buyButtonText"><enum name="buy_with_google" value="1"/><enum name="buy_now" value="2"/><enum name="book_now" value="3"/><enum name="donate_with_google" value="4"/></attr><attr format="enum" name="buyButtonAppearance"><enum name="classic" value="1"/><enum name="grayscale" value="2"/><enum name="monochrome" value="3"/></attr><attr format="reference" name="maskedWalletDetailsTextAppearance"/><attr format="reference" name="maskedWalletDetailsHeaderTextAppearance"/><attr format="reference|color" name="maskedWalletDetailsBackground"/><attr format="reference" name="maskedWalletDetailsButtonTextAppearance"/><attr format="reference|color" name="maskedWalletDetailsButtonBackground"/><attr format="color" name="maskedWalletDetailsLogoTextColor"/><attr format="enum" name="maskedWalletDetailsLogoImageType"><enum name="classic" value="1"/><enum name="monochrome" value="2"/></attr></declare-styleable>
+    <!-- From: file:/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/src/main/res/values/dimens.xml -->
+    <eat-comment/>
+    <dimen name="default_button_size">60dp</dimen>
+    <dimen name="default_header_size">10dp</dimen>
+    <dimen name="default_text_size">20dp</dimen>
+    <dimen name="default_text_size_large">35dp</dimen>
+    <dimen name="dialogTitleSize">8dp</dimen>
+    <dimen name="dialog_padding">5dp</dimen>
+    <dimen name="image_view_max_width">400dp</dimen>
+    <dimen name="item_height">67dp</dimen>
+    <dimen name="large_brush">20dp</dimen>
+    <dimen name="margin">2dp</dimen>
+    <dimen name="max_listitemimage_height">200dp</dimen>
+    <dimen name="max_listitemimage_width">200dp</dimen>
+    <dimen name="max_noteimage_height">400dp</dimen>
+    <dimen name="max_noteimage_width">400dp</dimen>
+    <dimen name="medium_brush">10dp</dimen>
+    <dimen name="paint_color_size">35dp</dimen>
+    <dimen name="section_div_height">20dp</dimen>
+    <dimen name="small_brush">5dp</dimen>
+    <dimen name="xlarge_brush">25dp</dimen>
+    <dimen name="xsmall_brush">2dp</dimen>
+    <!-- From: file:/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/src/main/res/values/ids.xml -->
+    <eat-comment/>
+    <item name="click_remove" type="id"/>
+    <item name="drag_handle" type="id"/>
+    <!-- From: file:/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values/version.xml -->
+    <eat-comment/>
+    <integer name="google_play_services_version">7095000</integer>
+    <!-- From: file:/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/src/main/res/values/dimens.xml -->
+    <eat-comment/>
+    <integer name="large_size">20</integer>
+    <integer name="medium_size">10</integer>
+    <integer name="small_size">4</integer>
+    <integer name="xlarge_size">25</integer>
+    <integer name="xsmall_size">2</integer>
+    <!-- From: file:/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/src/main/res/values/strings.xml -->
+    <eat-comment/>
+    <string name="MC">MC</string>
+    <!-- From: file:/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/7.0.0/res/values/admob_strings.xml -->
+    <eat-comment/>
+    <string name="accept">Accept</string>
+    <!-- From: file:/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/src/main/res/values/strings.xml -->
+    <eat-comment/>
+    <string name="adMobHomeInsterstitial">ca-app-pub-4082522619366895/1887649769</string>
+    <string name="adMobId">ca-app-pub-4082522619366895/7023283761</string>
+    <string name="addEditReminder">Add/Remove Reminders</string>
+    <string name="addItem">Add</string>
+    <string name="addItemCamera">Take Pic</string>
+    <string name="addItemDraw">Draw Note</string>
+    <string name="addItemType">Type Note</string>
+    <string name="addReminder">Add Reminder(s)</string>
+    <string name="addressLine1Txt">Address Line 1:</string>
+    <string name="addressLine2Txt">Address Line 2:</string>
+    <string name="addressLine3Txt">Address Line 3:</string>
+    <string name="addressLine4Txt">Address Line 4:</string>
+    <string name="allDay">All Day</string>
+    <string name="amount">Amount</string>
+    <string name="app_name">HoneyDew-It</string>
+    <string name="areYouSure">Are You Sure?</string>
+    <string name="back">Back</string>
+    <string name="brush">Brush</string>
+    <string name="button0">0</string>
+    <string name="button1">1</string>
+    <string name="button2">2</string>
+    <string name="button3">3</string>
+    <string name="button4">4</string>
+    <string name="button5">5</string>
+    <string name="button6">6</string>
+    <string name="button7">7</string>
+    <string name="button8">8</string>
+    <string name="button9">9</string>
+    <string name="buttonAdd">+</string>
+    <string name="buttonClear">C</string>
+    <string name="buttonDecimalPoint">.</string>
+    <string name="buttonDelete">DEL</string>
+    <string name="buttonDivide"> / </string>
+    <string name="buttonEquals">=</string>
+    <string name="buttonMultiply">*</string>
+    <string name="buttonSubtract">-</string>
+    <string name="calculateQty">Calculate Qty</string>
+    <string name="calculators">Calculators</string>
+    <string name="calendar">Calendar</string>
+    <string name="calendarHeader">Calendar Header</string>
+    <string name="cancel">Cancel</string>
+    <string name="cancelImportMessage">By clicking \"OK\" you will cancel the import process</string>
+    <!-- From: file:/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/src/main/res/values/messages.xml -->
+    <eat-comment/>
+    <string name="cancelledImport">You have cancelled the import. If you didn\'t mean to try again.</string>
+    <string name="cantDeleteItem">You cannot delete this item as it has been edited outside this application.</string>
+    <!-- From: file:/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/src/main/res/values/strings.xml -->
+    <eat-comment/>
+    <string name="changeDate">Change Date</string>
+    <!-- From: file:/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/src/main/res/values/messages.xml -->
+    <eat-comment/>
+    <string name="chooseCalculatorDialogMessage">Please choose the appropriate calculator to calculate ^</string>
+    <string name="chooseCalculatorDialogTitle">^ Calculator</string>
+    <!-- From: file:/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/src/main/res/values/strings.xml -->
+    <eat-comment/>
+    <string name="cityTxt">City:</string>
+    <string name="clear">Clear</string>
+    <string name="clickForDate">Click to Set Date</string>
+    <string name="close">Close</string>
+    <string name="close_drawer">Close Drawer</string>
+    <!-- From: file:/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/src/main/res/values/messages.xml -->
+    <eat-comment/>
+    <string name="commonErrorRedirect">There was a problem with your request. You will be redirected back to the home screen.</string>
+    <!-- From: file:/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values/common_strings.xml -->
+    <eat-comment/>
+    <string name="common_android_wear_notification_needs_update_text">An application requires an update to the Android Wear app.</string>
+    <string name="common_android_wear_update_text">This app won\'t run unless you update the Android Wear app.</string>
+    <string msgid="6006316683626838685" name="common_android_wear_update_title">Update Android Wear</string>
+    <string msgid="2523291102206661146" name="common_google_play_services_enable_button">Enable Google Play services</string>
+    <string msgid="227660514972886228" name="common_google_play_services_enable_text">This app won\'t work unless you enable Google Play services.</string>
+    <string msgid="5122002158466380389" name="common_google_play_services_enable_title">Enable Google Play services</string>
+    <string name="common_google_play_services_error_notification_requested_by_msg">Requested by <ns1:g id="app_name">%1$s</ns1:g></string>
+    <string msgid="7153882981874058840" name="common_google_play_services_install_button">Get Google Play services</string>
+    <string msgid="2122112764540849864" name="common_google_play_services_install_text_phone">This app won\'t run without Google Play services, which are missing from your phone.</string>
+    <string msgid="7351599665250191022" name="common_google_play_services_install_text_tablet">This app won\'t run without Google Play services, which are missing from your tablet.</string>
+    <string msgid="7215213145546190223" name="common_google_play_services_install_title">Get Google Play services</string>
+    <string name="common_google_play_services_invalid_account_text">The specified account does not exist on this device. Please choose a different account.</string>
+    <string name="common_google_play_services_invalid_account_title">Invalid Account</string>
+    <string name="common_google_play_services_needs_enabling_title">An application requires Google Play services to be enabled.</string>
+    <string name="common_google_play_services_network_error_text">A data connection is required to connect to Google Play services.</string>
+    <string name="common_google_play_services_network_error_title">Network Error</string>
+    <string name="common_google_play_services_notification_needs_installation_title">An application requires installation of Google Play services.</string>
+    <string name="common_google_play_services_notification_needs_update_title">An application requires an update for Google Play services.</string>
+    <string name="common_google_play_services_notification_ticker">Google Play services error</string>
+    <string name="common_google_play_services_sign_in_failed_text">Error signing in the specified account. Please choose a different account.</string>
+    <string name="common_google_play_services_sign_in_failed_title">Sign in failed</string>
+    <string name="common_google_play_services_unknown_issue">Unknown issue with Google Play services.</string>
+    <string name="common_google_play_services_unsupported_text">Google Play services, which some of your applications rely on, is not supported by your device. Please contact the manufacturer for assistance.</string>
+    <string name="common_google_play_services_unsupported_title">Google Play services</string>
+    <string msgid="6556509956452265614" name="common_google_play_services_update_button">Update</string>
+    <string msgid="9053896323427875356" name="common_google_play_services_update_text">This app won\'t run unless you update Google Play services.</string>
+    <string msgid="6006316683626838685" name="common_google_play_services_update_title">Update Google Play services</string>
+    <string name="common_open_on_phone">Open on phone</string>
+    <string name="common_signin_button_text">Sign in</string>
+    <string name="common_signin_button_text_long">Sign in with Google</string>
+    <string name="commono_google_play_services_api_unavailable_text">This app requires one or more Google Play services that are not currently
+available. Please contact the developer for assistance.</string>
+    <!-- From: file:/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/src/main/res/values/messages.xml -->
+    <eat-comment/>
+    <string name="confirmCancel">You are about to cancel your changes. Is this OK?</string>
+    <!-- From: file:/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/src/main/res/values/strings.xml -->
+    <eat-comment/>
+    <string name="countryTxt">Country:</string>
+    <string name="createList">Create List</string>
+    <!-- From: file:/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/7.0.0/res/values/admob_strings.xml -->
+    <eat-comment/>
+    <string name="create_calendar_message">Allow Ad to create a calendar event?</string>
+    <string name="create_calendar_title">Create calendar event</string>
+    <!-- From: file:/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/src/main/res/values/strings.xml -->
+    <eat-comment/>
+    <string name="currentDate">Current Date (M-D-YYYY): </string>
+    <!-- From: file:/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/src/main/res/values/messages.xml -->
+    <eat-comment/>
+    <string name="dateEndError">Please select a date end that is after the start date.</string>
+    <!-- From: file:/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/src/main/res/values/strings.xml -->
+    <eat-comment/>
+    <string name="day">Day</string>
+    <!-- From: file:/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/7.0.0/res/values/admob_strings.xml -->
+    <eat-comment/>
+    <string name="decline">Decline</string>
+    <!-- From: file:/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/src/main/res/values/strings.xml -->
+    <eat-comment/>
+    <string name="delete">Delete</string>
+    <!-- From: file:/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/src/main/res/values/messages.xml -->
+    <eat-comment/>
+    <string name="deleteEventsMessage">You have calendar events associated with this list. Do you want to delete these events?</string>
+    <string name="deleteItemWarning">By clicking \"Ok\" you will permanently delete the item.</string>
+    <!-- From: file:/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/src/main/res/values/strings.xml -->
+    <eat-comment/>
+    <string name="deleteList">Delete List</string>
+    <string name="descriptionLengthError">If you enter a description it must be at least 3 characters.</string>
+    <string name="descriptionTxt">Description:</string>
+    <string name="discountTxt">Discount</string>
+    <string name="dontAskAgain">Don\'t ask again</string>
+    <string name="dontSave">Don\'t Save</string>
+    <string name="dontShow">Don\'t show again.</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="each">Each: </string>
+    <string name="edit">Edit</string>
+    <!-- From: file:/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/src/main/res/values/messages.xml -->
+    <eat-comment/>
+    <string name="editEventOutsideMsg">Editing this event outside of this application can cause adverse effects.</string>
+    <!-- From: file:/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/src/main/res/values/strings.xml -->
+    <eat-comment/>
+    <string name="editReminder">Edit Reminder</string>
+    <string name="editSheetBtn">Edit Sheet Name</string>
+    <!-- From: file:/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/src/main/res/values/messages.xml -->
+    <eat-comment/>
+    <string name="endDateError">End Date should be later than Start Date</string>
+    <!-- From: file:/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/src/main/res/values/strings.xml -->
+    <eat-comment/>
+    <string name="enterDescription">Enter Description Here</string>
+    <string name="enterItemName">Enter item name here</string>
+    <string name="enterListName">Enter list name here</string>
+    <string name="enterNameTitle">Please enter a name:</string>
+    <string name="enterNote">Enter note here:</string>
+    <string name="enterQuantity">#</string>
+    <string name="enterStoreName">Enter store name here</string>
+    <string name="enterUnitPrice">Enter unit price here</string>
+    <string name="enterUnitType">Enter Unit Type:</string>
+    <string name="erase">Erase</string>
+    <string name="error">Error</string>
+    <!-- From: file:/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/src/main/res/values/messages.xml -->
+    <eat-comment/>
+    <string name="errorExists">There were errors importing this item. Please click to fix.</string>
+    <string name="errorImporting">There was an error importing.</string>
+    <string name="errorImportingFix">There were some errors when importing your list. You can fix the errors or remove the items with errors from the list</string>
+    <string name="errorImportingMessage">There were some errors importing. None of the sheets were imported.Please fix the issues and try again.</string>
+    <string name="errorLoadingList">There was an error loading the list. Please try again</string>
+    <!-- From: file:/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/src/main/res/values/strings.xml -->
+    <eat-comment/>
+    <string name="event">Event</string>
+    <!-- From: file:/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/src/main/res/values/messages.xml -->
+    <eat-comment/>
+    <string name="eventDateLaterStart">The end date should be later than the start date</string>
+    <string name="eventMin3CharRequired">Please enter a name with a minimum of 3 characters.</string>
+    <string name="eventNameRequired">Please enter an event name.</string>
+    <string name="eventRemoved">An external application has removed this event from your calendar.</string>
+    <string name="eventSaved">Event Saved</string>
+    <!-- From: file:/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/src/main/res/values/strings.xml -->
+    <eat-comment/>
+    <string name="events">Events For ?</string>
+    <string name="eventsDay">Events/Day</string>
+    <string name="every">Every: </string>
+    <!-- From: file:/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/src/main/res/values/messages.xml -->
+    <eat-comment/>
+    <string name="expectedDate">Expected Date:</string>
+    <!-- From: file:/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/src/main/res/values/strings.xml -->
+    <eat-comment/>
+    <string name="frequency">Frequency: </string>
+    <string name="from">From:</string>
+    <string name="goHome">Go Home</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hideImportDialog">Click to hide this dialog next time.</string>
+    <!-- From: file:/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/src/main/res/values/messages.xml -->
+    <eat-comment/>
+    <string name="honeDewItImporting">HoneyDew It is importing list</string>
+    <!-- From: file:/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/src/main/res/values/strings.xml -->
+    <eat-comment/>
+    <string name="ignoreErrors">Remove \nItems</string>
+    <string name="image">Image:</string>
+    <string name="imageCancelled">Cancelled</string>
+    <string name="imageChoice">Do you want to replace or delete image?</string>
+    <string name="imageSaveError">You must take a photo in order to save.</string>
+    <!-- From: file:/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/src/main/res/values/messages.xml -->
+    <eat-comment/>
+    <string name="importCancelled">Import Cancelled</string>
+    <string name="importError">There was an error reading the file. This can sometimes happen if the file is corrupt or has the incorrect file extension.</string>
+    <string name="importFinished">Your import has finished.</string>
+    <!-- From: file:/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/src/main/res/values/strings.xml -->
+    <eat-comment/>
+    <string name="importInstructions">Importing Instructions</string>
+    <string name="importList">Import</string>
+    <!-- From: file:/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/src/main/res/values/messages.xml -->
+    <eat-comment/>
+    <string name="importMessage">HoneyDew It supports importing data from either an .xls,.xlsx, .txt or .csv file. Just open the file on your phone and click the HoneyDewIt icon. The first row in all files must have an \"item\" header. There is also an option to add the following: \"quantity\", \"description\", \"discount\", \"unit\" type,  as well as \"price\" per item. If you do not supply a quantity then a default quantity of 1 will be set. If using a .txt or .csv file please separate values by a \^. If you are importing from an .xls or .xlsx file then you have the ability to create separate lists for each sheet in the workbook. Please look at the images below for a sample of all files.</string>
+    <!-- From: file:/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/src/main/res/values/strings.xml -->
+    <eat-comment/>
+    <string name="importing">HoneyDewIt is Importing:</string>
+    <!-- From: file:/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/src/main/res/values/messages.xml -->
+    <eat-comment/>
+    <string name="invalidDiscount">Please enter a valid number for discount.</string>
+    <string name="invalidPrice">Please enter a valid price.</string>
+    <!-- From: file:/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/src/main/res/values/strings.xml -->
+    <eat-comment/>
+    <string name="itemNameTxt">Item Name:</string>
+    <!-- From: file:/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/src/main/res/values/messages.xml -->
+    <eat-comment/>
+    <string name="listExists">A list already exists with the name ?. Please try a different name.</string>
+    <string name="listExistsMessage">A list named \"^\" already exists. Please rename the file or replace the existing.</string>
+    <!-- From: file:/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/src/main/res/values/strings.xml -->
+    <eat-comment/>
+    <string name="listNameTxt">List Name:</string>
+    <string name="lists">Lists</string>
+    <string name="lrg">Large</string>
+    <string name="main_no_items">No Items to Display</string>
+    <string name="med">Medium</string>
+    <string name="menu">Menu</string>
+    <string name="menuImg">Menu Image</string>
+    <!-- From: file:/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/src/main/res/values/messages.xml -->
+    <eat-comment/>
+    <string name="min3CharRequired">Please enter a name with a minimum of 3 characters.</string>
+    <!-- From: file:/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/src/main/res/values/strings.xml -->
+    <eat-comment/>
+    <string name="month">Month</string>
+    <string name="monthNav">Calendar Navigation:</string>
+    <string name="name">Name: </string>
+    <!-- From: file:/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/src/main/res/values/messages.xml -->
+    <eat-comment/>
+    <string name="nameRequired">Please enter a name.</string>
+    <!-- From: file:/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/src/main/res/values/strings.xml -->
+    <eat-comment/>
+    <string name="newEvent">New Event</string>
+    <!-- From: file:/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/src/main/res/values/messages.xml -->
+    <eat-comment/>
+    <string name="nextInstance">The next instance is ^</string>
+    <!-- From: file:/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/src/main/res/values/strings.xml -->
+    <eat-comment/>
+    <string name="nextMonth">Next Month</string>
+    <string name="nextYear">Next Year</string>
+    <string name="no">No</string>
+    <string name="noCalendarChosen">No calendar has been chosen</string>
+    <string name="noFutureEvent">No future events exist.</string>
+    <!-- From: file:/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/src/main/res/values/messages.xml -->
+    <eat-comment/>
+    <string name="noSheetsSeleceted">You have not selected any Sheets. If this was in error please try again</string>
+    <!-- From: file:/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/src/main/res/values/strings.xml -->
+    <eat-comment/>
+    <string name="noteImage">Note Image</string>
+    <string name="noteText">Note:</string>
+    <string name="numDegrees"># of Degrees</string>
+    <string name="numItems">Total Items Checked: </string>
+    <string name="numItemsUnique">Items: </string>
+    <string name="ok">OK</string>
+    <string name="onThe">On The:</string>
+    <string name="open_drawer">Open Drawer</string>
+    <string name="paint">Paint</string>
+    <string name="phoneTxt">Phone:</string>
+    <string name="pleaseNote">Please Note:</string>
+    <string name="postalCodeTxt">Postal Code:</string>
+    <string name="previous">Previous ?</string>
+    <string name="previousMonth">Previous Month</string>
+    <string name="previousYear">Previous Year</string>
+    <!-- From: file:/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/src/main/res/values/messages.xml -->
+    <eat-comment/>
+    <string name="quantityRequired">Please enter a valid quantity greater than 0.</string>
+    <!-- From: file:/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/src/main/res/values/strings.xml -->
+    <eat-comment/>
+    <string name="quantityTxt">Quantity:</string>
+    <string name="recurrence">Recurrence: </string>
+    <string name="reminder">Reminder Date/Time:</string>
+    <string name="reminders">Reminders</string>
+    <string name="remindersTxt">Reminders</string>
+    <string name="renameList">Rename List:</string>
+    <string name="renameNewList">Rename the new list</string>
+    <string name="repeat">Repeat</string>
+    <!-- From: file:/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/src/main/res/values/messages.xml -->
+    <eat-comment/>
+    <string name="repeatMessage">To add repeat events please open event in standard calendar app.</string>
+    <!-- From: file:/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/src/main/res/values/strings.xml -->
+    <eat-comment/>
+    <string name="repeatRep">By Repetitions</string>
+    <string name="repeatUntil">Until Date</string>
+    <string name="replace">Replace</string>
+    <string name="replaceCurrentList">Replace the existing list</string>
+    <string name="row">Row:</string>
+    <string name="save">Save</string>
+    <!-- From: file:/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/src/main/res/values/messages.xml -->
+    <eat-comment/>
+    <string name="saveOnBack">You are about to leave the current screen. Do you want to save?</string>
+    <!-- From: file:/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/src/main/res/values/strings.xml -->
+    <eat-comment/>
+    <string name="saveTitle">Save?</string>
+    <string name="selectAll">Select All</string>
+    <!-- From: file:/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/src/main/res/values/messages.xml -->
+    <eat-comment/>
+    <string name="selectionContinueMessage">You must make a selection to continue.</string>
+    <!-- From: file:/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/src/main/res/values/strings.xml -->
+    <eat-comment/>
+    <string name="sendReport">Send Report</string>
+    <string name="set">Set</string>
+    <string name="setDate">Set Reminder</string>
+    <string name="shareItem">Share</string>
+    <string name="shareList">Share List</string>
+    <string name="showErrors">Fix \nErrors</string>
+    <string name="sml">Small</string>
+    <string name="start_new">New</string>
+    <string name="state_provinceTxt">State/Province:</string>
+    <string name="storeName">Store Name:</string>
+    <!-- From: file:/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/7.0.0/res/values/admob_strings.xml -->
+    <eat-comment/>
+    <string name="store_picture_message">"Allow Ad to store image in Picture gallery?"</string>
+    <string name="store_picture_title">Save image</string>
+    <!-- From: file:/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/src/main/res/values/strings.xml -->
+    <eat-comment/>
+    <string name="takePhoto">Take a Photo</string>
+    <string name="takeRetakeImage">Take/Retake Picture</string>
+    <string name="timezone">Time zone</string>
+    <string name="title_activity_note_image">NoteImageActivity</string>
+    <string name="to">To:</string>
+    <string name="totalPrice">Total Price Checked: </string>
+    <string name="txtCsvFile">Text or csv files:</string>
+    <string name="undoSelectedSheet">Clicking "Cancel" will cancel the selection of the sheet.</string>
+    <!-- From: file:/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/src/main/res/values/messages.xml -->
+    <eat-comment/>
+    <string name="unexpectedError">Unfortunately there was an unexpected error. Click "Send Report" to send an error report to AJB Technologies. Click on "Home" to be taken to HoneyDew-It home screen.</string>
+    <!-- From: file:/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/src/main/res/values/strings.xml -->
+    <eat-comment/>
+    <string name="unitPriceTxt">Unit Price:</string>
+    <string name="unitTxt">Unit Type:</string>
+    <string name="units">Units:</string>
+    <string name="unselectAll">Unselect All</string>
+    <string name="view">View</string>
+    <!-- From: file:/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-wallet/7.0.0/res/values/wallet_strings.xml -->
+    <eat-comment/>
+    <string name="wallet_buy_button_place_holder" translation_description="Text on a button that allows a user to make a payment with Google Wallet [CHAR LIMIT=30]">Buy with Google</string>
+    <!-- From: file:/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/src/main/res/values/strings.xml -->
+    <eat-comment/>
+    <string name="xlsFile">XLS\\XLSX file:</string>
+    <string name="xsml">Extra Smaill</string>
+    <string name="yes">Yes</string>
+    <string name="zero">0.0</string>
+    <!-- From: file:/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/src/main/res/values/styles.xml -->
+    <eat-comment/>
+    <style name="ButtonBar">
+        <item name="android:paddingLeft">2dp</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingRight">2dp</item>
+        <item name="android:paddingBottom">0dp</item>
+        <item name="android:background">@android:drawable/bottom_bar</item>
+    </style>
+    <style name="ButtonBarButton"/>
+    <style name="FullscreenTheme" parent="android:Theme.NoTitleBar">
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowBackground">@null</item>
+        <item name="metaButtonBarStyle">@style/ButtonBar</item>
+        <item name="metaButtonBarButtonStyle">@style/ButtonBarButton</item>
+    </style>
+    <style name="HoneyDewActionBar" parent="@android:style/Widget.Holo.Light.ActionBar.Solid.Inverse">
+        <item name="android:background">@drawable/actionbar_background</item>
+        <item name="android:titleTextStyle">@style/actionbartext</item>
+        <item name="android:actionMenuTextColor">@color/edit_text_color</item>
+    </style>
+    <style name="HoneyDewActionBarLarge" parent="@android:style/Widget.Holo.Light.ActionBar.Solid.Inverse">
+        <item name="android:background">@drawable/actionbar_background</item>
+        <item name="android:titleTextStyle">@style/actionbartextlarge</item>
+        <item name="android:actionMenuTextColor">@color/edit_text_color</item>
+        <item name="android:height">150dp</item>
+    </style>
+    <!-- From: file:/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/src/main/res/values/themes.xml -->
+    <eat-comment/>
+    <style name="HoneyDewActionBarTheme" parent="@android:style/Theme.Holo.Light.DarkActionBar">
+        <item name="android:actionBarStyle">@style/HoneyDewActionBar</item>
+        <item name="android:actionMenuTextColor">@color/edit_text_color</item>
+        <item name="android:layout_margin">@dimen/margin</item>
+        <item name="android:listViewStyle">@style/listViewStyle</item>
+
+    </style>
+    <style name="HoneyDewActionBarThemeLarge" parent="@android:style/Theme.Holo.Light.DarkActionBar">
+        <item name="android:actionBarStyle">@style/HoneyDewActionBarLarge</item>
+        <item name="android:actionMenuTextColor">@color/edit_text_color</item>
+        <item name="android:layout_margin">@dimen/margin</item>
+        <item name="android:listViewStyle">@style/listViewStyle</item>
+
+    </style>
+    <!-- From: file:/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/7.0.0/res/values/admob_iap_style.xml -->
+    <eat-comment/>
+    <style name="Theme.IAPTheme" parent="android:Theme">
+    <item name="android:windowIsTranslucent">true</item>
+    <item name="android:windowBackground">@android:color/transparent</item>
+    <item name="android:windowContentOverlay">@null</item>
+    <item name="android:windowNoTitle">true</item>
+    <item name="android:windowIsFloating">true</item>
+    <item name="android:backgroundDimEnabled">false</item>
+  </style>
+    <!-- From: file:/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-wallet/7.0.0/res/values/wallet_styles.xml -->
+    <eat-comment/>
+    <style name="WalletFragmentDefaultButtonTextAppearance">
+        <item name="android:textColor">@color/wallet_primary_text_holo_light</item>
+        <item name="android:textColorHighlight">@color/wallet_highlighted_text_holo_light</item>
+        <item name="android:textColorHint">@color/wallet_hint_foreground_holo_light</item>
+        <item name="android:textColorLink">@color/wallet_link_text_light</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+    <style name="WalletFragmentDefaultDetailsHeaderTextAppearance" parent="WalletFragmentDefaultDetailsTextAppearance">
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="WalletFragmentDefaultDetailsTextAppearance">
+        <item name="android:textColor">@color/wallet_secondary_text_holo_dark</item>
+        <item name="android:textColorHighlight">@color/wallet_highlighted_text_holo_dark</item>
+        <item name="android:textColorHint">@color/wallet_hint_foreground_holo_dark</item>
+        <item name="android:textColorLink">@color/wallet_holo_blue_light</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+    <style name="WalletFragmentDefaultStyle">
+        <item name="buyButtonHeight">48dp</item>
+        <item name="buyButtonWidth">match_parent</item>
+        <item name="buyButtonText">buy_with_google</item>
+        <item name="buyButtonAppearance">classic</item>
+        <item name="maskedWalletDetailsTextAppearance">@style/WalletFragmentDefaultDetailsTextAppearance</item>
+        <item name="maskedWalletDetailsHeaderTextAppearance">@style/WalletFragmentDefaultDetailsHeaderTextAppearance</item>
+        <item name="maskedWalletDetailsBackground">@color/wallet_bright_foreground_holo_light</item>
+        <item name="maskedWalletDetailsButtonBackground">@android:drawable/btn_default</item>
+        <item name="maskedWalletDetailsButtonTextAppearance">@style/WalletFragmentDefaultButtonTextAppearance</item>
+        <item name="maskedWalletDetailsLogoTextColor">@color/wallet_bright_foreground_holo_dark</item>
+        <item name="maskedWalletDetailsLogoImageType">classic</item>
+    </style>
+    <!-- From: file:/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/src/main/res/values/styles.xml -->
+    <eat-comment/>
+    <style name="actionbartext" parent="@android:style/TextAppearance.Holo.Widget.ActionBar.Title">
+        <item name="android:textColor">@color/edit_text_color</item>
+        <item name="android:textSize">@dimen/default_text_size</item>
+        <item name="android:fontFamily">fonts/RobotoCondensed-Regular.ttf</item>
+    </style>
+    <style name="actionbartextlarge" parent="@android:style/TextAppearance.Holo.Widget.ActionBar.Title">
+        <item name="android:textColor">@color/edit_text_color</item>
+        <item name="android:textSize">@dimen/default_text_size_large</item>
+        <item name="android:fontFamily">fonts/RobotoCondensed-Regular.ttf</item>
+    </style>
+    <style name="button_style" parent="android:Widget.Button">
+        <item name="android:textColor">@color/edit_text_color</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/button_background</item>
+        <item name="android:textSize">@dimen/default_text_size</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">fonts/RobotoCondensed-Regular.ttf</item>
+        <item name="android:minHeight">@dimen/default_button_size</item>
+    </style>
+    <!-- From: file:/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/src/main/res/values/themes.xml -->
+    <eat-comment/>
+    <style name="calculatorStyle" parent="HoneyDewActionBarTheme">
+        <item name="android:windowBackground">@drawable/background_gradient</item>
+        <item name="android:dialogTheme">@style/defaultDialog</item>
+        <item name="android:editTextStyle">@style/edittext_style</item>
+        <item name="android:buttonStyle">@style/button_style</item>
+        <item name="android:textViewStyle">@style/textview_style</item>
+        <item name="android:layout_margin">@dimen/margin</item>
+        <item name="android:listViewStyle">@style/listViewStyle</item>
+    </style>
+    <style name="defaultDialog" parent="@android:style/Theme.DeviceDefault.Dialog">
+        <item name="android:background">@drawable/dialog</item>
+        <item name="android:windowBackground">@drawable/dialog</item>
+        <item name="android:minWidth" type="dimen">200dp</item>
+        <item name="android:padding">@dimen/dialog_padding</item>
+        <item name="android:buttonStyle">@style/button_style</item>
+        <item name="android:buttonBarButtonStyle">@style/button_style</item>
+        <item name="android:textViewStyle">@style/textview_style</item>
+        <item name="android:listViewStyle">@style/listViewStyle</item>
+    </style>
+    <style name="defaultTitle" parent="HoneyDewActionBarTheme">
+        <item name="android:windowBackground">@drawable/background_gradient</item>
+        <item name="android:dialogTheme">@style/defaultDialog</item>
+        <item name="android:editTextStyle">@style/edittext_style</item>
+        <item name="android:buttonStyle">@style/button_style</item>
+        <item name="android:imageButtonStyle">@style/image_button_style</item>
+        <item name="android:textViewStyle">@style/textview_style</item>
+        <item name="android:layout_margin">@dimen/margin</item>
+        <item name="android:buttonBarButtonStyle">@style/button_style</item>
+        <item name="android:listViewStyle">@style/listViewStyle</item>
+    </style>
+    <!-- From: file:/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/src/main/res/values/styles.xml -->
+    <eat-comment/>
+    <style name="dialog_title_style" parent="android:Widget.TextView">
+        <item name="android:background">@drawable/dialog</item>
+    </style>
+    <style name="drawerStyle">
+        <item name="android:textColor">@color/edit_text_color</item>
+        <item name="android:gravity">fill</item>
+        <item name="android:fontFamily">fonts/RobotoCondensed-Regular.ttf</item>
+        <item name="android:background">@drawable/button_background</item>
+        <item name="android:divider">@color/shadow_color</item>
+        <item name="android:dividerHeight">1sp</item>
+
+    </style>
+    <style name="edittext_style" parent="android:Widget.Holo.Light.EditText">
+        <item name="android:textSize">@dimen/default_text_size</item>
+        <item name="android:background">@drawable/edittextbasestyle</item>
+        <item name="android:padding">4dp</item>
+        <item name="android:fontFamily">fonts/RobotoCondensed-Regular.ttf</item>
+
+    </style>
+    <style name="goButtonStyle">
+        <item name="android:textColor">@color/gobuttontextcolor</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">fonts/RobotoCondensed-Regular.ttf</item>
+        <item name="android:background">@drawable/go_button_background</item>
+    </style>
+    <style name="image_button_style" parent="android:Widget.ImageButton">
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/button_background</item>
+    </style>
+    <!-- From: file:/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/src/main/res/values/themes.xml -->
+    <eat-comment/>
+    <style name="largeTitle" parent="HoneyDewActionBarThemeLarge">
+        <item name="android:windowBackground">@drawable/background_gradient</item>
+        <item name="android:dialogTheme">@style/defaultDialog</item>
+        <item name="android:editTextStyle">@style/edittext_style</item>
+        <item name="android:buttonStyle">@style/button_style</item>
+        <item name="android:imageButtonStyle">@style/image_button_style</item>
+        <item name="android:textViewStyle">@style/textview_style</item>
+        <item name="android:layout_margin">@dimen/margin</item>
+        <item name="android:buttonBarButtonStyle">@style/button_style</item>
+        <item name="android:listViewStyle">@style/listViewStyle</item>
+    </style>
+    <!-- From: file:/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/src/main/res/values/styles.xml -->
+    <eat-comment/>
+    <style name="listViewStyle" parent="android:style/Widget.ListView">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:divider">@drawable/background_gradient</item>
+        <item name="android:dividerHeight">10.0sp</item>
+        <item name="android:cacheColorHint">@android:color/transparent</item>
+        <item name="android:fadeScrollbars">false</item>
+    </style>
+    <style name="scrollbar_shape_style">
+        <item name="android:scrollbarAlwaysDrawVerticalTrack">true</item>
+        <item name="android:scrollbarStyle">outsideOverlay</item>
+        <item name="android:scrollbars">vertical</item>
+        <item name="android:fadeScrollbars">true</item>
+        <item name="android:scrollbarThumbVertical">@drawable/scrollbar_vertical_thumb</item>
+        <item name="android:scrollbarTrackVertical">@drawable/scrollbar_vertical_track</item>
+        <item name="android:scrollbarSize">5dp</item>
+
+    </style>
+    <style name="textview_style" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/edit_text_color</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/default_text_size</item>
+        <item name="android:fontFamily">fonts/RobotoCondensed-Regular.ttf</item>
+    </style>
+</resources>

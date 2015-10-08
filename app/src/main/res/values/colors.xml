@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <color name="shadow_color">#455A64</color>
+  <color name="error_text_color">#FF0000</color>
+  <color name="gobuttoncolor">#00ff00</color>
+  <color name="gobuttontextcolor">#FCFBE3</color>
+  <color name="dialog_background">#B0BEC5</color>
+  <color name="edit_text_color">#636363</color>
+  <color name="button_background">#EEEEEE</color>
+  <color name="button_pressed_background">#B0BEC5</color>
+  <color name="backgroundStart">#B0BEC5</color>
+  <color name="backgroundEnd">#B0BEC5</color>
+  <color name="editTextBackground">#FFFFFF</color>
+  <color name="spinner_text_color">#FFFFFF</color>
+  <color name="spinner_text_background">#FFFFFF</color>
+  <color name="brush_chooser_color">#FFFFFF</color>
+    <color name="black_overlay">#66000000</color>
+
+
+  <color name="blue">#33b5e5</color>
+  <color name="darkblue">#0099cc</color>
+  <color name="red">#ff4444</color>
+  <color name="grayStart">#adadad</color>
+  <color name="grayEnd">#ffffff</color>
+  <color name="black">#000000</color>
+  <color name="bg_handle_pressed">#a0a0a0</color>
+
+
+  <color name="calendarSelectedDateBG">#33b5e5</color>
+  <color name="calendarCurrentDateBG">#33b5e5</color>
+  <color name="calendarCellDefaultBG">#EEEEEE</color>
+  <color name="calendarHeaderCellDefaultBG">#B0BEC5</color>
+
+
+
+</resources>

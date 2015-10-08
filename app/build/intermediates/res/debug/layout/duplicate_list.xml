@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    >
+	
+	<TextView android:id="@+id/message" android:layout_width="fill_parent" android:layout_height="wrap_content"  ></TextView>
+    
+    <RadioGroup
+        android:id="@+id/duplicateListRadioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        android:visibility="gone">
+
+        <RadioButton
+            android:id="@+id/replaceRadio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="@string/replaceCurrentList" />
+
+        <RadioButton
+            android:id="@+id/renameRadio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/renameNewList" />
+
+    </RadioGroup>
+	
+    
+    <EditText
+        android:hint="@string/enterListName"
+        android:inputType="text"
+        android:id="@+id/listNameInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+/>
+
+    <LinearLayout
+        style="?android:buttonBarStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" 
+       >
+
+
+        <Button
+            style="?android:buttonBarButtonStyle"
+            android:id="@+id/cancelBtn"
+            android:layout_width="0dp"
+        	android:layout_weight=".5"
+            android:layout_height="fill_parent"
+            android:text="@string/cancel" />
+
+        <Button
+            style="?android:buttonBarButtonStyle"
+            android:id="@+id/okBtn"
+            android:layout_width="0dp"
+            android:layout_weight=".5"
+            android:layout_height="fill_parent"
+            android:text="@string/ok" />
+
+    </LinearLayout>
+	
+</LinearLayout><!-- From: file:/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/src/main/res/layout/duplicate_list.xml -->

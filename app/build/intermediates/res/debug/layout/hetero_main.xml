@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.honeydewit.adapters.draganddrop.DragSortListView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:dslv="http://schemas.android.com/apk/res-auto"
+    android:id="@android:id/list"
+    android:cacheColorHint="@android:color/transparent"
+    android:divider="@drawable/background_gradient"
+    android:dividerHeight="10.0sp"
+    android:layout_alignParentTop="true"
+    android:layout_above="@+id/totalPriceLayout"
+    android:layout_height="wrap_content" android:layout_width="fill_parent" android:choiceMode="multipleChoice"
+    style="@style/scrollbar_shape_style"
+    dslv:drag_enabled="true"
+    dslv:collapsed_height="2dp"
+    dslv:drag_scroll_start="0.33"
+    dslv:max_drag_scroll_speed="0.5"
+    dslv:float_alpha="0.6"
+    dslv:slide_shuffle_speed="0.3"
+    dslv:track_drag_sort="true"
+    dslv:use_default_controller="true"
+    dslv:drag_handle_id="@id/drag_handle"
+    dslv:sort_enabled="true"
+    dslv:remove_enabled="true"
+    dslv:drag_start_mode="onMove"/>
+<!-- From: file:/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/src/main/res/layout/hetero_main.xml -->

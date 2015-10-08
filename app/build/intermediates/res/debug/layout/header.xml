@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_height="wrap_content"
+    android:layout_width="fill_parent"
+    android:background="@drawable/header_style"
+    android:gravity="center_vertical"
+    android:padding="15dp"
+    >
+
+	<ImageView
+
+	    android:id="@+id/honeyDewHeader"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:contentDescription="@string/menuImg"
+	    android:src="@drawable/honedewit_header_no_title_small"
+        android:layout_alignParentTop="true"
+        android:scaleType="fitStart"
+
+        />
+        
+    <TextView
+        android:id="@+id/headerTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textIsSelectable="false"
+        android:singleLine="false"
+        android:maxLines = "2"
+		android:ellipsize="end"
+        android:layout_toRightOf="@id/honeyDewHeader"
+        android:text="@string/app_name"
+        />
+
+
+</RelativeLayout>
+<!-- From: file:/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/src/main/res/layout/header.xml -->

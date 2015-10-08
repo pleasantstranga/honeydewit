@@ -1,0 +1,15 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <!-- Search, should appear as action button -->
+    <item android:checked="true" android:id="@+id/addItemKeyboard"
+          android:title="@string/addItemType"
+          android:icon="@drawable/keyboard"
+          android:showAsAction="always"/>
+    <item android:checked="true" android:id="@+id/addItemDraw"
+          android:title="@string/addItemDraw"
+          android:showAsAction="always"
+          android:icon="@drawable/brush"></item>
+    <item android:checked="true" android:id="@+id/addItemImage"
+        android:title="@string/addItemCamera"
+        android:showAsAction="always"
+        android:icon="@drawable/camera"/>
+</menu>

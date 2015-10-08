@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.honeydewit"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="19"
+        android:targetSdkVersion="22" />
+
+    <uses-permission android:name="android.permission.READ_CALENDAR" />
+    <uses-permission android:name="android.permission.WRITE_CALENDAR" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <uses-feature android:name="android.hardware.camera.flash" />
+
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="com.android.alarm.permission.SET_ALARM" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="com.google.android.gm.permission.READ_GMAIL" />
+    <uses-permission android:name="com.google.android.gm.permission.WRITE_GMAIL" />
+
+    <application
+        android:name="com.honeydewit.HoneyDewApplication"
+        android:allowBackup="false"
+        android:icon="@drawable/honeydewcart_icon"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/defaultTitle" >
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity
+            android:name="com.honeydewit.MainMenuActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.google.android.gms.ads.AdActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize" />
+        <activity
+            android:name="com.honeydewit.CreateEditListsActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.honeydewit.calendar.ListEventsActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/defaultTitle" />
+        <activity
+            android:name="com.honeydewit.CalculatorsActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/calculatorStyle"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.honeydewit.calendar.EventActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.honeydewit.calendar.CalendarActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/defaultTitle" />
+        <activity
+            android:name="com.honeydewit.calendar.CustomRecurrenceActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/defaultTitle"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.honeydewit.calculators.CalculateUnitActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/calculatorStyle" />
+        <activity
+            android:name="com.honeydewit.calculators.CalculateActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/calculatorStyle" />
+        <activity
+            android:name="com.honeydewit.ListsHomeActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:parentActivityName="com.honeydewit.CreateEditListsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/defaultTitle" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".CreateEditListsActivity" />
+        </activity>
+        <activity
+            android:name="com.honeydewit.ListHomeActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/defaultTitle" />
+        <activity
+            android:name="com.honeydewit.ListInfoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/defaultTitle"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.honeydewit.ToDoItemActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/defaultTitle"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="com.honeydewit.ItemActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/defaultTitle"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="com.honeydewit.NotesActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:parentActivityName="com.honeydewit.MainMenuActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/defaultTitle" />
+        <activity
+            android:name="com.honeydewit.ImportInstructionsActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/defaultTitle" />
+        <activity
+            android:name="com.honeydewit.ImportedListNameChoiceActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/defaultDialog" />
+        <activity
+            android:name="com.honeydewit.SheetNameInputDialogActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.DeviceDefault.Dialog" />
+        <activity
+            android:name="com.honeydewit.CheckBoxListActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/defaultTitle" />
+        <activity
+            android:name="com.honeydewit.TextImportActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.honeydewit.HoneyDewImportActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.honeydewit.ExcelImportActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.honeydewit.errorhandling.ExceptionActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/error"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.DeviceDefault.Dialog" >
+        </activity>
+        <activity
+            android:name="com.honeydewit.ImportErrorActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/defaultTitle" />
+        <activity
+            android:name="com.honeydewit.DrawNoteActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/defaultTitle" />
+        <activity
+            android:name="com.honeydewit.ImageViewActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Dialog" />
+        <activity
+            android:name="com.honeydewit.CalculatorsDialogActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.DeviceDefault.Dialog" />
+        <!-- Import Activities -->
+        <activity
+            android:name="com.honeydewit.AttachmentProcessor"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:mimeType="application/vnd.ms-excel" />
+                <data android:pathPattern="/.*\\.xls" />
+                <data android:host="*" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:mimeType="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" />
+                <data android:pathPattern="/.*\\.xlsx" />
+                <data android:host="*" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:mimeType="text/csv" />
+                <data android:pathPattern="/.*\\.csv" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:mimeType="text/plain" />
+                <data android:pathPattern="/.*\\.txt" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:mimeType="text/xml" />
+                <data android:pathPattern="/.*\\.xml" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <action android:name="android.intent.action.EDIT" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:pathPattern="/*.hdew" />
+                <data android:mimeType="text/hdew" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:mimeType="application/hdew" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:mimeType="application/octet-stream" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name="com.honeydewit.services.DeleteListService"
+            android:exported="false" />
+        <service
+            android:name="com.honeydewit.services.ExcelImportService"
+            android:exported="false" />
+        <service
+            android:name="com.honeydewit.services.TextImportService"
+            android:exported="false" />
+        <service
+            android:name="com.honeydewit.services.UpdateRowNumService"
+            android:exported="false" />
+
+        <activity
+            android:name="com.honeydewit.NoteImageActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_note_image"
+            android:screenOrientation="portrait"
+            android:theme="@style/defaultTitle" >
+        </activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+
+	>
+    
+   	<TextView android:id="@+id/message" android:layout_width="fill_parent" android:layout_height="wrap_content"/>
+
+	<Spinner android:id="@+id/calculatorTypes" android:layout_width="fill_parent" android:layout_height="wrap_content"/>
+
+	<LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="horizontal" style="?android:attr/buttonBarStyle">
+   	    <Button android:id="@+id/cancelBtn" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight=".5" style="?android:attr/buttonBarButtonStyle" android:text="@string/cancel"/>
+   	   	<Button android:id="@+id/okBtn"  android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight=".5" style="?android:attr/buttonBarButtonStyle" android:text="@string/ok"/>
+   	</LinearLayout>
+	
+</LinearLayout>
+<!-- From: file:/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/src/main/res/layout/calculators_dialog_activity.xml -->

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:id="@+id/itemLayout">
+  	<ImageButton android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/buttonImg"
+        android:contentDescription="@string/menuImg"
+        android:background="@drawable/no_background"
+        android:layout_gravity="center"
+        />
+    <TextView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+       	android:id="@+id/itemTxt"
+       	android:background="@drawable/no_background"
+       	android:textIsSelectable="false"
+       	android:layout_gravity="center"
+       	android:singleLine="false"
+       	/>
+   
+</LinearLayout>
+
+    <!-- From: file:/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/src/main/res/layout/menu_item.xml -->

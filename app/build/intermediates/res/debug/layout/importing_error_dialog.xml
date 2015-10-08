@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android" 
+    android:layout_width="fill_parent" 
+    android:layout_height="wrap_content" 
+    android:orientation="vertical">
+	
+    <TextView android:text="@string/errorImportingFix" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+	<CheckBox android:button="@drawable/custom_checkbox_design" android:id="@+id/hideDialogInFutureCheckbox" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/dontShow"/>
+ 	<LinearLayout
+		style="?android:buttonBarStyle"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+
+		<Button 
+        	android:id="@+id/ignoreBtn" android:text="@string/ignoreErrors"
+        	android:layout_width="0dp"
+        	android:layout_weight="1"
+        	android:layout_height="wrap_content"
+			style="?android:buttonBarButtonStyle"
+            />
+
+    	<Button
+	        android:id="@+id/showErrorsBtn" android:text="@string/showErrors"
+	        android:layout_width="0dp"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="1"
+			style="?android:buttonBarButtonStyle"
+           />
+	</LinearLayout>
+</LinearLayout><!-- From: file:/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/src/main/res/layout/importing_error_dialog.xml -->

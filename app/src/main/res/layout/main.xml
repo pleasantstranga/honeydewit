@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+	android:id="@+id/mainLayout" android:layout_width="fill_parent"
+	android:layout_height="wrap_content" android:orientation="vertical"
+	>
+
+	<include android:layout_width="fill_parent"
+		android:layout_height="wrap_content" layout="@layout/header"
+		android:id="@+id/header" />
+
+	<GridView android:id="@+id/linksGrid" android:layout_width="fill_parent"
+		android:layout_height="wrap_content" android:layout_below="@+id/header"
+		android:layout_centerHorizontal="true" android:gravity="center"
+        android:numColumns="1" />
+
+	<com.google.android.gms.ads.AdView
+		android:layout_alignParentBottom="true"
+		android:id="@+id/adView" android:layout_width="match_parent"
+		android:layout_height="wrap_content" ads:adSize="BANNER" ads:adUnitId="@string/adMobId" />
+
+</RelativeLayout>
+
+
