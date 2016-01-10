@@ -24,7 +24,6 @@
         android:layout_weight="0.6"
         android:contentDescription="@string/monthNav"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:textStyle="bold" 
         android:background="@drawable/buttonborder"
         android:layout_gravity="center"
         style="?android:attr/buttonBarButtonStyle" >

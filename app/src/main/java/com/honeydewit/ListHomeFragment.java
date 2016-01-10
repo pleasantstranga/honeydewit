@@ -14,51 +14,51 @@ import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 
-import com.honeydewit.adapters.ListItemAdapter;
+import com.honeydewit.adapters.ListHomeAdapter;
 import com.honeydewit.adapters.NoteAdapter;
 import com.honeydewit.adapters.draganddrop.DragSortListView;
-import com.honeydewit.pojos.BasicList;
 import com.honeydewit.pojos.ListItem;
 import com.honeydewit.services.UpdateRowNumService;
 
-import java.util.ArrayList;
 import java.util.List;
 
 
 public class ListHomeFragment extends Fragment {
 
-    RelativeLayout layout;
+    private RelativeLayout layout;
     public ArrayAdapter<ListItem> adapter;
     public DragSortListView listView;
+    private List<ListItem> list;
 
     static final int REQUEST_IMAGE_CAPTURE = 1234;
 
     private HoneyDewApplication hdewContext;
-
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
         hdewContext = (HoneyDewApplication)getActivity().getApplicationContext();
         layout = (RelativeLayout) inflater.inflate(R.layout.listhome, container, false);
         listView =(DragSortListView) layout.findViewById(R.id.list);
+
+        if(getActivity().getIntent().getIntExtra("listId", -1) != -1) {
+            new LoadListAsyncTask().execute(getActivity().getIntent().getIntExtra("listId", -1));
+        }
+        else if(hdewContext != null) {
+            new LoadListAsyncTask().execute(hdewContext.getCurrentList().get_id());
+
+        }
+
         return layout;
     }
-
-    @Override
-    public void onResume() {
-        super.onResume();
-        loadList();
-
-
+    public void goTo(int position) {
+        listView.setSelection(position);
     }
 
-    public void loadList() {
-        int listId = getActivity().getIntent().getIntExtra("listId", -1);
-        new LoadListAsyncTask().execute(listId);
-
-
+    public void addItemToList(ListItem item) {
+        list.add(item);
+        adapter.notifyDataSetChanged();
+        listView.setSelection(listView.getAdapter().getCount()-1);
     }
-
 
 
 
@@ -107,7 +107,7 @@ public class ListHomeFragment extends Fragment {
 
         protected Boolean doInBackground(Integer... listIds) {
 
-            if(hdewContext.getCurrentList() == null) {
+
                 Integer subTypeCatCode = getActivity().getIntent().getIntExtra(Constants.SUB_CAT_CODE, -1);
                 if(null != subTypeCatCode && subTypeCatCode == Constants.NOTES_LIST_TYP_CODE) {
                     Log.d(ListHomeActivity.class.getName(), "Notes: currentlist null : subTypeCatCode = notes");
@@ -127,7 +127,7 @@ public class ListHomeFragment extends Fragment {
                 }
 
 
-            }
+
             if(null == hdewContext.getCurrentList()) {
                 Toast.makeText(getActivity(), "3: " + getText(R.string.commonErrorRedirect), Toast.LENGTH_LONG).show();
                 startActivity(new Intent(getActivity(),MainMenuActivity.class));
@@ -157,19 +157,20 @@ public class ListHomeFragment extends Fragment {
 
         private void createListAdapter(boolean showErrors) {
             //reload data here
-            //if(getActivity().)
+            list = hdewContext.getCurrentList().getItems(showErrors);
+
             if(hdewContext.getCurrentList().getListTypeId() == Constants.SHOPPING_LIST_TYPE_CDE) {
-                adapter = new ListItemAdapter(getActivity(), R.layout.listrow, hdewContext.getCurrentList().getItems(showErrors));
+
+                adapter = new ListHomeAdapter(getActivity(), R.layout.listrow, list);
             }
             else if(hdewContext.getCurrentList().getListTypeId() == Constants.TODO_LIST_TYPE_CDE) {
-                adapter = new ListItemAdapter(getActivity(),R.layout.listrow,  hdewContext.getCurrentList().getItems(showErrors));
+                adapter = new ListHomeAdapter(getActivity(),R.layout.listrow,  list);
             }
             else {
-                adapter = new NoteAdapter((BasicActivity)getActivity(),R.layout.notesrow,  hdewContext.getCurrentList().getItems(false));
+                adapter = new NoteAdapter((BasicActivity)getActivity(),R.layout.notesrow,  list);
             }
 
         }
-
 
 
     }

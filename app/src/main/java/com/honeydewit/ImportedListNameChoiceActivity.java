@@ -70,7 +70,10 @@ public class ImportedListNameChoiceActivity extends BasicActivity implements and
                 fileNameInput.setText(listInfo.getCurrentName());
             }
         }
-    }
+		okButton.setText("OK");
+		cancelButton.setText("Cancel");
+
+	}
 
 	@Override
 	public void onClick(View v) {

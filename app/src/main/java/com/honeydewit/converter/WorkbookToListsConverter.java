@@ -76,9 +76,13 @@ public class WorkbookToListsConverter extends BaseImportParser  {
 		
 		for(Map.Entry<String, Cell> cell : row.getCells().entrySet()) {
 			String columnName = columnHeaders.get(cell.getValue().getColumn());
-			String cellValue = cell.getValue().getStringValue() != null ? cell.getValue().getStringValue().trim() : null;
-			processCell(columnName, cellValue, listItem);
-
+			if(columnName != null) {
+				String cellValue = cell.getValue().getStringValue() != null ? cell.getValue().getStringValue().trim() : null;
+				processCell(columnName, cellValue, listItem);
+			}
+			else {
+				System.out.println("Cell is empty: " + cell.getValue().getColumn());
+			}
 		}
         Log.d(this.getClass().getName(),"ListItem: " + listItem.getName() + "Row Number: " + listItem.getRowNumber());
 		return listItem;

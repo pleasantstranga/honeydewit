@@ -27,7 +27,7 @@
 
 
   <color name="calendarSelectedDateBG">#33b5e5</color>
-  <color name="calendarCurrentDateBG">#33b5e5</color>
+  <color name="calendarCurrentDateBG">#F3ECC7</color>
   <color name="calendarCellDefaultBG">#EEEEEE</color>
   <color name="calendarHeaderCellDefaultBG">#B0BEC5</color>
 

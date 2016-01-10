@@ -19,7 +19,7 @@ public class ExceptionHandler implements
         StringWriter stackTrace = new StringWriter();
         exception.printStackTrace(new PrintWriter(stackTrace));
         StringBuilder errorReport = new StringBuilder();
-        errorReport.append("************ CAUSE OF ERROR ************\n\n");
+        errorReport.append("************ CAUSE OF ERROR *************\n\n");
         errorReport.append(stackTrace.toString());
 
         errorReport.append("\n************ DEVICE INFORMATION ***********\n");
@@ -54,7 +54,7 @@ public class ExceptionHandler implements
         intent.putExtra("error", errorReport.toString());
         myContext.startActivity(intent);
 
-        android.os.Process.killProcess(android.os.Process.myPid());
+       // android.os.Process.killProcess(android.os.Process.myPid());
        // System.exit(10);
     }
 

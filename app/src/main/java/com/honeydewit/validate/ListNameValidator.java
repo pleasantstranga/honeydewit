@@ -24,11 +24,11 @@ public class ListNameValidator extends BaseValidator {
 				getErrorMessages().add(res.getString(R.string.min3CharRequired));
 			}
 			else {
-
+				String currentListName = ((HoneyDewApplication)context).getCurrentList().getListName();
+				boolean isCurrentListName = currentListName.equals(listName);
                 boolean isExists = ((HoneyDewApplication) context.getApplicationContext()).getShoppingListDbHelper().isListExists(listName, Constants.SHOPPING_LIST_TYPE_CDE, true);
-				if(isExists) {
-					getErrorMessages().add(res.getString(R.string.listExists).replace("?", "\"" + listName + "\""));
-				}	
+				getErrorMessages().add(res.getString(R.string.listExists).replace("?", "\"" + listName + "\""));
+
 			}
 
 			return getErrorMessages().size() == 0;

@@ -1,6 +1,8 @@
 package com.honeydewit;
 
-public class ListsHomeAdapterData {
+import java.io.Serializable;
+
+public class ListsHomeAdapterData implements Serializable {
 	private String listName;
 	private Integer itemCount;
 	private Integer errorCount;

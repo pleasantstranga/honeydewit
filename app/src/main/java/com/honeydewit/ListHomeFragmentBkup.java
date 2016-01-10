@@ -12,7 +12,7 @@ import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 
-import com.honeydewit.adapters.ListItemAdapter;
+import com.honeydewit.adapters.ListHomeAdapter;
 import com.honeydewit.adapters.NoteAdapter;
 import com.honeydewit.adapters.draganddrop.DragSortListView;
 import com.honeydewit.pojos.BasicList;
@@ -108,10 +108,10 @@ public class ListHomeFragmentBkup extends Fragment {
         BasicList reloadedList = hdewContext.getShoppingListDbHelper().getListById(hdewContext.getCurrentList().get_id());
         hdewContext.setCurrentList(reloadedList);
         if(hdewContext.getCurrentList().getListTypeId() == Constants.SHOPPING_LIST_TYPE_CDE) {
-            adapter = new ListItemAdapter(getActivity(), R.layout.listrow, hdewContext.getCurrentList().getItems(showErrors));
+            adapter = new ListHomeAdapter(getActivity(), R.layout.listrow, hdewContext.getCurrentList().getItems(showErrors));
         }
         else if(hdewContext.getCurrentList().getListTypeId() == Constants.TODO_LIST_TYPE_CDE) {
-            adapter = new ListItemAdapter(getActivity(),R.layout.listrow,  hdewContext.getCurrentList().getItems(showErrors));
+            adapter = new ListHomeAdapter(getActivity(),R.layout.listrow,  hdewContext.getCurrentList().getItems(showErrors));
         }
         else {
             adapter = new NoteAdapter((BasicActivity)getActivity(),R.layout.notesrow,  hdewContext.getCurrentList().getItems(false));

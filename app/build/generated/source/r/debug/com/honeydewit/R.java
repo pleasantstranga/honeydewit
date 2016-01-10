@@ -688,10 +688,11 @@ containing a value of this type.
         public static final int section_div=0x7f02004e;
         public static final int small=0x7f02004f;
         public static final int spinner_background=0x7f020050;
-        public static final int spinner_selector=0x7f020051;
-        public static final int spinnerbasestyle=0x7f020052;
-        public static final int trash_empty=0x7f020053;
-        public static final int xsmall=0x7f020054;
+        public static final int spinner_image=0x7f020051;
+        public static final int spinner_selector=0x7f020052;
+        public static final int spinnerbasestyle=0x7f020053;
+        public static final int trash_empty=0x7f020054;
+        public static final int xsmall=0x7f020055;
     }
     public static final class id {
         public static final int RLayout=0x7f0a001f;
@@ -1336,26 +1337,27 @@ containing a value of this type.
         public static final int HoneyDewActionBarLarge=0x7f060006;
         public static final int HoneyDewActionBarTheme=0x7f060007;
         public static final int HoneyDewActionBarThemeLarge=0x7f060008;
-        public static final int Theme_IAPTheme=0x7f060009;
-        public static final int WalletFragmentDefaultButtonTextAppearance=0x7f06000a;
-        public static final int WalletFragmentDefaultDetailsHeaderTextAppearance=0x7f06000b;
-        public static final int WalletFragmentDefaultDetailsTextAppearance=0x7f06000c;
-        public static final int WalletFragmentDefaultStyle=0x7f06000d;
-        public static final int actionbartext=0x7f06000e;
-        public static final int actionbartextlarge=0x7f06000f;
-        public static final int button_style=0x7f060010;
-        public static final int calculatorStyle=0x7f060011;
-        public static final int defaultDialog=0x7f060012;
-        public static final int defaultTitle=0x7f060013;
-        public static final int dialog_title_style=0x7f060014;
-        public static final int drawerStyle=0x7f060015;
-        public static final int edittext_style=0x7f060016;
-        public static final int goButtonStyle=0x7f060017;
-        public static final int image_button_style=0x7f060018;
-        public static final int largeTitle=0x7f060019;
-        public static final int listViewStyle=0x7f06001a;
-        public static final int scrollbar_shape_style=0x7f06001b;
-        public static final int textview_style=0x7f06001c;
+        public static final int SpinnerTheme=0x7f060009;
+        public static final int Theme_IAPTheme=0x7f06000a;
+        public static final int WalletFragmentDefaultButtonTextAppearance=0x7f06000b;
+        public static final int WalletFragmentDefaultDetailsHeaderTextAppearance=0x7f06000c;
+        public static final int WalletFragmentDefaultDetailsTextAppearance=0x7f06000d;
+        public static final int WalletFragmentDefaultStyle=0x7f06000e;
+        public static final int actionbartext=0x7f06000f;
+        public static final int actionbartextlarge=0x7f060010;
+        public static final int button_style=0x7f060011;
+        public static final int calculatorStyle=0x7f060012;
+        public static final int defaultDialog=0x7f060013;
+        public static final int defaultTitle=0x7f060014;
+        public static final int dialog_title_style=0x7f060015;
+        public static final int drawerStyle=0x7f060016;
+        public static final int edittext_style=0x7f060017;
+        public static final int goButtonStyle=0x7f060018;
+        public static final int image_button_style=0x7f060019;
+        public static final int largeTitle=0x7f06001a;
+        public static final int listViewStyle=0x7f06001b;
+        public static final int scrollbar_shape_style=0x7f06001c;
+        public static final int textview_style=0x7f06001d;
     }
     public static final class styleable {
         /** Attributes that can be used with a AdsAttrs.

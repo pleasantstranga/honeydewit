@@ -139,8 +139,7 @@
             android:configChanges="orientation|keyboardHidden"/>
         <activity
             android:name=".ImportedListNameChoiceActivity"
-            android:theme="@style/defaultDialog"
-            android:screenOrientation="portrait"
+             android:screenOrientation="portrait"
             android:configChanges="orientation|keyboardHidden"/>
         <activity
             android:name=".SheetNameInputDialogActivity"
@@ -282,6 +281,9 @@
             android:exported="false" />
         <service
             android:name=".services.UpdateRowNumService"
+            android:exported="false" />
+        <service
+            android:name=".services.UpdateListsRowNumService"
             android:exported="false" />
 
         <activity

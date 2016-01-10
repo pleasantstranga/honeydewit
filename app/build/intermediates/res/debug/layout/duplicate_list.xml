@@ -39,7 +39,6 @@
 />
 
     <LinearLayout
-        style="?android:buttonBarStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal" 
@@ -47,19 +46,18 @@
 
 
         <Button
-            style="?android:buttonBarButtonStyle"
+
             android:id="@+id/cancelBtn"
             android:layout_width="0dp"
         	android:layout_weight=".5"
-            android:layout_height="fill_parent"
+            android:layout_height="wrap_content"
             android:text="@string/cancel" />
 
         <Button
-            style="?android:buttonBarButtonStyle"
             android:id="@+id/okBtn"
             android:layout_width="0dp"
             android:layout_weight=".5"
-            android:layout_height="fill_parent"
+            android:layout_height="wrap_content"
             android:text="@string/ok" />
 
     </LinearLayout>

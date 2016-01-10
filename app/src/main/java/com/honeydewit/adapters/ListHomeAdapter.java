@@ -39,11 +39,11 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ListItemAdapter extends ArrayAdapter<ListItem> implements Serializable{
+public class ListHomeAdapter extends ArrayAdapter<ListItem> implements Serializable{
 	private ListItemWatcher watcher;
 	Integer listTypeId;
 
-	public ListItemAdapter(Context context, int layoutId, List<ListItem> items) {
+	public ListHomeAdapter(Context context, int layoutId, List<ListItem> items) {
 		super(context, R.layout.listrow, R.id.topRow, items);
 		if(items != null && items.size() > 0) {
 			listTypeId = items.get(0).getList().getListTypeId();
@@ -132,7 +132,6 @@ public class ListItemAdapter extends ArrayAdapter<ListItem> implements Serializa
 				Intent newListIntent = null;
 				if(listTypeId == Constants.SHOPPING_LIST_TYPE_CDE) {
 					newListIntent = new Intent(getContext(), ItemActivity.class);
-
 				}
 				else if(listTypeId == Constants.TODO_LIST_TYPE_CDE) {
 					newListIntent = new Intent(getContext(), ToDoItemActivity.class);
@@ -217,12 +216,17 @@ public class ListItemAdapter extends ArrayAdapter<ListItem> implements Serializa
 				if(bm == null) {
 					bm = ThumbnailUtils.extractThumbnail(BitmapFactory.decodeResource(getContext().getResources(), R.drawable.nophoto, null), 26, 26);
 				}
-				imageView.setImageBitmap(bm);
+				if(bm != null) {
+					imageView.setImageBitmap(bm);
+					imageView.setVisibility(View.VISIBLE);
+				}
 			}
 			else {
 				imageView.setImageDrawable(getContext().getResources().getDrawable(R.drawable.nophoto));
+				imageView.setVisibility(View.VISIBLE);
+
 			}
-			imageView.setVisibility(View.VISIBLE);
+
 		}
 
 

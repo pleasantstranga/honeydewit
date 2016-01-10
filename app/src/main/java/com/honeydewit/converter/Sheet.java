@@ -5,6 +5,7 @@ import android.annotation.SuppressLint;
 import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.TreeMap;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -17,7 +18,7 @@ public class Sheet implements Serializable {
 	private String id;
 	private Integer index;
 	@SuppressLint("UseSparseArrays")
-	private Map<Integer,Row> rows = new HashMap<Integer, Row>();
+	private Map<Integer,Row> rows = new TreeMap<>();
 	private Pattern pattern = Pattern.compile("\\d+"); 
 	private Workbook workbook;
 	private String revisedName = null;

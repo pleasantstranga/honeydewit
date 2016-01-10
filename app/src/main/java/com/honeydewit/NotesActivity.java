@@ -119,18 +119,17 @@ public class NotesActivity extends OptionsMenuActivity {
 
 		
 		if(noteValidator.validate(getBaseContext(), listItem)) {
-			 
-			 try {
-				 getApplicationContext().getShoppingListDbHelper().addUpdateListItem(listItem);
-				  
-			 }
-			 catch(SQLException e) {
-				e.printStackTrace(); 
-			 }
-			 finally {
-				 
-				 finish();
-			 }
+
+			boolean isUpdate = listItem.get_id() != null;
+
+			int listId =getApplicationContext().getShoppingListDbHelper().addUpdateListItem(listItem);
+
+			getApplicationContext().setCurrentItem(listItem);
+			getIntent().putExtra("isUpdate", isUpdate);
+			setResult(RESULT_OK, getIntent());
+
+
+			finish();
 		    					
 		}
 		else {

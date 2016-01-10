@@ -53,13 +53,9 @@ public class ListEventInstancesAdapter extends ArrayAdapter<EventInstance> {
                     vi= (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
                     linearLayout = (LinearLayout)vi.inflate(resourceId, null);
                 }
-                if (position % 2 == 1) {
-                	linearLayout.setBackgroundColor(Color.GRAY);  
-        		} else {
-        			linearLayout.setBackgroundColor(Color.LTGRAY);  
-        		}
+
                 final EventInstance instance = items.get(position);
-                if (instance != null) {                		
+                if (instance != null) {
                         TextView eventTitle = (TextView) linearLayout.findViewById(R.id.eventTitle);
                         TextView eventDate = (TextView) linearLayout.findViewById(R.id.eventDate);
                         TextView eventTime = (TextView) linearLayout.findViewById(R.id.eventTime);

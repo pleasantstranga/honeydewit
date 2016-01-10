@@ -482,176 +482,180 @@ ADDED from AndroidManifest.xml:135:9
 activity#com.honeydewit.ImportedListNameChoiceActivity
 ADDED from AndroidManifest.xml:140:9
 	android:screenOrientation
-		ADDED from AndroidManifest.xml:143:13
+		ADDED from AndroidManifest.xml:142:14
 	android:configChanges
-		ADDED from AndroidManifest.xml:144:13
-	android:theme
-		ADDED from AndroidManifest.xml:142:13
+		ADDED from AndroidManifest.xml:143:13
 	android:name
 		ADDED from AndroidManifest.xml:141:13
 activity#com.honeydewit.SheetNameInputDialogActivity
-ADDED from AndroidManifest.xml:145:9
+ADDED from AndroidManifest.xml:144:9
 	android:screenOrientation
-		ADDED from AndroidManifest.xml:148:13
-	android:configChanges
-		ADDED from AndroidManifest.xml:149:13
-	android:theme
 		ADDED from AndroidManifest.xml:147:13
-	android:name
+	android:configChanges
+		ADDED from AndroidManifest.xml:148:13
+	android:theme
 		ADDED from AndroidManifest.xml:146:13
+	android:name
+		ADDED from AndroidManifest.xml:145:13
 activity#com.honeydewit.CheckBoxListActivity
-ADDED from AndroidManifest.xml:150:9
+ADDED from AndroidManifest.xml:149:9
 	android:screenOrientation
-		ADDED from AndroidManifest.xml:153:13
-	android:configChanges
-		ADDED from AndroidManifest.xml:154:13
-	android:theme
 		ADDED from AndroidManifest.xml:152:13
-	android:name
+	android:configChanges
+		ADDED from AndroidManifest.xml:153:13
+	android:theme
 		ADDED from AndroidManifest.xml:151:13
+	android:name
+		ADDED from AndroidManifest.xml:150:13
 activity#com.honeydewit.TextImportActivity
-ADDED from AndroidManifest.xml:155:9
+ADDED from AndroidManifest.xml:154:9
 	android:screenOrientation
-		ADDED from AndroidManifest.xml:157:13
-	android:configChanges
-		ADDED from AndroidManifest.xml:158:13
-	android:name
 		ADDED from AndroidManifest.xml:156:13
+	android:configChanges
+		ADDED from AndroidManifest.xml:157:13
+	android:name
+		ADDED from AndroidManifest.xml:155:13
 activity#com.honeydewit.HoneyDewImportActivity
-ADDED from AndroidManifest.xml:159:9
+ADDED from AndroidManifest.xml:158:9
 	android:screenOrientation
-		ADDED from AndroidManifest.xml:161:13
-	android:configChanges
-		ADDED from AndroidManifest.xml:162:13
-	android:name
 		ADDED from AndroidManifest.xml:160:13
+	android:configChanges
+		ADDED from AndroidManifest.xml:161:13
+	android:name
+		ADDED from AndroidManifest.xml:159:13
 activity#com.honeydewit.ExcelImportActivity
-ADDED from AndroidManifest.xml:163:9
+ADDED from AndroidManifest.xml:162:9
 	android:screenOrientation
-		ADDED from AndroidManifest.xml:165:13
-	android:configChanges
-		ADDED from AndroidManifest.xml:166:13
-	android:name
 		ADDED from AndroidManifest.xml:164:13
+	android:configChanges
+		ADDED from AndroidManifest.xml:165:13
+	android:name
+		ADDED from AndroidManifest.xml:163:13
 activity#com.honeydewit.errorhandling.ExceptionActivity
-ADDED from AndroidManifest.xml:167:9
+ADDED from AndroidManifest.xml:166:9
 	android:screenOrientation
-		ADDED from AndroidManifest.xml:171:13
-	android:label
-		ADDED from AndroidManifest.xml:169:13
-	android:configChanges
-		ADDED from AndroidManifest.xml:172:13
-	android:theme
 		ADDED from AndroidManifest.xml:170:13
-	android:name
-		ADDED from AndroidManifest.xml:168:13
-activity#com.honeydewit.ImportErrorActivity
-ADDED from AndroidManifest.xml:174:9
-	android:screenOrientation
-		ADDED from AndroidManifest.xml:177:13
-	android:configChanges
-		ADDED from AndroidManifest.xml:178:13
-	android:theme
-		ADDED from AndroidManifest.xml:176:13
-	android:name
-		ADDED from AndroidManifest.xml:175:13
-activity#com.honeydewit.DrawNoteActivity
-ADDED from AndroidManifest.xml:179:9
-	android:screenOrientation
-		ADDED from AndroidManifest.xml:182:13
 	android:label
+		ADDED from AndroidManifest.xml:168:13
+	android:configChanges
+		ADDED from AndroidManifest.xml:171:13
+	android:theme
+		ADDED from AndroidManifest.xml:169:13
+	android:name
+		ADDED from AndroidManifest.xml:167:13
+activity#com.honeydewit.ImportErrorActivity
+ADDED from AndroidManifest.xml:173:9
+	android:screenOrientation
+		ADDED from AndroidManifest.xml:176:13
+	android:configChanges
+		ADDED from AndroidManifest.xml:177:13
+	android:theme
+		ADDED from AndroidManifest.xml:175:13
+	android:name
+		ADDED from AndroidManifest.xml:174:13
+activity#com.honeydewit.DrawNoteActivity
+ADDED from AndroidManifest.xml:178:9
+	android:screenOrientation
 		ADDED from AndroidManifest.xml:181:13
-	android:configChanges
-		ADDED from AndroidManifest.xml:184:13
-	android:theme
-		ADDED from AndroidManifest.xml:183:13
-	android:name
+	android:label
 		ADDED from AndroidManifest.xml:180:13
+	android:configChanges
+		ADDED from AndroidManifest.xml:183:13
+	android:theme
+		ADDED from AndroidManifest.xml:182:13
+	android:name
+		ADDED from AndroidManifest.xml:179:13
 activity#com.honeydewit.ImageViewActivity
-ADDED from AndroidManifest.xml:185:9
+ADDED from AndroidManifest.xml:184:9
 	android:screenOrientation
-		ADDED from AndroidManifest.xml:188:13
-	android:configChanges
-		ADDED from AndroidManifest.xml:189:13
-	android:theme
 		ADDED from AndroidManifest.xml:187:13
-	android:name
-		ADDED from AndroidManifest.xml:186:13
-activity#com.honeydewit.CalculatorsDialogActivity
-ADDED from AndroidManifest.xml:190:9
-	android:screenOrientation
-		ADDED from AndroidManifest.xml:193:13
 	android:configChanges
-		ADDED from AndroidManifest.xml:194:13
+		ADDED from AndroidManifest.xml:188:13
 	android:theme
-		ADDED from AndroidManifest.xml:192:13
+		ADDED from AndroidManifest.xml:186:13
 	android:name
-		ADDED from AndroidManifest.xml:191:13
-activity#com.honeydewit.AttachmentProcessor
-ADDED from AndroidManifest.xml:196:9
+		ADDED from AndroidManifest.xml:185:13
+activity#com.honeydewit.CalculatorsDialogActivity
+ADDED from AndroidManifest.xml:189:9
 	android:screenOrientation
-		ADDED from AndroidManifest.xml:198:13
+		ADDED from AndroidManifest.xml:192:13
 	android:configChanges
-		ADDED from AndroidManifest.xml:199:13
+		ADDED from AndroidManifest.xml:193:13
+	android:theme
+		ADDED from AndroidManifest.xml:191:13
 	android:name
+		ADDED from AndroidManifest.xml:190:13
+activity#com.honeydewit.AttachmentProcessor
+ADDED from AndroidManifest.xml:195:9
+	android:screenOrientation
 		ADDED from AndroidManifest.xml:197:13
-intent-filter#android.intent.action.VIEW+android.intent.category.BROWSABLE+android.intent.category.DEFAULT
-ADDED from AndroidManifest.xml:200:13
-action#android.intent.action.VIEW
-ADDED from AndroidManifest.xml:201:17
+	android:configChanges
+		ADDED from AndroidManifest.xml:198:13
 	android:name
-		ADDED from AndroidManifest.xml:201:25
+		ADDED from AndroidManifest.xml:196:13
+intent-filter#android.intent.action.VIEW+android.intent.category.BROWSABLE+android.intent.category.DEFAULT
+ADDED from AndroidManifest.xml:199:13
+action#android.intent.action.VIEW
+ADDED from AndroidManifest.xml:200:17
+	android:name
+		ADDED from AndroidManifest.xml:200:25
 category#android.intent.category.DEFAULT
+ADDED from AndroidManifest.xml:202:17
+	android:name
+		ADDED from AndroidManifest.xml:202:27
+category#android.intent.category.BROWSABLE
 ADDED from AndroidManifest.xml:203:17
 	android:name
 		ADDED from AndroidManifest.xml:203:27
-category#android.intent.category.BROWSABLE
-ADDED from AndroidManifest.xml:204:17
-	android:name
-		ADDED from AndroidManifest.xml:204:27
 data
-ADDED from AndroidManifest.xml:206:17
+ADDED from AndroidManifest.xml:205:17
 	android:mimeType
-		ADDED from AndroidManifest.xml:206:23
+		ADDED from AndroidManifest.xml:205:23
 intent-filter#android.intent.action.EDIT+android.intent.action.VIEW+android.intent.category.DEFAULT
-ADDED from AndroidManifest.xml:247:13
+ADDED from AndroidManifest.xml:246:13
 action#android.intent.action.EDIT
-ADDED from AndroidManifest.xml:249:17
+ADDED from AndroidManifest.xml:248:17
 	android:name
-		ADDED from AndroidManifest.xml:249:25
+		ADDED from AndroidManifest.xml:248:25
 service#com.honeydewit.services.DeleteListService
-ADDED from AndroidManifest.xml:274:9
+ADDED from AndroidManifest.xml:273:9
 	android:exported
-		ADDED from AndroidManifest.xml:276:13
-	android:name
 		ADDED from AndroidManifest.xml:275:13
+	android:name
+		ADDED from AndroidManifest.xml:274:13
 service#com.honeydewit.services.ExcelImportService
-ADDED from AndroidManifest.xml:277:9
+ADDED from AndroidManifest.xml:276:9
 	android:exported
-		ADDED from AndroidManifest.xml:279:13
-	android:name
 		ADDED from AndroidManifest.xml:278:13
+	android:name
+		ADDED from AndroidManifest.xml:277:13
 service#com.honeydewit.services.TextImportService
-ADDED from AndroidManifest.xml:280:9
+ADDED from AndroidManifest.xml:279:9
 	android:exported
-		ADDED from AndroidManifest.xml:282:13
-	android:name
 		ADDED from AndroidManifest.xml:281:13
+	android:name
+		ADDED from AndroidManifest.xml:280:13
 service#com.honeydewit.services.UpdateRowNumService
-ADDED from AndroidManifest.xml:283:9
+ADDED from AndroidManifest.xml:282:9
 	android:exported
-		ADDED from AndroidManifest.xml:285:13
-	android:name
 		ADDED from AndroidManifest.xml:284:13
-activity#com.honeydewit.NoteImageActivity
-ADDED from AndroidManifest.xml:287:9
-	android:screenOrientation
-		ADDED from AndroidManifest.xml:290:13
-	android:label
-		ADDED from AndroidManifest.xml:292:13
-	android:configChanges
-		ADDED from AndroidManifest.xml:291:13
-	android:theme
-		ADDED from AndroidManifest.xml:289:13
 	android:name
-		ADDED from AndroidManifest.xml:288:13
+		ADDED from AndroidManifest.xml:283:13
+service#com.honeydewit.services.UpdateListsRowNumService
+ADDED from AndroidManifest.xml:285:9
+	android:exported
+		ADDED from AndroidManifest.xml:287:13
+	android:name
+		ADDED from AndroidManifest.xml:286:13
+activity#com.honeydewit.NoteImageActivity
+ADDED from AndroidManifest.xml:289:9
+	android:screenOrientation
+		ADDED from AndroidManifest.xml:292:13
+	android:label
+		ADDED from AndroidManifest.xml:294:13
+	android:configChanges
+		ADDED from AndroidManifest.xml:293:13
+	android:theme
+		ADDED from AndroidManifest.xml:291:13
+	android:name
+		ADDED from AndroidManifest.xml:290:13

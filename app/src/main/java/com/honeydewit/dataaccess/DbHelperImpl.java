@@ -12,6 +12,7 @@ import android.widget.ArrayAdapter;
 import com.honeydewit.Constants;
 import com.honeydewit.ImportError;
 import com.honeydewit.ListsHomeAdapterData;
+import com.honeydewit.adapters.ListsHomeAdapter;
 import com.honeydewit.pojos.BasicList;
 import com.honeydewit.pojos.BasicListLight;
 import com.honeydewit.pojos.ImportHeader;
@@ -30,6 +31,7 @@ import com.j256.ormlite.stmt.Where;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -973,16 +975,15 @@ public void deleteList(BasicList list)  {
 	}
 	/**
 	 * Updates the row numbers of all lists in an adapter by their position in the adapter;
-	 * @param adapter The adapter
+	 * @param listPositions The positions
 	 */
-	public void updateListRowNumbersByAdapterPosition(ArrayAdapter<ListsHomeAdapterData> adapter) {
+	public void updateListRowNumbersByAdapterPosition(Map<Integer,Integer> listPositions) {
 		try {
-			for(int position = 0; position < adapter.getCount(); position++) {
+			for(Map.Entry entry : listPositions.entrySet()) {
 				int update = 0;
-				ListsHomeAdapterData list = adapter.getItem(position);
 				UpdateBuilder<BasicList, Integer> updateBuilder = getListDao().updateBuilder();
-				updateBuilder.updateColumnValue(BasicList.ROW_NUM_CMN, position);
-				updateBuilder.where().idEq(list.getListId());
+				updateBuilder.updateColumnValue(BasicList.ROW_NUM_CMN, (Integer)entry.getValue());
+				updateBuilder.where().idEq((Integer)entry.getKey());
 				update = updateBuilder.update();
 			}
 		}

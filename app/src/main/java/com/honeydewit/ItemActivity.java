@@ -52,7 +52,6 @@ public class ItemActivity extends OptionsMenuActivity implements OnClickListener
 	private BaseValidator listItemValidator;
 	private String tempImageName = null;
 	private String calcType = null;
-	private Integer position = null;
 	static final int REQUEST_IMAGE_CAPTURE = 1234;
 	private ListView errorListView;
 	private ArrayAdapter<String> errorsAdapter = null;
@@ -95,7 +94,7 @@ public class ItemActivity extends OptionsMenuActivity implements OnClickListener
 			save();
 		}
 		else if(v == cancelButton) {
-			showCancelMessageDialog( R.string.areYouSure, position);
+			showCancelMessageDialog( R.string.areYouSure, listItem.getRowNumber());
 		}
 		else if(v == cameraButton) {
 			tempImageName = DateUtil.tempFileNameFormat.format(new Date());
@@ -149,21 +148,16 @@ public class ItemActivity extends OptionsMenuActivity implements OnClickListener
 			boolean isUpdate = listItem.get_id() != null;
 
 			int listId =getApplicationContext().getShoppingListDbHelper().addUpdateListItem(listItem);
-			getApplicationContext().getShoppingListDbHelper().deleteImportErrors(listItem);
-			
-			if(listId != -1) {
-				getIntent().putExtra("isUpdate", isUpdate);
-				getIntent().putExtra(Constants.POSITION, position);
-				setResult(RESULT_OK, getIntent());
-			}
-			else {
-				if(null != this) {
-					Toast.makeText(getApplicationContext(), "1:" + getText(R.string.commonErrorRedirect).toString(), Toast.LENGTH_LONG).show();
-					Intent intent = new Intent(this, MainMenuActivity.class);
-					startActivity(intent);
-				}
 
+			if(isUpdate) {
+				getApplicationContext().getShoppingListDbHelper().deleteImportErrors(listItem);
 			}
+
+			getApplicationContext().setCurrentItem(listItem);
+			getIntent().putExtra("isUpdate", isUpdate);
+			setResult(RESULT_OK, getIntent());
+
+
 			finish();
 		}
 		else {
@@ -267,14 +261,10 @@ public class ItemActivity extends OptionsMenuActivity implements OnClickListener
 			}
 	
 			else {
-				listItem = new ListItem(); 
+				listItem = new ListItem();
 				listItem.setQuantity(1D);
 				quantity.setText(listItem.getQuantity().toString());
 				listItem.setList(getApplicationContext().getCurrentList());
-			}
-			if(listItem.getRowNumber() != null) {
-				position = getIntent().getIntExtra(Constants.POSITION, listItem.getRowNumber());
-
 			}
 		}
 	}
@@ -292,7 +282,7 @@ public class ItemActivity extends OptionsMenuActivity implements OnClickListener
 				}
 
 			}
-		}, position);
+		}, listItem.getRowNumber());
 	}
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
@@ -313,7 +303,7 @@ public class ItemActivity extends OptionsMenuActivity implements OnClickListener
 		}
 		else if(itemId == R.id.optionCancelButton) {
 
-			showCancelMessageDialog(R.string.areYouSure, position);
+			showCancelMessageDialog(R.string.areYouSure, listItem.getRowNumber());
 			return true;
 		}
 		return false;

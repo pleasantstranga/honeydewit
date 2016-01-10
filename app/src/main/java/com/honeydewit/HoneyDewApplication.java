@@ -1,5 +1,6 @@
 package com.honeydewit;
 
+import android.app.Activity;
 import android.app.Application;
 import android.content.Context;
 import android.content.Intent;
@@ -17,6 +18,7 @@ import com.google.android.gms.ads.AdView;
 import com.honeydewit.calendar.CalendarDbHelper;
 import com.honeydewit.dataaccess.DbHelperImpl;
 import com.honeydewit.pojos.BasicList;
+import com.honeydewit.pojos.ListItem;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -27,6 +29,7 @@ import java.util.Set;
 public class HoneyDewApplication extends Application {
 	
 	private BasicList currentList;
+	private ListItem currentItem;
 
 	private static Typeface typeface;
 	private static DbHelperImpl shoppingListDbHelper;
@@ -177,21 +180,7 @@ public class HoneyDewApplication extends Application {
     	}
 		
 	}
-    public void sendError(String[] emailAddresses, String error) {
-        if (error != null) {
-            Intent emailIntent = new Intent(android.content.Intent.ACTION_SEND);
-            emailIntent.putExtra(android.content.Intent.EXTRA_EMAIL,emailAddresses);
-            emailIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, "HoneyDewIt Error Report");
-            emailIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-            emailIntent.setType("plain/text");
-            emailIntent.putExtra(android.content.Intent.EXTRA_TEXT,error);
-            startActivity(emailIntent);
-        }
-        else {
-            Toast.makeText(this, "There was an error sending the report. Please try again", Toast.LENGTH_LONG).show();
-        }
 
-    }
     public File getExportTempDirectory() {
 		File folder = new File(storageDirectory.toString() + "/HoneyDewIt/temp/export/");
 		if(!folder.exists()){
@@ -199,5 +188,13 @@ public class HoneyDewApplication extends Application {
 		}
 		return folder;
     }
-    
+	public ListItem getCurrentItem() {
+		return currentItem;
+	}
+
+	public void setCurrentItem(ListItem currentItem) {
+		this.currentItem = currentItem;
+	}
+
+
 }

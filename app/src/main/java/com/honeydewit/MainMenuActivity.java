@@ -8,7 +8,7 @@ import com.google.android.gms.ads.AdView;
 
 
 public class MainMenuActivity extends MenuActivity {
-
+	private boolean isExit = false;
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		
@@ -32,7 +32,13 @@ public class MainMenuActivity extends MenuActivity {
 
 	@Override
 	public void onBackPressed() {
-		showExitDialog();
+		if(isExit) {
+			super.onBackPressed();
+		}
+		else {
+			showExitDialog();
+		}
+
 	}
 	public void showExitDialog() {
 
@@ -63,7 +69,7 @@ public class MainMenuActivity extends MenuActivity {
 
 			}
 		});
-
+		isExit = true;
 
 	}
 }

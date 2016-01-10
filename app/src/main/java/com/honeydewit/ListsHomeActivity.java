@@ -12,9 +12,14 @@ import android.widget.ArrayAdapter;
 import com.honeydewit.adapters.ListsHomeAdapter;
 import com.honeydewit.adapters.draganddrop.DragSortListView;
 import com.honeydewit.pojos.BasicList;
+import com.honeydewit.pojos.ListItem;
+import com.honeydewit.services.UpdateListsRowNumService;
+import com.honeydewit.services.UpdateRowNumService;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class ListsHomeActivity extends OptionsMenuActivity{
    
@@ -97,48 +102,37 @@ public class ListsHomeActivity extends OptionsMenuActivity{
         super.onBackPressed();
 
     }
-    private DragSortListView.DropListener onDrop =
-            new DragSortListView.DropListener() {
-                @Override
-                public void drop(int from, int to) {
-                    ListsHomeAdapterData item = listAdapter.getItem(from);
-
-                    listAdapter.remove(item);
-                    listAdapter.insert(item, to);
-
-                    Intent intent = new Intent(getBaseContext(),UpdateRowNumbersTask.class);
-                    intent.putExtra("adapter", listAdapter);
-                    startService(intent);
-                }
-            };
-
-    private DragSortListView.RemoveListener onRemove =
-            new DragSortListView.RemoveListener() {
-                @Override
-                public void remove(int which) {
-                    listAdapter.remove(listAdapter.getItem(which));
-                }
-            };
-
-        private class UpdateRowNumbersTask extends IntentService {
-
-        public UpdateRowNumbersTask() {
-            super("UpdateRowNumbersTask");
-        }
-
+    private DragSortListView.DropListener onDrop = new DragSortListView.DropListener() {
         @Override
-        protected void onHandleIntent(Intent intent) {
+        public void drop(int from, int to) {
             try {
-                ArrayAdapter adapter = (ArrayAdapter)intent.getSerializableExtra("adapter");
-                ((HoneyDewApplication)getApplicationContext()).getShoppingListDbHelper().updateListRowNumbersByAdapterPosition(adapter);
+                ListsHomeAdapterData item = listAdapter.getItem(from);
 
-            } catch (Exception e) {
+                listAdapter.remove(item);
+                listAdapter.insert(item, to);
+
+                HashMap<Integer,Integer> listPositions = new HashMap<>();
+                for(int position = 0; position < listAdapter.getCount(); position++) {
+                    int update = 0;
+                    ListsHomeAdapterData list = listAdapter.getItem(position);
+                    listPositions.put(list.getListId(),position);
+                }
+                Intent intent = new Intent(getBaseContext(), UpdateListsRowNumService.class);
+                intent.putExtra("positions", listPositions);
+                startService(intent);
+            }
+            catch(Exception e) {
                 e.printStackTrace();
-            } finally {
-
             }
         }
+    };
+
+    private DragSortListView.RemoveListener onRemove = new DragSortListView.RemoveListener() {
+        @Override
+        public void remove(int which) {
+            listAdapter.remove(listAdapter.getItem(which));
+        }
+    };
 
 
-    }
 }

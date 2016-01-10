@@ -21,6 +21,7 @@ import android.widget.TableRow;
 import android.widget.TextView;
 
 import com.honeydewit.errorhandling.ExceptionHandler;
+import com.honeydewit.pojos.ListItem;
 import com.honeydewit.utils.ImageUtil;
 
 import java.io.File;
@@ -135,9 +136,6 @@ public class BasicActivity extends FragmentActivity {
 			@Override
 			public void onClick(View v) {
 				Intent intent = getIntent();
-				if (null != arrayAdapterPositionToReturnTo) {
-					intent.putExtra(Constants.POSITION, arrayAdapterPositionToReturnTo);
-				}
 				setResult(RESULT_CANCELED, intent);
 					finish();
 				dialog.dismiss();
@@ -215,9 +213,6 @@ public class BasicActivity extends FragmentActivity {
 				try {
 					saveMethod.call();
 					Intent intent = getIntent();
-					if (null != arrayAdapterPositionToReturnTo) {
-						intent.putExtra(Constants.POSITION, arrayAdapterPositionToReturnTo);
-					}
 					setResult(RESULT_OK, intent);
 					dialog.dismiss();
 					finish();
@@ -232,9 +227,6 @@ public class BasicActivity extends FragmentActivity {
 			@Override
 			public void onClick(View view) {
 				Intent intent = getIntent();
-				if (null != arrayAdapterPositionToReturnTo) {
-					intent.putExtra(Constants.POSITION, arrayAdapterPositionToReturnTo);
-				}
 				setResult(RESULT_CANCELED, intent);
 				dialog.dismiss();
 				finish();
@@ -286,5 +278,7 @@ public class BasicActivity extends FragmentActivity {
 		super.onPostResume();
 
 
+	}
+	public void saveListItem(ListItem item) {
 	}
 }

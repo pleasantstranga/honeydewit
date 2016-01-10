@@ -1,10 +1,13 @@
 package com.honeydewit.errorhandling;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.ActionMode;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.Toast;
 
 import com.honeydewit.BasicActivity;
 import com.honeydewit.MainMenuActivity;
@@ -26,15 +29,23 @@ public class ExceptionActivity extends BasicActivity {
         sendReportBtn = (Button)findViewById(R.id.sendReportBtn);
         goHomeBtn = (Button)findViewById(R.id.goHomeBtn);
 
-        sendReportBtn.setOnClickListener(new View.OnClickListener() {
+        sendReportBtn.setOnClickListener( new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String error = getIntent().getStringExtra("error");
-                getApplicationContext().sendError(new String[] {"aaronbernstein1975@gmail.com"}, error);
-
-                Intent intent = new Intent(getBaseContext(), MainMenuActivity.class);
-                startActivity(intent);
-                finish();
+                String[] emailAddresses = new String[] {"aaronbernstein1975@gmail.com"};
+                if (error != null) {
+                    Intent emailIntent = new Intent(android.content.Intent.ACTION_SEND);
+                    emailIntent.putExtra(android.content.Intent.EXTRA_EMAIL,emailAddresses);
+                    emailIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, "HoneyDewIt Error Report");
+                    emailIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                    emailIntent.setType("plain/text");
+                    emailIntent.putExtra(android.content.Intent.EXTRA_TEXT,error);
+                    startActivityForResult(emailIntent,100);
+                }
+                else {
+                    Toast.makeText(getBaseContext(), "There was an error sending the report. Please try again", Toast.LENGTH_LONG).show();
+                }
 
             }
         });
@@ -56,5 +67,13 @@ public class ExceptionActivity extends BasicActivity {
         getApplicationContext().getShoppingListDbHelper().close();
         getApplicationContext().setShoppingListDbHelper(null);
         getApplicationContext().setCalDbHelper(null);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        Intent intent = new Intent(getBaseContext(), MainMenuActivity.class);
+        startActivity(intent);
+        finish();
     }
 }

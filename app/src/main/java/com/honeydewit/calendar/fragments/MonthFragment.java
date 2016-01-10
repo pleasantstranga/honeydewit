@@ -41,12 +41,14 @@ public class MonthFragment extends Fragment implements OnClickListener,	OnLongCl
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
 		setRetainInstance(true);
+
 		LinearLayout monthtab = (LinearLayout) inflater.inflate(R.layout.monthtab, container, false);
 		ListView listEvents = (ListView) monthtab.findViewById(android.R.id.list);
+
 		eventAdapter = new ListEventInstancesAdapter(getActivity(), new ArrayList<EventInstance>());
 		eventAdapter.setShowDate(false);
-		calendarView = (CalendarView) monthtab.findViewById(R.id.calendarView);
 
+		calendarView = (CalendarView) monthtab.findViewById(R.id.calendarView);
 		calendarView.addDateCellOnClickListener(this);
 		calendarView.addDateCellOnLongClickListener(this);
 		calendarView.addNavigationOnClickListener(this);

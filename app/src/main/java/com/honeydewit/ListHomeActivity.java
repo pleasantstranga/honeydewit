@@ -19,6 +19,7 @@ import android.widget.Toast;
 
 import com.honeydewit.calendar.CalendarActivity;
 import com.honeydewit.pojos.BasicList;
+import com.honeydewit.pojos.ListItem;
 import com.honeydewit.utils.EmailUtil;
 import com.honeydewit.validate.BaseValidator;
 import com.honeydewit.validate.ListNameValidator;
@@ -29,7 +30,6 @@ public class ListHomeActivity extends BasicActivity {
 	private static final int RENAME_LIST = 3245;
 	private static final int ADD_REMINDER_REQ = 345;
 	private ActionBarDrawerToggle mDrawerToggle = null;
-	public Integer position = null;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -89,7 +89,10 @@ public class ListHomeActivity extends BasicActivity {
 			@Override
 			public void onClick(View v) {
 				BaseValidator validator = new ListNameValidator();
-				if (validator.validate(getBaseContext(), dialog.getEditTextValue())) {
+				if(dialog.getEditTextValue().equals(getApplicationContext().getCurrentList().getListName())) {
+					dialog.dismiss();
+				}
+				else if (validator.validate(getBaseContext(), dialog.getEditTextValue())) {
 					getApplicationContext().getCurrentList().setListName(dialog.getEditTextValue());
 					getApplicationContext().getShoppingListDbHelper().addUpdateShoppingList(getApplicationContext().getCurrentList());
 					setTitle(getApplicationContext().getCurrentList().getListName());
@@ -97,8 +100,6 @@ public class ListHomeActivity extends BasicActivity {
 				} else {
 					dialog.setMessage(validator.getErrorMessages().get(0));
 					dialog.getMessage().setTextColor(getResources().getColor(R.color.red));
-
-
 				}
 
 			}
@@ -114,6 +115,7 @@ public class ListHomeActivity extends BasicActivity {
 		});
 
 	}
+
 	private void initDrawer() {
 
 
@@ -174,19 +176,14 @@ public class ListHomeActivity extends BasicActivity {
 		mDrawerLayout.setDrawerListener(mDrawerToggle);
 
 		getActionBar().setDisplayHomeAsUpEnabled(true);
+		getActionBar().setHomeAsUpIndicator(getResources().getDrawable(R.drawable.ic_drawer));
 		getActionBar().setHomeButtonEnabled(true);
 
 	}
 	@Override
 	protected void onResume() {
-		// TODO Auto-generated method stub
 		super.onResume();
 
-
-		if (position != null && fragment.listView != null) {
-			fragment.listView.setSelection(position);
-			position = 0;
-		}
 
 		if(isShowImportErrorDialog && getApplicationContext().getCurrentList().isShowErrorDialogInd() && getApplicationContext().getCurrentList().getItemsWithErrors().size() > 0) {
 			showImportErrorDialog();
@@ -251,7 +248,7 @@ public class ListHomeActivity extends BasicActivity {
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu items for use in the action bar
 		MenuInflater inflater = getMenuInflater();
-		Integer subTypeCatCode = getIntent().getIntExtra("listTypeId", -1);
+		Integer subTypeCatCode = getIntent().getIntExtra(Constants.SUB_CAT_CODE, -1);
 		if(subTypeCatCode == Constants.NOTES_LIST_TYP_CODE) {
 			inflater.inflate(R.menu.action_bar_note_menu, menu);
 
@@ -304,6 +301,7 @@ public class ListHomeActivity extends BasicActivity {
 		else {
 			newListIntent = new Intent(getBaseContext(), ItemActivity.class);
 
+
 		}
 		startActivityForResult(newListIntent, 0);
 
@@ -315,9 +313,16 @@ public class ListHomeActivity extends BasicActivity {
 		if(requestCode == RENAME_LIST) {
 			setTitle(getApplicationContext().getCurrentList().getListName());
 		}
-		if(intent != null && intent.getExtras() != null && intent.getExtras().containsKey(Constants.POSITION)) {
-			position = intent.getIntExtra(Constants.POSITION, 0);
+		if(null != getApplicationContext().getCurrentItem()) {
+				fragment.addItemToList(getApplicationContext().getCurrentItem());
+				fragment.listView.setSelection(getApplicationContext().getCurrentItem().getRowNumber());
 		}
 	}
 
+	@Override
+	protected void onDestroy() {
+		super.onDestroy();
+		getApplicationContext().setCurrentItem(null);
+		getApplicationContext().setCurrentList(null);
+	}
 }

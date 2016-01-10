@@ -50,7 +50,6 @@ public class Constants {
 	public static final int REQUEST_TAKE_PHOTO = 1;
 	public static final String SHOW_HOME_SPLASH_SCREEN = "showSplashHome";
 	public static final String IMAGE_NAME = "imageName";
-	public static final String POSITION = "position";
 	public static final int ITEM_TYPE_REQUEST = 2;
     public static final int LIST_NAME_CHOICE_REQ_CODE = 0;
 	public static final String CALC_TYPE = "calcType";
@@ -58,5 +57,7 @@ public class Constants {
 	public static final int RESULT_UNIT_PRICE = 1;
 	public static final int REQUEST_CALCULATOR = 1235;
 	public static final String JPEG = ".jpeg";
+	public static final String LIST_ITEM = "listItem";
+
 
 }
