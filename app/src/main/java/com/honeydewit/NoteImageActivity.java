@@ -122,7 +122,13 @@ public class NoteImageActivity extends OptionsMenuActivity implements View.OnCli
     }
     public void save() {
         if(validate()) {
+
+            boolean isUpdate = listItem.get_id() != null;
             getApplicationContext().getShoppingListDbHelper().addUpdateListItem(listItem);
+            getIntent().putExtra("isUpdate", isUpdate);
+            getApplicationContext().setCurrentItem(listItem);
+            setResult(RESULT_OK, getIntent());
+
             finish();
         }
     }

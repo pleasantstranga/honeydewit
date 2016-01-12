@@ -27,7 +27,7 @@
 				<ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/csv_txt_screenshot" android:contentDescription="@string/txtCsvFile"/>
 			</TableRow>
 			<TableRow android:id="@+id/checkBoxRow" >
-				<CheckBox android:button="@drawable/custom_checkbox_design" android:id="@+id/hideImporting" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/hideImportDialog"/>
+				<CheckBox android:id="@+id/hideImporting" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/hideImportDialog"/>
 			</TableRow>
 			<TableRow android:id="@+id/buttonRow" >
 				<Button android:id="@+id/ok" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ok"/>		

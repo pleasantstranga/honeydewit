@@ -39,7 +39,7 @@
         android:layout_alignParentLeft="true"
         android:orientation="horizontal"
         android:layout_toLeftOf="@id/buttonLayout">
-        <CheckBox android:button="@drawable/custom_checkbox_design"  android:id="@+id/checked" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+        <CheckBox android:id="@+id/checked" android:layout_width="wrap_content" android:layout_height="wrap_content" />
 
         <ImageView android:layout_gravity="center" android:contentDescription="@string/noteImage" android:id="@+id/noteImage" android:layout_width="40dp" android:layout_height="40dp" android:visibility="gone"/>
 

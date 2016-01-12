@@ -21,11 +21,15 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.CheckedTextView;
 import android.widget.CompoundButton;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.Spinner;
+import android.widget.Switch;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
@@ -57,7 +61,7 @@ import java.util.TimeZone;
 public class EventActivity extends BasicActivity {
 
 	private static final String CUSTOM = "Custom";
-	private TextView headerTxt, chosenRepeat;
+	private TextView chosenRepeat;
 	private EditText titleText;
 	private Button fromDateBtn;
 	private Button fromTimeBtn;
@@ -69,8 +73,7 @@ public class EventActivity extends BasicActivity {
 	private Spinner repeatChoices;
 	private Calendar dateFrom;
 	private Calendar dateTo;
-	private CheckBox allDay;
-	private TextView calendarAccountName;
+	private Switch allDay;
 	private TableLayout reminderTable;
 	private TableRow titleHeaderRow;
 	private TableRow titleTextRow;
@@ -133,20 +136,25 @@ public class EventActivity extends BasicActivity {
 		initialiseViews();
 		list = getApplicationContext().getCurrentList();
 		if(null != list) {
-			headerTxt.setText(list.getListName());
+			setTitle(list.getListName());
 		}
 		else {
-			headerTxt.setText(getText(R.string.newEvent));
+			setTitle(getText(R.string.newEvent));
 			titleHeaderRow.setVisibility(View.VISIBLE);
 			titleTextRow.setVisibility(View.VISIBLE);
 			titleText = (EditText)findViewById(R.id.titleText);
-			titleText.addTextChangedListener(new TextWatcher(){
-				public void afterTextChanged(Editable s) {}
-				public void beforeTextChanged(CharSequence s, int start, int count, int after){}
-				public void onTextChanged(CharSequence s, int start, int before, int count){
-					headerTxt.setText(s.toString());
-					if(headerTxt.getText().length() == 0) {
-						headerTxt.setText(getText(R.string.newEvent));
+			titleText.addTextChangedListener(new TextWatcher() {
+				public void afterTextChanged(Editable s) {
+				}
+
+				public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+				}
+
+				public void onTextChanged(CharSequence s, int start, int before, int count) {
+					if (titleText.getText().length() == 0) {
+						setTitle(getText(R.string.newEvent));
+					} else {
+						setTitle(s.toString());
 					}
 				}
 			});
@@ -246,7 +254,6 @@ public class EventActivity extends BasicActivity {
 		if(null == eventInstance) {
 			String defaultCalendar = getDefaultCalendar();
 			calendars.setSelection(calendarAdapter.getPosition(defaultCalendar));
-			calendarAccountName.setText(calendarMap.get(defaultCalendar).getCalendarName());
 		}
 		else {
 			eventInstance.getEvent().getCalendarId();
@@ -256,13 +263,11 @@ public class EventActivity extends BasicActivity {
 			@Override
 			public void onItemSelected(AdapterView<?> arg0, View arg1,
 					int arg2, long arg3) {
-				calendarAccountName.setText(calendarMap.get(calendars.getSelectedItem()).getCalendarName());
-				
+
 			}
 
 			@Override
 			public void onNothingSelected(AdapterView<?> arg0) {
-				calendarAccountName.setText(R.string.noCalendarChosen);
 			}
 		});
 	}
@@ -285,11 +290,10 @@ public class EventActivity extends BasicActivity {
 	}
 
 	private void initialiseViews() {
-		headerTxt = (TextView)findViewById(R.id.headerTxt);
 		titleHeaderRow = (TableRow)findViewById(R.id.titleHeaderRow);
 		titleText = (EditText)findViewById(R.id.titleText);
 		titleTextRow = (TableRow)findViewById(R.id.titleTextRow);
-		allDay = (CheckBox)findViewById(R.id.allDay);
+		allDay = (Switch)findViewById(R.id.allDay);
 		chosenRepeat = (TextView)findViewById(R.id.chosenRepeat);
 		fromDateBtn = (Button)findViewById(R.id.fromDateBtn);
 		fromTimeBtn = (Button)findViewById(R.id.fromTimeBtn);
@@ -299,7 +303,6 @@ public class EventActivity extends BasicActivity {
 		timeZones = (Spinner) findViewById(R.id.timeZones);
 		repeatChoices = (Spinner)findViewById(R.id.repeatChoices);
 		calendars = (Spinner)findViewById(R.id.calendars);
-		calendarAccountName = (TextView)findViewById(R.id.chosenCalendar);
 		reminderTable = (TableLayout)findViewById(R.id.reminderTable);
 		TableRow reminderRow = (TableRow) reminderTable.findViewById(R.id.reminderRow);
 		reminderRowIndex = reminderTable.indexOfChild(reminderRow);
@@ -581,8 +584,8 @@ public class EventActivity extends BasicActivity {
 	}
 	
 	private void initAllDay() {
-		allDay.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
 
+		allDay.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
 			@Override
 			public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
 				if(isChecked) {
@@ -593,9 +596,9 @@ public class EventActivity extends BasicActivity {
 					toTimeBtn.setVisibility(View.VISIBLE);
 					fromTimeBtn.setVisibility(View.VISIBLE);
 				}
-
 			}
 		});
+
 	}
 	private void saveEvent()  {
 		boolean isUpdate = false;
@@ -609,12 +612,9 @@ public class EventActivity extends BasicActivity {
 		}
 		event.setCalendarId(calendarMap.get(calendars.getSelectedItem()).getId());
 		event.setEventTimezone(dateFrom.getTimeZone().getID());
-		if(null != list) {
-			event.setTitle(headerTxt.getText().toString());
-		}
-		else {
-			event.setTitle(titleText.getText().toString());
-		}
+
+		event.setTitle(getTitle().toString());
+
 		event.setDateFrom(dateFrom);
 		
 		if(null != rrule) {
@@ -628,6 +628,7 @@ public class EventActivity extends BasicActivity {
 			event.setDuration(null);
 			
 		}
+
 		if(allDay.isChecked()) {
 			event.setDateFrom(DateUtil.getBeginningOfDay((GregorianCalendar)dateFrom));
 			dateTo = dateFrom;
@@ -636,9 +637,10 @@ public class EventActivity extends BasicActivity {
 			event.setEventTimezone("UTC");
 			event.setAllDay(true);
 		}
+
 		addRemindersToEvent(event);
 
-		if(eventValidator.validate(getBaseContext(), event)) {
+		if(!eventValidator.validate(getBaseContext(), event)) {
 
 
 			showErrors(eventValidator.getErrorMessages());
@@ -743,19 +745,19 @@ public class EventActivity extends BasicActivity {
 		protected String doInBackground(String... params) {
 			try {
 				event = getApplicationContext().getCalDbHelper().addUpdateCalendarEvent(getApplicationContext(), event);
-				getApplicationContext().getCalDbHelper().addUpdateReminders(getApplicationContext(), event.getEventId(), event.getReminders());
+				getApplicationContext().getCalDbHelper().addUpdateReminders(getApplicationContext(), event.getEventId(), event.getReminders(), isUpdate);
 			}
 			catch(Exception e) {
 				e.printStackTrace();
 			}
 			finally {
 			
-				if(!isUpdate)  {
+
 					ListEvent listEvent = getApplicationContext().getShoppingListDbHelper().saveListEvent(new ListEvent(event.getCalendarId(), event.getEventId(), list));
 					if(null != list) {
 						list.addEvent(getApplicationContext(),listEvent);
 					}
-				}
+
 			
 			
 			}

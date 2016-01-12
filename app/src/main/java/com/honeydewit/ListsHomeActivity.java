@@ -75,7 +75,6 @@ public class ListsHomeActivity extends OptionsMenuActivity{
         
               	
         List<Integer> excudedListIds = getApplicationContext().getListsIdsToDelete();
-
         lists = getApplicationContext().getShoppingListDbHelper().getListsHomeAdapterData(listType,excudedListIds, Constants.TRUE);
         for(ListsHomeAdapterData data : lists) {
             data.setErrorCount(getApplicationContext().getShoppingListDbHelper().getImportErrorCount(data.getListId()));

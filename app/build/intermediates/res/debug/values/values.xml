@@ -530,6 +530,9 @@ available. Please contact the developer for assistance.</string>
         <item name="android:background">@android:drawable/bottom_bar</item>
     </style>
     <style name="ButtonBarButton"/>
+    <style name="CheckboxStyle">
+        <item name="android:background">@drawable/custom_checkbox_design</item>
+    </style>
     <style name="FullscreenTheme" parent="android:Theme.NoTitleBar">
         <item name="android:windowContentOverlay">@null</item>
         <item name="android:windowBackground">@null</item>
@@ -554,6 +557,8 @@ available. Please contact the developer for assistance.</string>
         <item name="android:actionMenuTextColor">@color/edit_text_color</item>
         <item name="android:layout_margin">@dimen/margin</item>
         <item name="android:listViewStyle">@style/listViewStyle</item>
+        <item name="android:checkboxStyle">@style/CheckboxStyle</item>
+        <item name="android:radioButtonStyle">@style/RadioButtonStyle</item>
 
     </style>
     <style name="HoneyDewActionBarThemeLarge" parent="@android:style/Theme.Holo.Light.DarkActionBar">
@@ -561,14 +566,19 @@ available. Please contact the developer for assistance.</string>
         <item name="android:actionMenuTextColor">@color/edit_text_color</item>
         <item name="android:layout_margin">@dimen/margin</item>
         <item name="android:listViewStyle">@style/listViewStyle</item>
+        <item name="android:checkboxStyle">@style/CheckboxStyle</item>
+        <item name="android:radioButtonStyle">@style/RadioButtonStyle</item>
 
     </style>
     <!-- From: file:/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/src/main/res/values/styles.xml -->
     <eat-comment/>
+    <style name="RadioButtonStyle">
+        <item name="android:background">@drawable/radiobutton_custom</item>
+    </style>
     <style name="SpinnerTheme" parent="android:Widget.Spinner">
         <item name="android:background">@drawable/spinner_image</item>
         <item name="android:dropDownSelector">@drawable/bg_handle</item>
-        <item name="android:spinnerMode">dropdown</item>
+        <item name="android:spinnerMode">dialog</item>
     </style>
     <!-- From: file:/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/7.0.0/res/values/admob_iap_style.xml -->
     <eat-comment/>
@@ -645,6 +655,10 @@ available. Please contact the developer for assistance.</string>
         <item name="android:layout_margin">@dimen/margin</item>
         <item name="android:listViewStyle">@style/listViewStyle</item>
         <item name="android:spinnerStyle">@style/SpinnerTheme</item>
+        <item name="android:checkboxStyle">@style/CheckboxStyle</item>
+        <item name="android:radioButtonStyle">@style/RadioButtonStyle</item>
+
+
     </style>
     <style name="defaultDialog" parent="@android:style/Theme.DeviceDefault.Dialog">
         <item name="android:background">@drawable/dialog</item>
@@ -656,6 +670,10 @@ available. Please contact the developer for assistance.</string>
         <item name="android:textViewStyle">@style/textview_style</item>
         <item name="android:listViewStyle">@style/listViewStyle</item>
         <item name="android:spinnerStyle">@style/SpinnerTheme</item>
+        <item name="android:checkboxStyle">@style/CheckboxStyle</item>
+        <item name="android:radioButtonStyle">@style/RadioButtonStyle</item>
+
+
     </style>
     <style name="defaultTitle" parent="HoneyDewActionBarTheme">
         <item name="android:windowBackground">@drawable/background_gradient</item>
@@ -668,6 +686,8 @@ available. Please contact the developer for assistance.</string>
         <item name="android:buttonBarButtonStyle">@style/button_style</item>
         <item name="android:listViewStyle">@style/listViewStyle</item>
         <item name="android:spinnerStyle">@style/SpinnerTheme</item>
+        <item name="android:checkboxStyle">@style/CheckboxStyle</item>
+        <item name="android:radioButtonStyle">@style/RadioButtonStyle</item>
     </style>
     <!-- From: file:/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/src/main/res/values/styles.xml -->
     <eat-comment/>
@@ -714,6 +734,9 @@ available. Please contact the developer for assistance.</string>
         <item name="android:buttonBarButtonStyle">@style/button_style</item>
         <item name="android:listViewStyle">@style/listViewStyle</item>
         <item name="android:spinnerStyle">@style/SpinnerTheme</item>
+        <item name="android:checkboxStyle">@style/CheckboxStyle</item>
+        <item name="android:radioButtonStyle">@style/RadioButtonStyle</item>
+
     </style>
     <!-- From: file:/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/src/main/res/values/styles.xml -->
     <eat-comment/>

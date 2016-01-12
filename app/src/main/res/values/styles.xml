@@ -110,6 +110,12 @@
     <style name="SpinnerTheme" parent="android:Widget.Spinner">
         <item name="android:background">@drawable/spinner_image</item>
         <item name="android:dropDownSelector">@drawable/bg_handle</item>
-        <item name="android:spinnerMode">dropdown</item>
+        <item name="android:spinnerMode">dialog</item>
+    </style>
+    <style name="CheckboxStyle">
+        <item name="android:background">@drawable/custom_checkbox_design</item>
+    </style>
+    <style name="RadioButtonStyle">
+        <item name="android:background">@drawable/radiobutton_custom</item>
     </style>
 </resources>

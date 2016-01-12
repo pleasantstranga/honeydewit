@@ -82,9 +82,9 @@ public class NoteAdapter extends BaseListItemImageAdapter implements Serializabl
 							}
 
 						}
-						newListIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+						//newListIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 						newListIntent.putExtra("itemId", item.get_id());
-						getContext().startActivity(newListIntent);
+						((BasicActivity)getContext()).startActivityForResult(newListIntent, Constants.ITEM_TYPE_REQUEST);
 
 
 					}

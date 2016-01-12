@@ -43,11 +43,12 @@ public class ListHomeFragment extends Fragment {
         if(getActivity().getIntent().getIntExtra("listId", -1) != -1) {
             new LoadListAsyncTask().execute(getActivity().getIntent().getIntExtra("listId", -1));
         }
-        else if(hdewContext != null) {
+        else if(hdewContext != null && null != hdewContext.getCurrentList() ) {
             new LoadListAsyncTask().execute(hdewContext.getCurrentList().get_id());
-
         }
-
+        else {
+            new LoadListAsyncTask().execute(-1);
+        }
         return layout;
     }
     public void goTo(int position) {

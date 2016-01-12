@@ -132,7 +132,7 @@ public class CalendarView extends LinearLayout implements OnClickListener {
 			}
 			if(v == currentMonthBtn) {	
 				currentMonthBtn.setEnabled(false);
-				DatePickerDialog dialog = new DatePickerDialog(context, datePickerListener,  Integer.valueOf(cellTag[2]), Integer.valueOf(cellTag[0])-1,Integer.valueOf(cellTag[1]));
+				DatePickerDialog dialog = new DatePickerDialog(getContext(), datePickerListener,  Integer.valueOf(cellTag[2]), Integer.valueOf(cellTag[0])-1,Integer.valueOf(cellTag[1]));
 				dialog.setOnDismissListener(datePickerDismissListener);
 				dialog.show();
 			}

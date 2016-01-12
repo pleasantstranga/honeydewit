@@ -5,7 +5,7 @@
     android:orientation="vertical">
 	
     <TextView android:text="@string/errorImportingFix" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
-	<CheckBox android:button="@drawable/custom_checkbox_design" android:id="@+id/hideDialogInFutureCheckbox" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/dontShow"/>
+	<CheckBox android:id="@+id/hideDialogInFutureCheckbox" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/dontShow"/>
  	<LinearLayout
 		style="?android:buttonBarStyle"
       android:layout_width="match_parent"

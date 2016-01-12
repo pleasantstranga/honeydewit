@@ -54,7 +54,7 @@ public class ListHomeActivity extends BasicActivity {
 	private void openNoteDrawableScreen(BasicList list) {
 		if(getApplicationContext().getCurrentList().getListTypeId() == Constants.NOTES_LIST_TYP_CODE) {
 			Intent newListIntent = new Intent(getBaseContext(), DrawNoteActivity.class);
-			startActivity(newListIntent);
+			startActivityForResult(newListIntent, Constants.REQUEST_DRAW_NOTE);
 		}
 	}
 
@@ -277,7 +277,7 @@ public class ListHomeActivity extends BasicActivity {
 		}
 		else if(item.getItemId() == R.id.addItemImage) {
 			Intent noteImageIntent = new Intent(this, NoteImageActivity.class);
-			startActivity(noteImageIntent);
+			startActivityForResult(noteImageIntent, Constants.REQUEST_IMAGE_CAPTURE);
 		}
 
 		else {
@@ -309,6 +309,7 @@ public class ListHomeActivity extends BasicActivity {
 	@Override
 	protected void onActivityResult(int requestCode, int resultCode, Intent intent) {
 		// TODO Auto-generated method stub
+
 		super.onActivityResult(requestCode, resultCode, intent);
 		if(requestCode == RENAME_LIST) {
 			setTitle(getApplicationContext().getCurrentList().getListName());

@@ -5,7 +5,7 @@
     android:orientation="horizontal"
     android:background="@drawable/item_background"
     >
- 	<CheckBox android:button="@drawable/custom_checkbox_design"  android:id="@+id/checked" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+ 	<CheckBox android:id="@+id/checked" android:layout_width="wrap_content" android:layout_height="wrap_content" />
  	 	
  	<LinearLayout
         android:orientation="vertical"

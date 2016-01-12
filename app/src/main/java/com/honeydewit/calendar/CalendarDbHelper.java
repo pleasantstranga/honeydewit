@@ -291,7 +291,7 @@ public class CalendarDbHelper {
 	    calEvent.put(Events.TITLE, event.getTitle());
 	    calEvent.put(Events.DTSTART, event.getDateFrom().getTimeInMillis()); 
 	    
-	    calEvent.put(Events.EVENT_TIMEZONE,event.getEventTimezone());
+	    calEvent.put(Events.EVENT_TIMEZONE, event.getEventTimezone());
 	    
 	    if(event.isAllDay()) {
 	        calEvent.put(Events.ALL_DAY, 1);
@@ -318,21 +318,17 @@ public class CalendarDbHelper {
 	    }
 	  
 	    Uri uri = null;
-	    try {
-	         if(null != event.getEventId()) {
-	            uri = ContentUris.withAppendedId(Events.CONTENT_URI, event.getEventId());
-	            int rows = ctx.getContentResolver().update(uri, calEvent, null, null);
-	    		Log.d("Rows updated: " ,  String.valueOf(rows));  
-	        }
-	        else {
-	            uri = contentResolver.insert(Events.CONTENT_URI, calEvent);
-	            event.setEventId(Integer.parseInt(uri.getLastPathSegment()));
-	            
-	        }
-	    }
-	    catch(Exception e) {
-	    	e.printStackTrace();
-	    }
+
+		if(null != event.getEventId()) {
+			uri = ContentUris.withAppendedId(Events.CONTENT_URI, event.getEventId());
+			int rows = ctx.getContentResolver().update(uri, calEvent, null, null);
+			Log.d("Rows updated: " ,  String.valueOf(rows));
+		}
+		else {
+			uri = contentResolver.insert(Events.CONTENT_URI, calEvent);
+			event.setEventId(Integer.parseInt(uri.getLastPathSegment()));
+		}
+
 	    return event;
 	}
 	
@@ -545,7 +541,7 @@ public class CalendarDbHelper {
 	
 		  int iNumRowsDeleted = 0;
           Uri eventsUri = Events.CONTENT_URI;
-          Uri uri = ContentUris.withAppendedId(eventsUri,eventId);
+          Uri uri = ContentUris.withAppendedId(eventsUri, eventId);
           iNumRowsDeleted = context.getContentResolver().delete(uri, null, null);
           return iNumRowsDeleted;
           
@@ -589,10 +585,12 @@ public class CalendarDbHelper {
 			}
 			return reminders;
 	}
-	public void addUpdateReminders(Context ctx, Integer eventId, List<Reminder> reminders) throws InterruptedException {
-		
+	public void addUpdateReminders(Context ctx, Integer eventId, List<Reminder> reminders, boolean isUpdate) throws InterruptedException {
+
+
 		deleteAllRemindersForEvent(ctx, eventId);
-		
+
+
 		ArrayList<ContentProviderOperation> operations = new ArrayList<ContentProviderOperation>();
 		for(Reminder reminder : reminders) {
 			 

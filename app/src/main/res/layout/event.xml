@@ -1,27 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent" >
-    <LinearLayout android:baselineAligned="false" android:id="@+id/headerView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentTop="true" >
-        <include android:layout_width="0dip" android:layout_height="wrap_content" layout="@layout/header" android:id="@+id/header" android:layout_weight="1"/>
-    </LinearLayout>
-    
-	<ScrollView style="@style/scrollbar_shape_style" android:isScrollContainer="false"  android:id="@+id/scrollablContent" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_above="@+id/footerView" android:layout_below="@+id/headerView">
+
+
+	<ScrollView style="@style/scrollbar_shape_style" android:isScrollContainer="false"  android:id="@+id/scrollablContent" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_above="@+id/footerView">
 		<TableLayout   android:id="@+id/reminderTable" android:stretchColumns="*" android:layout_width="match_parent" android:layout_height="wrap_content">
 			<TableRow  android:id="@+id/titleHeaderRow"  android:visibility="gone"><TextView android:text="@string/name"/></TableRow>
-			<TableRow  android:id="@+id/titleTextRow"  android:visibility="gone" ><EditText android:id="@+id/titleText" android:hint="@string/enterNameTitle" android:layout_weight="1" android:layout_height="wrap_content"/></TableRow>
+			<TableRow  android:id="@+id/titleTextRow"  android:visibility="gone"
+				android:layout_height="wrap_content"
+				android:layout_width="match_parent"><EditText android:id="@+id/titleText" android:hint="@string/enterNameTitle" android:layout_weight="1" android:layout_height="wrap_content"/></TableRow>
+
 			<TableRow><TextView android:text="@string/from"/></TableRow>
 		    <TableRow><Button   style="?android:attr/buttonBarButtonStyle" android:id="@+id/fromDateBtn" android:layout_width="0dp" android:layout_weight="1" /><Button  style="?android:attr/buttonBarButtonStyle" android:id="@+id/fromTimeBtn" android:layout_width="0dp" android:layout_weight="1"/></TableRow>
 		    <TableRow><TextView android:text="@string/to"/></TableRow>
 		    <TableRow><Button  style="?android:attr/buttonBarButtonStyle" android:id="@+id/toDateBtn" android:layout_width="0dp" android:layout_weight="1" /><Button  style="?android:attr/buttonBarButtonStyle" android:id="@+id/toTimeBtn" android:layout_width="0dp" android:layout_weight="1"/></TableRow>
 		    <TableRow><TextView android:text="@string/timezone"/></TableRow>
 		    <TableRow><Spinner android:id="@+id/timeZones" android:layout_weight="1" android:layout_height="wrap_content"/></TableRow>
-		    <TableRow><TextView android:layout_weight="1" android:text="@string/allDay" android:layout_width="0dp"/><CheckBox android:id="@+id/allDay" android:gravity="right" android:layout_weight="1" android:layout_width="0dp"/></TableRow>
-		    <TableRow><TextView android:text="@string/calendar"/></TableRow>
+			<TableRow><LinearLayout
+				android:id="@+id/allDayLayout"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content">
+				<TextView
+					android:gravity="center_horizontal|center_vertical"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="@string/allDay"/>
+				<Switch
+					android:layout_marginLeft="@dimen/dialog_padding"
+					android:id="@+id/allDay"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:textOff="NO"
+					android:textOn="YES"
+					android:layout_alignParentRight="true"
+					android:thumb="@drawable/switch_bg"
+					android:track="@drawable/track_bg"
+					 />
+			</LinearLayout></TableRow>
+			<TableRow><TextView android:text="@string/calendar"/></TableRow>
 		    <TableRow><Spinner android:id="@+id/calendars" android:layout_weight="1" android:layout_height="wrap_content"/></TableRow>
-		    <TableRow><TextView android:textIsSelectable="false" android:id="@+id/chosenCalendar"/></TableRow>
 		    <TableRow><TextView android:text="@string/repeat"/></TableRow>
 		    <TableRow  android:id="@+id/repeatRow"><Spinner android:layout_weight="1" android:layout_height="wrap_content" android:id="@+id/repeatChoices"/></TableRow>
 		    <TableRow><TextView  android:textIsSelectable="false" android:id="@+id/chosenRepeat" /></TableRow>
-		    <TableRow><TextView android:layout_weight="1" android:text="@string/reminders" android:layout_width="0dp"/><ImageButton android:layout_gravity="right" android:src="@drawable/plus" android:background="@drawable/no_background" android:contentDescription="@string/addEditReminder" android:layout_weight="1" android:id="@+id/addRemoveReminderBtn" android:layout_width="0dp"/></TableRow>
+		    <TableRow><TextView android:layout_weight="2" android:text="@string/reminders" android:layout_width="0dp"/><ImageButton  android:layout_gravity="right" android:src="@drawable/plus" android:background="@drawable/no_background" android:contentDescription="@string/addEditReminder" android:layout_weight="1" android:id="@+id/addRemoveReminderBtn" android:layout_width="0dp"/></TableRow>
 		    <TableRow  android:id="@+id/reminderRow"  android:layout_width="fill_parent" android:layout_height="wrap_content"/>
 		    <TableRow><TextView android:layout_width="fill_parent" android:text="@string/descriptionTxt"/></TableRow>
 		    <TableRow><EditText android:id="@+id/calendarDescription" android:hint="@string/enterDescription"  android:inputType="textMultiLine" android:lines="4" android:maxLines="10" android:layout_height="wrap_content" android:layout_weight="1"/></TableRow>

@@ -260,8 +260,9 @@ public class DrawNoteActivity extends OptionsMenuActivity implements OnClickList
 			listItem.setList(getApplicationContext().getCurrentList());
 			listItem.setIsDrawingImage(Constants.TRUE);
 
-
+			boolean isUpdate = listItem.get_id() != null;
 			getApplicationContext().getShoppingListDbHelper().addUpdateListItem(listItem);
+			getIntent().putExtra("isUpdate", isUpdate);
 			getApplicationContext().setCurrentItem(listItem);
 			setResult(RESULT_OK, getIntent());
 

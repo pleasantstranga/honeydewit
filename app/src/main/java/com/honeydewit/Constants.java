@@ -58,6 +58,6 @@ public class Constants {
 	public static final int REQUEST_CALCULATOR = 1235;
 	public static final String JPEG = ".jpeg";
 	public static final String LIST_ITEM = "listItem";
-
+	public static final int REQUEST_DRAW_NOTE = 123;
 
 }
