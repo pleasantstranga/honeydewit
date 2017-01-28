@@ -200,7 +200,7 @@ int drawable excel_screenshot 0x7f02003d
 int drawable go_button_background 0x7f02003e
 int drawable header_style 0x7f02003f
 int drawable honedewit_header_no_title_small 0x7f020040
-int drawable honeydewcart_icon 0x7f020041
+int drawable honeydewit_icon 0x7f020041
 int drawable ic_drawer 0x7f020042
 int drawable ic_plusone_medium_off_client 0x7f020043
 int drawable ic_plusone_small_off_client 0x7f020044

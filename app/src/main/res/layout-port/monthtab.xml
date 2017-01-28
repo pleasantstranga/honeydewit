@@ -6,7 +6,7 @@
 	android:layout_width="fill_parent"
 	android:layout_height="fill_parent">
 
-	<com.honeydewit.calendar.customviews.CalendarView xmlns:app="http://schemas.android.com/apk/res/com.honeydewit"
+	<com.ajbtechnologies.calendar.customviews.CalendarView xmlns:app="http://schemas.android.com/apk/res/com.honeydewit"
 	    android:id="@+id/calendarView"
 		android:layout_width="fill_parent"
 		android:layout_height="wrap_content"

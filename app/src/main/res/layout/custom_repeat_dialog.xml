@@ -12,7 +12,8 @@
 				<RadioButton android:text="@string/each" android:id="@+id/eachRadio" android:layout_width="wrap_content" android:layout_height="wrap_content"   android:layout_weight="1"  android:layout_gravity="center|left"/>
 				<RadioButton android:id="@+id/onTheRadio" android:text="@string/onThe"  android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="center|right"/>    
 			</RadioGroup>
-			<com.honeydewit.calendar.customviews.ExpandableHeightGridView android:layout_height="wrap_content" android:layout_below="@+id/recurrenceRadioGroup" android:id="@+id/frequencyGrid"  android:numColumns="7" android:layout_width="fill_parent" android:horizontalSpacing="2sp" android:verticalSpacing="2sp"/>
+			<com.ajbtechnologies.calendar.customviews.ExpandableHeightGridView
+				android:layout_height="wrap_content" android:layout_below="@+id/recurrenceRadioGroup" android:id="@+id/frequencyGrid"  android:numColumns="7" android:layout_width="fill_parent" android:horizontalSpacing="2sp" android:verticalSpacing="2sp"/>
 			
 			<Spinner android:layout_below="@+id/recurrenceRadioGroup" android:id="@+id/weeksSpinner" android:layout_width="wrap_content" android:layout_height="wrap_content" />
 			<Spinner android:layout_below="@+id/recurrenceRadioGroup" android:layout_toRightOf="@+id/weeksSpinner" android:id="@+id/daysSpinner" android:layout_width="wrap_content" android:layout_height="wrap_content" />

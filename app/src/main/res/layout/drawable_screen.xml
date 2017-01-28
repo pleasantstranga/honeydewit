@@ -140,7 +140,7 @@
         android:tag="#FF787878"
 		android:layout_gravity="right" />
 
-	<com.honeydewit.customviews.DrawingView
+	<com.ajbtechnologies.customviews.DrawingView
 		android:id="@+id/drawing"
 		android:layout_width="fill_parent"
 		android:layout_height="0dp"

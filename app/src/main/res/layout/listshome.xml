@@ -6,7 +6,7 @@
 	android:orientation="vertical">
 
 
-	<com.honeydewit.adapters.draganddrop.DragSortListView
+	<com.ajbtechnologies.adapters.draganddrop.DragSortListView
 		xmlns:android="http://schemas.android.com/apk/res/android"
 		xmlns:dslv="http://schemas.android.com/apk/res-auto"
 		android:id="@+id/list"

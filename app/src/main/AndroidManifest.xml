@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.honeydewit"
+    package="com.ajbtechnologies"
     android:versionCode="1"
     android:versionName="1.0" >
 
@@ -29,9 +29,9 @@
     <uses-permission android:name="com.google.android.gm.permission.WRITE_GMAIL" />
 
     <application
-        android:name=".HoneyDewApplication"
+        android:name="com.ajbtechnologies.Application"
         android:allowBackup="false"
-        android:icon="@drawable/honeydewcart_icon"
+        android:icon="@drawable/honeydewit_icon"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/defaultTitle" >
@@ -40,7 +40,7 @@
             android:value="@integer/google_play_services_version" />
 
         <activity
-            android:name=".MainMenuActivity"
+            android:name="com.ajbtechnologies.MainMenuActivity"
             android:screenOrientation="portrait"
             android:configChanges="orientation|keyboardHidden"
             android:launchMode="singleTask">
@@ -52,148 +52,148 @@
         <activity
             android:name="com.google.android.gms.ads.AdActivity"
             android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize" />
-        <activity android:name=".CreateEditListsActivity"
+        <activity android:name="com.ajbtechnologies.CreateEditListsActivity"
             android:screenOrientation="portrait"
             android:configChanges="orientation|keyboardHidden"
             android:launchMode="singleTask"
             />
         <activity
-            android:name=".calendar.ListEventsActivity"
+            android:name="com.ajbtechnologies.calendar.ListEventsActivity"
             android:theme="@style/defaultTitle"
             android:screenOrientation="portrait"
             android:configChanges="orientation|keyboardHidden"/>
         <activity
-            android:name=".CalculatorsActivity"
+            android:name="com.ajbtechnologies.CalculatorsActivity"
             android:theme="@style/calculatorStyle"
             android:windowSoftInputMode="stateHidden"
             android:screenOrientation="portrait"
             android:configChanges="orientation|keyboardHidden"
             />
-        <activity android:name=".calendar.EventActivity"
+        <activity android:name="com.ajbtechnologies.calendar.EventActivity"
             android:screenOrientation="portrait"
             android:configChanges="orientation|keyboardHidden"/>
         <activity
-            android:name=".calendar.CalendarActivity"
+            android:name="com.ajbtechnologies.calendar.CalendarActivity"
             android:theme="@style/defaultTitle"
             android:screenOrientation="portrait"
             android:configChanges="orientation|keyboardHidden"/>
         <activity
-            android:name=".calendar.CustomRecurrenceActivity"
+            android:name="com.ajbtechnologies.calendar.CustomRecurrenceActivity"
             android:screenOrientation="portrait"
             android:theme="@style/defaultTitle"
             android:windowSoftInputMode="stateHidden"
             android:configChanges="orientation|keyboardHidden"/>
         <activity
-            android:name=".calculators.CalculateUnitActivity"
+            android:name="com.ajbtechnologies.calculators.CalculateUnitActivity"
             android:theme="@style/calculatorStyle"
             android:screenOrientation="portrait"
             android:configChanges="orientation|keyboardHidden"/>
         <activity
-            android:name=".calculators.CalculateActivity"
+            android:name="com.ajbtechnologies.calculators.CalculateActivity"
             android:theme="@style/calculatorStyle"
             android:screenOrientation="portrait"
             android:configChanges="orientation|keyboardHidden"/>
         <activity
-            android:name=".ListsHomeActivity"
+            android:name="com.ajbtechnologies.ListsHomeActivity"
             android:theme="@style/defaultTitle"
             android:screenOrientation="portrait"
             android:configChanges="orientation|keyboardHidden"
-            android:parentActivityName=".CreateEditListsActivity">
+            android:parentActivityName="com.ajbtechnologies.CreateEditListsActivity">
 
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".CreateEditListsActivity"/>
+                android:value="com.ajbtechnologies.CreateEditListsActivity"/>
         </activity>
         <activity
-            android:name=".ListHomeActivity"
+            android:name="com.ajbtechnologies.ListHomeActivity"
             android:theme="@style/defaultTitle" android:screenOrientation="portrait"
             android:configChanges="orientation|keyboardHidden"
            />
         <activity
-            android:name=".ListInfoActivity"
+            android:name="com.ajbtechnologies.ListInfoActivity"
             android:screenOrientation="portrait"
             android:theme="@style/defaultTitle"
             android:windowSoftInputMode="stateHidden" />
         <activity
-            android:name=".ToDoItemActivity"
+            android:name="com.ajbtechnologies.ToDoItemActivity"
             android:screenOrientation="portrait"
             android:configChanges="orientation|keyboardHidden"
             android:theme="@style/defaultTitle"
             android:windowSoftInputMode="stateHidden|adjustResize" />
         <activity
-            android:name=".ItemActivity"
+            android:name="com.ajbtechnologies.ItemActivity"
             android:screenOrientation="portrait"
             android:configChanges="orientation|keyboardHidden"
             android:theme="@style/defaultTitle"
             android:windowSoftInputMode="stateHidden|adjustResize" />
         <activity
-            android:name=".NotesActivity"
+            android:name="com.ajbtechnologies.NotesActivity"
             android:screenOrientation="portrait"
             android:configChanges="orientation|keyboardHidden"
             android:theme="@style/defaultTitle"
-            android:parentActivityName=".MainMenuActivity"/>
+            android:parentActivityName="com.ajbtechnologies.MainMenuActivity"/>
         <activity
-            android:name=".ImportInstructionsActivity"
+            android:name="com.ajbtechnologies.ImportInstructionsActivity"
             android:theme="@style/defaultTitle"
             android:screenOrientation="portrait"
             android:configChanges="orientation|keyboardHidden"/>
         <activity
-            android:name=".ImportedListNameChoiceActivity"
+            android:name="com.ajbtechnologies.ImportedListNameChoiceActivity"
              android:screenOrientation="portrait"
             android:configChanges="orientation|keyboardHidden"/>
         <activity
-            android:name=".SheetNameInputDialogActivity"
+            android:name="com.ajbtechnologies.SheetNameInputDialogActivity"
             android:theme="@android:style/Theme.DeviceDefault.Dialog"
             android:screenOrientation="portrait"
             android:configChanges="orientation|keyboardHidden"/>
         <activity
-            android:name=".CheckBoxListActivity"
+            android:name="com.ajbtechnologies.CheckBoxListActivity"
             android:theme="@style/defaultTitle"
             android:screenOrientation="portrait"
             android:configChanges="orientation|keyboardHidden"/>
         <activity
-            android:name=".TextImportActivity"
+            android:name="com.ajbtechnologies.TextImportActivity"
             android:screenOrientation="portrait"
             android:configChanges="orientation|keyboardHidden" />
         <activity
-            android:name=".HoneyDewImportActivity"
+            android:name="com.ajbtechnologies.ImportActivity"
             android:screenOrientation="portrait"
             android:configChanges="orientation|keyboardHidden" />
         <activity
-            android:name=".ExcelImportActivity"
+            android:name="com.ajbtechnologies.ExcelImportActivity"
             android:screenOrientation="portrait"
             android:configChanges="orientation|keyboardHidden" />
         <activity
-            android:name=".errorhandling.ExceptionActivity"
+            android:name="com.ajbtechnologies.errorhandling.ExceptionActivity"
             android:label="@string/error"
             android:theme="@android:style/Theme.DeviceDefault.Dialog"
             android:screenOrientation="portrait"
             android:configChanges="orientation|keyboardHidden">
         </activity>
         <activity
-            android:name=".ImportErrorActivity"
+            android:name="com.ajbtechnologies.ImportErrorActivity"
             android:theme="@style/defaultTitle"
             android:screenOrientation="portrait"
             android:configChanges="orientation|keyboardHidden"/>
         <activity
-            android:name=".DrawNoteActivity"
+            android:name="com.ajbtechnologies.DrawNoteActivity"
             android:label="@string/app_name"
             android:screenOrientation="portrait"
             android:theme="@style/defaultTitle"
             android:configChanges="orientation|keyboardHidden"/>
         <activity
-            android:name=".ImageViewActivity"
+            android:name="com.ajbtechnologies.ImageViewActivity"
             android:theme="@android:style/Theme.Dialog"
             android:screenOrientation="portrait"
             android:configChanges="orientation|keyboardHidden"/>
         <activity
-            android:name=".CalculatorsDialogActivity"
+            android:name="com.ajbtechnologies.CalculatorsDialogActivity"
             android:theme="@android:style/Theme.DeviceDefault.Dialog"
             android:screenOrientation="portrait"
             android:configChanges="orientation|keyboardHidden"/>
         <!-- Import Activities -->
         <activity
-            android:name=".AttachmentProcessor"
+            android:name="com.ajbtechnologies.AttachmentProcessor"
             android:screenOrientation="portrait"
             android:configChanges="orientation|keyboardHidden">
             <intent-filter>
@@ -271,23 +271,23 @@
         </activity>
 
         <service
-            android:name=".services.DeleteListService"
+            android:name="com.ajbtechnologies.services.DeleteListService"
             android:exported="false" />
         <service
-            android:name=".services.ExcelImportService"
+            android:name="com.ajbtechnologies.services.ExcelImportService"
             android:exported="false" />
         <service
-            android:name=".services.TextImportService"
+            android:name="com.ajbtechnologies.services.TextImportService"
             android:exported="false" />
         <service
-            android:name=".services.UpdateRowNumService"
+            android:name="com.ajbtechnologies.services.UpdateRowNumService"
             android:exported="false" />
         <service
-            android:name=".services.UpdateListsRowNumService"
+            android:name="com.ajbtechnologies.services.UpdateListsRowNumService"
             android:exported="false" />
 
         <activity
-            android:name=".NoteImageActivity"
+            android:name="com.ajbtechnologies.NoteImageActivity"
             android:theme="@style/defaultTitle"
             android:screenOrientation="portrait"
             android:configChanges="orientation|keyboardHidden|screenSize"

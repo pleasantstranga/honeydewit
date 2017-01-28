@@ -36,7 +36,7 @@
 
     </LinearLayout>
 
-    <com.honeydewit.calendar.customviews.CalendarGridView
+    <com.ajbtechnologies.calendar.customviews.CalendarGridView
         android:id="@+id/calendar"
         android:layout_width="match_parent"
         android:layout_height="238dp"
