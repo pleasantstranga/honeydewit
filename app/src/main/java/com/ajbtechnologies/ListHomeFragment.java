@@ -55,12 +55,17 @@ public class ListHomeFragment extends Fragment {
         listView.setSelection(position);
     }
 
+    public void refreshList(ListItem item) {
+
+        adapter.notifyDataSetChanged();
+        listView.setSelection(listView.getAdapter().getCount()-1);
+    }
     public void addItemToList(ListItem item) {
+
         list.add(item);
         adapter.notifyDataSetChanged();
         listView.setSelection(listView.getAdapter().getCount()-1);
     }
-
 
 
     private DragSortListView.DropListener onDrop = new DragSortListView.DropListener() {
@@ -109,8 +114,8 @@ public class ListHomeFragment extends Fragment {
         protected Boolean doInBackground(Integer... listIds) {
 
 
-                Integer subTypeCatCode = getActivity().getIntent().getIntExtra(Constants.SUB_CAT_CODE, -1);
-                if(null != subTypeCatCode && subTypeCatCode == Constants.NOTES_LIST_TYP_CODE) {
+                int subTypeCatCode = getActivity().getIntent().getIntExtra(Constants.SUB_CAT_CODE, -1);
+                if(subTypeCatCode == Constants.NOTES_LIST_TYP_CODE) {
                     Log.d(ListHomeActivity.class.getName(), "Notes: currentlist null : subTypeCatCode = notes");
 
                     hdewContext.setCurrentList(hdewContext.getShoppingListDbHelper().getListByName("Notes", Constants.NOTES_LIST_TYP_CODE, true, false));

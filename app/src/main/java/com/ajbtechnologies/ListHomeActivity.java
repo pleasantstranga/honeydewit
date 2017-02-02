@@ -313,8 +313,12 @@ public class ListHomeActivity extends BasicActivity {
 			setTitle(getApplicationContext().getCurrentList().getListName());
 		}
 		if(null != getApplicationContext().getCurrentItem()) {
+			if(intent.hasExtra(Constants.IS_UPDATE) && intent.getBooleanExtra(Constants.IS_UPDATE, false)) {
+				fragment.refreshList(getApplicationContext().getCurrentItem());
+			}
+			else {
 				fragment.addItemToList(getApplicationContext().getCurrentItem());
-				fragment.listView.setSelection(getApplicationContext().getCurrentItem().getRowNumber());
+			}
 		}
 	}
 

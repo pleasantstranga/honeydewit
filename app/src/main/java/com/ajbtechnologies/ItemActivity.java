@@ -113,8 +113,8 @@ public class ItemActivity extends OptionsMenuActivity implements OnClickListener
 					bundle.putString("title", getText(R.string.chooseCalculatorDialogTitle).toString().replaceFirst("\\^", "Quantity"));
 					bundle.putString("message", getText(R.string.chooseCalculatorDialogMessage).toString().replaceFirst("\\^", "Quantity"));
 					bundle.putInt("requestCode", Constants.REQUEST_CALCULATOR);
-					List<Links> linksList = (List<Links>)getApplicationContext().getShoppingListDbHelper().getLinks(3, new Integer[]{11});
-					SerializableArrayList<Links> links = new SerializableArrayList<Links>();
+					List<Links> linksList = getApplicationContext().getShoppingListDbHelper().getLinks(3, new Integer[]{11});
+					SerializableArrayList<Links> links = new SerializableArrayList<>();
 					for(Links link : linksList) {
 						links.add(link);
 					}
@@ -154,7 +154,7 @@ public class ItemActivity extends OptionsMenuActivity implements OnClickListener
 			}
 
 			getApplicationContext().setCurrentItem(listItem);
-			getIntent().putExtra("isUpdate", isUpdate);
+			getIntent().putExtra(Constants.IS_UPDATE, isUpdate);
 			setResult(RESULT_OK, getIntent());
 
 
@@ -163,7 +163,7 @@ public class ItemActivity extends OptionsMenuActivity implements OnClickListener
 		else {
 			errors = listItemValidator.getErrorMessages();
 			if(errorsAdapter == null) {
-				errorsAdapter = new ArrayAdapter<String>(this, R.layout.error_layout,errors);
+				errorsAdapter = new ArrayAdapter<>(this, R.layout.error_layout,errors);
 				errorListView.setAdapter(errorsAdapter);
 			}
 			else {
@@ -238,9 +238,9 @@ public class ItemActivity extends OptionsMenuActivity implements OnClickListener
 
 				errorListView.setVisibility(View.VISIBLE);
 				findViewById(R.id.rowTableRow).setVisibility(View.VISIBLE);
-				((TextView)findViewById(R.id.rowNumber)).setText(listItem.getImportRow().toString());
+				((TextView)findViewById(R.id.rowNumber)).setText(String.format(listItem.getImportRow().toString()));
 
-				ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, 
+				ArrayAdapter<String> adapter = new ArrayAdapter<>(this,
 						R.layout.error_layout, listItem.getErrorsAsStrings());
 
 				errorListView.setAdapter(adapter);
@@ -263,7 +263,7 @@ public class ItemActivity extends OptionsMenuActivity implements OnClickListener
 			else {
 				listItem = new ListItem();
 				listItem.setQuantity(1D);
-				quantity.setText(listItem.getQuantity().toString());
+				quantity.setText(String.format(listItem.getQuantity().toString()));
 				listItem.setList(getApplicationContext().getCurrentList());
 			}
 		}
@@ -429,7 +429,7 @@ public class ItemActivity extends OptionsMenuActivity implements OnClickListener
 
 		StringBuilder string = new StringBuilder();
         for(String errorMessage : validator.getErrorMessages().get(listItem.getList().getListName())) {
-            string.append("* " + errorMessage + "\n");
+            string.append("* ").append(errorMessage).append("\n");
 		}
 		dialog.setTitle(getText(R.string.error).toString());
         dialog.setMessage(string.toString());

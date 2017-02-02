@@ -59,5 +59,7 @@ public class Constants {
 	public static final String JPEG = ".jpeg";
 	public static final String LIST_ITEM = "listItem";
 	public static final int REQUEST_DRAW_NOTE = 123;
+	public static final int ADD = 144;
+	public static final String IS_UPDATE = "isUpdate";
 
 }
