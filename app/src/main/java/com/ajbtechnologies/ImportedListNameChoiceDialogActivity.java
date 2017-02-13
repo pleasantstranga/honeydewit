@@ -1,5 +1,6 @@
 package com.ajbtechnologies;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -11,7 +12,7 @@ import android.widget.TextView;
 
 import com.ajbtechnologies.validate.ImportedListNameValidator;
 
-public class ImportedListNameChoiceActivity extends BasicActivity implements android.view.View.OnClickListener {
+public class ImportedListNameChoiceDialogActivity extends BasicActivity implements android.view.View.OnClickListener {
 
 	private RadioButton renameListBtn;
 	private RadioButton replaceListBtn;
@@ -21,12 +22,13 @@ public class ImportedListNameChoiceActivity extends BasicActivity implements and
 	private ImportedListNameValidator validator;
 	private ImportedList listInfo;
 	private boolean isRename = false;
+	private Activity context;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.duplicate_list);
-
+		context = this;
 		validator = new ImportedListNameValidator();
 		listInfo = (ImportedList)getIntent().getSerializableExtra("sheetInfo");
 		boolean sheetExists = getIntent().getBooleanExtra("isExists", false);
@@ -82,8 +84,10 @@ public class ImportedListNameChoiceActivity extends BasicActivity implements and
 				
 				if(validator.validate(this, fileNameInput.getText().toString()))  {
 					if(listInfo.isFromExcelFile()) {
+						listInfo.setRename(true);
+						listInfo.setReplace(false);
 						listInfo.setNewName(fileNameInput.getText().toString());
-                        getIntent().putExtra("listInfo", listInfo);
+						getIntent().putExtra(Constants.LIST_INFO, listInfo);
 						setResult(RESULT_OK, getIntent());
 						finish();
 					}
@@ -91,7 +95,7 @@ public class ImportedListNameChoiceActivity extends BasicActivity implements and
 						listInfo.setRename(true);
 						listInfo.setReplace(false);
 						listInfo.setNewName(fileNameInput.getText().toString());
-						getIntent().putExtra("listInfo", listInfo);
+						getIntent().putExtra(Constants.LIST_INFO, listInfo);
 						setResult(RESULT_OK, getIntent());
 						finish();
 					}
@@ -130,33 +134,9 @@ public class ImportedListNameChoiceActivity extends BasicActivity implements and
 	}
 	@Override
 	public void onBackPressed() {
-		showCancelMessageDialog();
+		showCancelMessageAlertDialog(R.string.cancel, R.string.cancelImportMessage);
 		
 	}
-	public void showCancelMessageDialog() {
-		final DialogFragment dialog = new DialogFragment();
-		boolean isExec = getSupportFragmentManager().executePendingTransactions();
-		dialog.show(getSupportFragmentManager(), "cancel");
 
-		String string = getText(R.string.undoSelectedSheet).toString();
-		dialog.setTitle(getText(R.string.cancel).toString());
-		dialog.setMessage(string);
-		dialog.setPositiveButton("Cancel", new View.OnClickListener() {
 
-			@Override
-			public void onClick(View view) {
-				setResult(RESULT_CANCELED);
-				dialog.dismiss();
-				finish();
-			}
-		});
-		dialog.setNegativeButton("Continue", new View.OnClickListener() {
-
-			@Override
-			public void onClick(View view) {
-				dialog.dismiss();
-			}
-		});
-
-	}
 }

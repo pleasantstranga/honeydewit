@@ -104,6 +104,7 @@
     <string name="addItem">Add</string>
     <string name="createList">Create List</string>
     <string name="areYouSure">Are You Sure?</string>
+    <string name="areYouSureCancelImport">Are you sure you want to cancel the import?</string>
     <string name="noteText">Note:</string>
     <string name="enterNote">Enter note here:</string>
 	<string name="eventsDay">Events/Day</string>
@@ -151,7 +152,7 @@
     <string name="close_drawer">Close Drawer</string>
     <string name="zero">0.0</string>
     <string name="edit">Edit</string>
-    <string name="cancelImportMessage">By clicking \"OK\" you will cancel the import process</string>
+    <string name="cancelImportMessage">By clicking \"Cancel\" you will cancel the import process</string>
     <string name="takeRetakeImage">Take/Retake Picture</string>
     <string name="title_activity_note_image">NoteImageActivity</string>
     <string name="dummy_button">Dummy Button</string>
@@ -172,7 +173,7 @@
     <string name="deleteList">Delete List</string>
     <string name="selectAll">Select All</string>
     <string name="unselectAll">Unselect All</string>
-
+    <string name="dontCancel">Don\'t Cancel</string>
 
 
 </resources>

@@ -7,12 +7,12 @@ import java.util.Observable;
 
 public class BaseObject extends Observable implements Serializable {
 
-	private static final long serialVersionUID = 1L;
 	public final static String DATE_CREATED_CMN = "DATE_CREATED";
 	public final static String DATE_MODIFIED_CMN = "DATE_MODIFIED";
 	public final static String ID_CMN = "_id";
 	public final static String CREATE_MODULE_CMN = "CREATE_MODULE";
 	public final static String MODIFIED_MODULE_CMN = "MODIFIED_MODULE";
+	private static final long serialVersionUID = 1L;
 	@DatabaseField(columnName = ID_CMN, generatedId = true)
 	private Integer _id;
 	@DatabaseField(columnName = DATE_CREATED_CMN)
@@ -26,6 +26,9 @@ public class BaseObject extends Observable implements Serializable {
 	
 	
 	public Integer get_id() {
+		if (_id == null) {
+			return -1;
+		}
 		return _id;
 	}
 	public void set_id(Integer _id) {

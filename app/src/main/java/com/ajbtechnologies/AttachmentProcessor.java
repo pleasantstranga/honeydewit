@@ -63,22 +63,22 @@ public class AttachmentProcessor extends BasicActivity   {
 
             if(ExcelMimeTypes.isExcelMimeType(mimeType)) {
                 Intent intent = new Intent(this,ExcelImportActivity.class);
-                intent.putExtra("fileName", fileName);
-                intent.putExtra("tempDirectory", files.getAbsolutePath());
+                intent.putExtra(Constants.fileName, fileName);
+                intent.putExtra(Constants.tempDirectory, files.getAbsolutePath());
                 startActivity(intent);
                 finish();
             }
             else if(mimeType.equals(Constants.TEXT_MIME) || mimeType.equals(Constants.CSV_MIME)) {
                 Intent intent = new Intent(this,TextImportActivity.class);
-                intent.putExtra("fileName", fileName);
-                intent.putExtra("tempDirectory",files.getAbsolutePath());
+                intent.putExtra(Constants.fileName, fileName);
+                intent.putExtra(Constants.tempDirectory, files.getAbsolutePath());
                 startActivity(intent);
                 finish();
             }
             else if(mimeType.equals(Constants.APPLICATION_OCTET_MIME)) {
-                Intent intent = new Intent(this,ImportActivity.class);
-                intent.putExtra("fileName", fileName);
-                intent.putExtra("tempDirectory",files.getAbsolutePath());
+                Intent intent = new Intent(this, XMLImportActivity.class);
+                intent.putExtra(Constants.fileName, fileName);
+                intent.putExtra(Constants.tempDirectory, files.getAbsolutePath());
                 startActivity(intent);
                 finish();
             }
@@ -88,22 +88,22 @@ public class AttachmentProcessor extends BasicActivity   {
         String fileName = files.getName().toLowerCase();
         if(fileName.endsWith(Constants.XLSX_EXT) || fileName.endsWith(Constants.XLS_EXT)) {
             Intent intent = new Intent(this,ExcelImportActivity.class);
-            intent.putExtra("fileName", fileName);
-            intent.putExtra("tempDirectory", files.getAbsolutePath());
+            intent.putExtra(Constants.fileName, fileName);
+            intent.putExtra(Constants.tempDirectory, files.getAbsolutePath());
             startActivity(intent);
             finish();
         }
         if(fileName.endsWith(Constants.CSV_EXT) || fileName.endsWith(Constants.TXT_EXT)) {
             Intent intent = new Intent(this,TextImportActivity.class);
-            intent.putExtra("fileName", fileName);
-            intent.putExtra("tempDirectory",files.getAbsolutePath());
+            intent.putExtra(Constants.fileName, fileName);
+            intent.putExtra(Constants.tempDirectory, files.getAbsolutePath());
             startActivity(intent);
             finish();
         }
         else if(fileName.endsWith(Constants.HDEW_EXT)) {
-            Intent intent = new Intent(this,ImportActivity.class);
-            intent.putExtra("fileName", fileName);
-            intent.putExtra("tempDirectory",files.getAbsolutePath());
+            Intent intent = new Intent(this, XMLImportActivity.class);
+            intent.putExtra(Constants.fileName, fileName);
+            intent.putExtra(Constants.tempDirectory, files.getAbsolutePath());
             startActivity(intent);
             finish();
         }

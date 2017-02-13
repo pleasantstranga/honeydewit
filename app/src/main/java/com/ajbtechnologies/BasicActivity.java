@@ -2,6 +2,7 @@ package com.ajbtechnologies;
 
 
 import android.annotation.SuppressLint;
+import android.app.AlertDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.Resources;
@@ -11,6 +12,7 @@ import android.os.Bundle;
 import android.provider.MediaStore;
 import android.support.v4.app.FragmentActivity;
 import android.util.AttributeSet;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -31,11 +33,10 @@ import java.util.concurrent.Callable;
 public class BasicActivity extends FragmentActivity {
 	
 
-	public static Resources resource;
 	public static final int ACTIVITY_OK = 0;
 	public static final int ACTIVITY_CANCEL = 1;
+	public static Resources resource;
 
-	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
@@ -278,5 +279,50 @@ public class BasicActivity extends FragmentActivity {
 
 	}
 	public void saveListItem(ListItem item) {
+	}
+
+	public void showCancelMessageAlertDialog(Integer titleStringId, Integer messageStringId) {
+
+		final AlertDialog.Builder builder = new AlertDialog.Builder(this);
+
+		LayoutInflater inflater = this.getLayoutInflater();
+		View dialogView = inflater.inflate(R.layout.choice_dialog, null);
+		builder.setView(dialogView);
+		final AlertDialog alertDialog = builder.create();
+
+		if (null != titleStringId) {
+			TextView title = (TextView) dialogView.findViewById(R.id.title);
+			title.setVisibility(View.VISIBLE);
+			title.setText(getText(titleStringId).toString());
+			title.setTypeface(title.getTypeface(), Typeface.BOLD);
+		}
+		if (null != messageStringId) {
+			TextView message = (TextView) dialogView.findViewById(R.id.message);
+			message.setVisibility(View.VISIBLE);
+			message.setText(getText(messageStringId).toString());
+		}
+
+
+		Button yesBtn = (Button) dialogView.findViewById(R.id.btn_yes);
+		yesBtn.setText(R.string.cancel);
+		yesBtn.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				alertDialog.dismiss();
+				finish();
+			}
+		});
+
+		Button noBtn = (Button) dialogView.findViewById(R.id.btn_no);
+		noBtn.setText(R.string.dontCancel);
+		noBtn.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				alertDialog.dismiss();
+			}
+		});
+
+		builder.show();
+
 	}
 }

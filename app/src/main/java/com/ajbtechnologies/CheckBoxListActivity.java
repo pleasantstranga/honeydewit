@@ -100,7 +100,7 @@ public class CheckBoxListActivity extends OptionsMenuActivity implements OnClick
 	public void showImportChoicesDialog(ImportedList listInfo, boolean isEmpty,boolean isExists, boolean isUnCheckParentOnExit, CompoundButton checkbox) {
 
 		this.checkbox = checkbox;
-		Intent intent = new Intent(this, ImportedListNameChoiceActivity.class);
+		Intent intent = new Intent(this, ImportedListNameChoiceDialogActivity.class);
 		intent.putExtra("isExists", isExists);
 		intent.putExtra("isEmpty", isEmpty);
 		intent.putExtra("sheetInfo", listInfo);

@@ -5,7 +5,7 @@
     <string name="min3CharRequired">Please enter a name with a minimum of 3 characters.</string>
     <string name="deleteItemWarning">By clicking \"Ok\" you will permanently delete the item.</string>
     <string name="quantityRequired">Please enter a valid quantity greater than 0.</string>
-    <string name="listExistsMessage">A list named \"^\" already exists. Please rename the file or replace the existing.</string>
+	<string name="listExistsMessage">A list named \"^\" already exists.</string>
 	<string name="eventNameRequired">Please enter an event name.</string>
 	<string name="eventMin3CharRequired">Please enter a name with a minimum of 3 characters.</string>
 	<string name="eventDateLaterStart">The end date should be later than the start date</string>

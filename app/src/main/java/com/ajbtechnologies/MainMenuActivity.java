@@ -3,6 +3,7 @@ package com.ajbtechnologies;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.gms.ads.AdView;
 
@@ -19,7 +20,16 @@ public class MainMenuActivity extends MenuActivity {
 			getApplicationContext().loadBannerAd((AdView) findViewById(R.id.adView));
 			setLinks(getApplicationContext().getShoppingListDbHelper().getLinks(1));
 			((TextView)findViewById(R.id.headerTxt)).setText(R.string.app_name);
+			if (getIntent().hasExtra(Constants.MESSAGE)) {
+				if (getIntent().getExtras().get(Constants.MESSAGE) instanceof Integer) {
+					Toast.makeText(getBaseContext(), getText(getIntent().getIntExtra(Constants.MESSAGE, -1)),
+							Toast.LENGTH_SHORT).show();
+				} else if (getIntent().getExtras().get(Constants.MESSAGE) instanceof String) {
+					Toast.makeText(getBaseContext(), getIntent().getStringExtra(Constants.MESSAGE),
+							Toast.LENGTH_SHORT).show();
+				}
 
+			}
 			
 			
 		}
