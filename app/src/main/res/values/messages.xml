@@ -37,7 +37,7 @@
 	<string name="errorLoadingList">There was an error loading the list. Please try again</string>
     <string name="errorImportingMessage">There were some errors importing. None of the sheets were imported.Please fix the issues and try again.</string>
     <string name="importFinished">Your import has finished.</string>
-	<string name="unexpectedError">Unfortunately there was an unexpected error. Click "Send Report" to send an error report to AJB Technologies. Click on "Home" to be taken to the application's home screen.</string>
+	<string name="unexpectedError">Unfortunately there was an unexpected error. Click "Send Report" to send an error report to AJB Technologies. Click on "Home" to be taken to the application\'s home screen.</string>
 	<string name="chooseCalculatorDialogTitle">^ Calculator</string>
 	<string name="chooseCalculatorDialogMessage">Please choose the appropriate calculator to calculate ^</string>
 
