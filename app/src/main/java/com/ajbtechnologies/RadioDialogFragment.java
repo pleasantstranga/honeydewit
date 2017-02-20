@@ -54,7 +54,7 @@ public class RadioDialogFragment extends DialogFragment {
 				View radioButton = radioGroup.findViewById(id);
 				int radioId = radioGroup.indexOfChild(radioButton);
 				RadioButton btn = (RadioButton) radioGroup.getChildAt(radioId);
-				String currentItemSelected = (String) btn.getText().toString();
+				String currentItemSelected = btn.getText().toString();
 
 				Intent intent = getIntent(currentItemSelected);
 				if (requestCode != null) {

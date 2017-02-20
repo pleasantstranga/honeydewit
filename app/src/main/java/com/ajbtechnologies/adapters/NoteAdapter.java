@@ -16,8 +16,8 @@ import android.widget.TextView;
 
 import com.ajbtechnologies.BasicActivity;
 import com.ajbtechnologies.Constants;
-import com.ajbtechnologies.DrawNoteActivity;
 import com.ajbtechnologies.DialogFragment;
+import com.ajbtechnologies.DrawNoteActivity;
 import com.ajbtechnologies.NoteImageActivity;
 import com.ajbtechnologies.NotesActivity;
 import com.ajbtechnologies.R;
@@ -42,7 +42,7 @@ public class NoteAdapter extends BaseListItemImageAdapter implements Serializabl
 	
 	@Override
 	public View getView(final int position, View convertView, ViewGroup parent) {
-		final ListItem item = (ListItem)getItem(position);
+		final ListItem item = getItem(position);
 
 			ViewGroup relativeLayout = (RelativeLayout)convertView;
 			if (relativeLayout == null) {

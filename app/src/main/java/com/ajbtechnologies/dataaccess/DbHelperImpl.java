@@ -979,7 +979,7 @@ public void deleteList(BasicList list)  {
 			for(Map.Entry entry : listPositions.entrySet()) {
 				int update = 0;
 				UpdateBuilder<BasicList, Integer> updateBuilder = getListDao().updateBuilder();
-				updateBuilder.updateColumnValue(BasicList.ROW_NUM_CMN, (Integer)entry.getValue());
+				updateBuilder.updateColumnValue(BasicList.ROW_NUM_CMN, entry.getValue());
 				updateBuilder.where().idEq((Integer)entry.getKey());
 				update = updateBuilder.update();
 			}

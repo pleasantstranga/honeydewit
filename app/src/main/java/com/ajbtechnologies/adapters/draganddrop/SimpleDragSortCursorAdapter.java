@@ -62,12 +62,10 @@ public class SimpleDragSortCursorAdapter extends ResourceDragSortCursorAdapter {
      * {@hide}
      */
     protected int[] mTo;
-
+    String[] mOriginalFrom;
     private int mStringConversionColumn = -1;
     private CursorToStringConverter mCursorToStringConverter;
     private ViewBinder mViewBinder;
-
-    String[] mOriginalFrom;
 
     /**
      * Constructor the enables auto-requery.
@@ -384,7 +382,7 @@ public class SimpleDragSortCursorAdapter extends ResourceDragSortCursorAdapter {
      * @see SimpleCursorAdapter#setViewImage(ImageView, String) 
      * @see SimpleCursorAdapter#setViewText(TextView, String)
      */
-    public static interface ViewBinder {
+    public interface ViewBinder {
         /**
          * Binds the Cursor column defined by the specified index to the specified view.
          *
@@ -407,7 +405,7 @@ public class SimpleDragSortCursorAdapter extends ResourceDragSortCursorAdapter {
      *
      * @see android.widget.CursorAdapter#convertToString(android.database.Cursor)
      */
-    public static interface CursorToStringConverter {
+    public interface CursorToStringConverter {
         /**
          * Returns a CharSequence representing the specified Cursor.
          *
