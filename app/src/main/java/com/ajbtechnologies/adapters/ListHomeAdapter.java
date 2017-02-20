@@ -19,11 +19,11 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.ajbtechnologies.Application;
 import com.ajbtechnologies.BasicActivity;
 import com.ajbtechnologies.Constants;
-import com.ajbtechnologies.DrawNoteActivity;
-import com.ajbtechnologies.Application;
 import com.ajbtechnologies.DialogFragment;
+import com.ajbtechnologies.DrawNoteActivity;
 import com.ajbtechnologies.ItemActivity;
 import com.ajbtechnologies.ItemsPrice;
 import com.ajbtechnologies.ListItemWatcher;
@@ -34,14 +34,15 @@ import com.ajbtechnologies.listeners.OneOffClickListener;
 import com.ajbtechnologies.pojos.ListItem;
 import com.ajbtechnologies.utils.ImageUtil;
 import com.ajbtechnologies.utils.NumberUtil;
+import com.ajbtechnologies.utils.StringUtils;
 
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
 public class ListHomeAdapter extends ArrayAdapter<ListItem> implements Serializable{
-	private ListItemWatcher watcher;
 	Integer listTypeId;
+	private ListItemWatcher watcher;
 
 	public ListHomeAdapter(Context context, int layoutId, List<ListItem> items) {
 		super(context, R.layout.listrow, R.id.topRow, items);
@@ -49,13 +50,7 @@ public class ListHomeAdapter extends ArrayAdapter<ListItem> implements Serializa
 			listTypeId = items.get(0).getList().getListTypeId();
 		}
 	}
-	private class ViewHolder{
-		TextView name;
-		TextView bottomRowTitle;
-		TextView bottomRowValue;
-		TextView errorExists;
-		LinearLayout mainLayout;
-	}
+
 	public View getView(int position, View convertView, ViewGroup parent) {
 		View linearLayout = null;
 		final ViewHolder vh;
@@ -102,6 +97,18 @@ public class ListHomeAdapter extends ArrayAdapter<ListItem> implements Serializa
 				vh.bottomRowTitle.setText(R.string.numItemsUnique);
 				vh.bottomRowValue.setText(NumberUtil.returnNumberString(item.getQuantity()));
 
+			} else if (listTypeId == Constants.NOTES_LIST_TYP_CODE) {
+				if (!StringUtils.isEmpty(item.getDescription())) {
+					vh.bottomRowTitle.setText(R.string.descriptionTxt);
+					vh.bottomRowValue.setText(item.getDescription().trim());
+					vh.bottomRowValue.setEllipsize(TextUtils.TruncateAt.MARQUEE);
+					vh.bottomRowValue.setFocusable(true);
+					vh.bottomRowValue.setFocusableInTouchMode(true);
+					vh.bottomRowValue.setSingleLine();
+					vh.bottomRowValue.setMarqueeRepeatLimit(-1);
+					vh.bottomRowValue.setSelected(true);
+					vh.bottomRowValue.requestFocus();
+				}
 			}
 			else if(listTypeId == Constants.TODO_LIST_TYPE_CDE) {
 				vh.bottomRowTitle.setText(R.string.descriptionTxt);
@@ -145,7 +152,6 @@ public class ListHomeAdapter extends ArrayAdapter<ListItem> implements Serializa
 
 					}
 				}
-				//newListIntent.addFlags(Intent.FLA);
 				newListIntent.putExtra("itemId", item.get_id());
 				((BasicActivity)getContext()).startActivityForResult(newListIntent, Constants.ITEM_TYPE_REQUEST);
 
@@ -231,6 +237,7 @@ public class ListHomeAdapter extends ArrayAdapter<ListItem> implements Serializa
 
 
 	}
+
 	public void changeBackgroundOnChecked(final CheckBox checked, View parent, TextView tt, TextView quantity) {
 		if(checked.isChecked()) {
 			if(null != tt) {
@@ -252,6 +259,7 @@ public class ListHomeAdapter extends ArrayAdapter<ListItem> implements Serializa
 			}
 		}
 	}
+
 	private List<ItemsPrice> initaliseItemsPrice() {
 		List<ItemsPrice> itemPrices = new ArrayList<ItemsPrice>();
 		for(int position = 0; position < getCount(); position++) {
@@ -262,6 +270,14 @@ public class ListHomeAdapter extends ArrayAdapter<ListItem> implements Serializa
 			}
 		}
 		return itemPrices;
+	}
+
+	private class ViewHolder {
+		TextView name;
+		TextView bottomRowTitle;
+		TextView bottomRowValue;
+		TextView errorExists;
+		LinearLayout mainLayout;
 	}
 
 

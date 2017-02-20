@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.Window;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -18,6 +19,7 @@ import android.widget.Toast;
 import com.ajbtechnologies.calendar.DateUtil;
 import com.ajbtechnologies.customviews.DrawingView;
 import com.ajbtechnologies.pojos.ListItem;
+import com.ajbtechnologies.utils.StringUtils;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -33,7 +35,7 @@ public class DrawNoteActivity extends OptionsMenuActivity implements OnClickList
 	private DrawingView drawView;
 	//buttons
 	private ImageButton currPaint;
-
+	private EditText itemName;
 	//sizes
 	private float xsBrush,smallBrush, mediumBrush, largeBrush;
 	private ListItem listItem;
@@ -42,6 +44,7 @@ public class DrawNoteActivity extends OptionsMenuActivity implements OnClickList
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.drawable_screen);
+		itemName = (EditText) findViewById(R.id.itemName);
 		//String imageName = null;
 		//get drawing view
 		drawView = (DrawingView)findViewById(R.id.drawing);
@@ -54,8 +57,12 @@ public class DrawNoteActivity extends OptionsMenuActivity implements OnClickList
 		}
 		if(listItem != null && listItem.getImageName() != null) {
 			drawView.setImageBackground(listItem.getImageName());
-		}
 
+		}
+		if (listItem != null && listItem.getName() != null) {
+			itemName.setText(listItem.getName());
+
+		}
 		//get the palette and first color button
 		LinearLayout paintLayout = (LinearLayout)findViewById(R.id.paint_shader);
 		currPaint = (ImageButton)paintLayout.getChildAt(0);
@@ -254,7 +261,11 @@ public class DrawNoteActivity extends OptionsMenuActivity implements OnClickList
 			if(listItem == null) {
 				listItem = new ListItem();
 			}
-			listItem.setName(filename);
+			if (!StringUtils.isEmpty(itemName.getText().toString())) {
+				listItem.setName(itemName.getText().toString());
+			} else {
+				listItem.setName(filename);
+			}
 			listItem.setImageName(filename);
 			listItem.setList(getApplicationContext().getCurrentList());
 			listItem.setIsDrawingImage(Constants.TRUE);

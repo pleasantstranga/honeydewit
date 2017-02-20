@@ -23,10 +23,10 @@ import com.ajbtechnologies.validate.BaseValidator;
 import com.ajbtechnologies.validate.ListNameValidator;
 
 public class ListHomeActivity extends BasicActivity {
-	public boolean isShowImportErrorDialog = false;
-	private ListHomeFragment fragment;
 	private static final int RENAME_LIST = 3245;
 	private static final int ADD_REMINDER_REQ = 345;
+	public boolean isShowImportErrorDialog = false;
+	private ListHomeFragment fragment;
 	private ActionBarDrawerToggle mDrawerToggle = null;
 
 	@Override
@@ -309,15 +309,15 @@ public class ListHomeActivity extends BasicActivity {
 		// TODO Auto-generated method stub
 
 		super.onActivityResult(requestCode, resultCode, intent);
-		if(requestCode == RENAME_LIST) {
-			setTitle(getApplicationContext().getCurrentList().getListName());
-		}
-		if(null != getApplicationContext().getCurrentItem()) {
-			if(intent.hasExtra(Constants.IS_UPDATE) && intent.getBooleanExtra(Constants.IS_UPDATE, false)) {
-				fragment.refreshList(getApplicationContext().getCurrentItem());
-			}
-			else {
-				fragment.addItemToList(getApplicationContext().getCurrentItem());
+		if (resultCode != RESULT_CANCELED) {
+			if (requestCode == RENAME_LIST) {
+				setTitle(getApplicationContext().getCurrentList().getListName());
+			} else if (null != getApplicationContext().getCurrentItem()) {
+				if (intent.hasExtra(Constants.IS_UPDATE) && intent.getBooleanExtra(Constants.IS_UPDATE, false)) {
+					fragment.refreshList(getApplicationContext().getCurrentItem());
+				} else {
+					fragment.addItemToList(getApplicationContext().getCurrentItem());
+				}
 			}
 		}
 	}

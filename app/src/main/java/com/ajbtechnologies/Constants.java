@@ -61,6 +61,7 @@ public class Constants {
 	public static final int REQUEST_DRAW_NOTE = 123;
 	public static final int ADD = 144;
 	public static final String IS_UPDATE = "isUpdate";
+	public static final String IS_CANCELLED = "isCancelled";
 	public static final String tempDirectory = "tempDirectory";
 	public static final String fileName = "fileName";
 	public static final String SHEETS = "sheets";

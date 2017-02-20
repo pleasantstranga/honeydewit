@@ -15,7 +15,6 @@ import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import com.ajbtechnologies.adapters.ListHomeAdapter;
-import com.ajbtechnologies.adapters.NoteAdapter;
 import com.ajbtechnologies.adapters.draganddrop.DragSortListView;
 import com.ajbtechnologies.pojos.ListItem;
 import com.ajbtechnologies.services.UpdateRowNumService;
@@ -25,14 +24,39 @@ import java.util.List;
 
 public class ListHomeFragment extends Fragment {
 
-    private RelativeLayout layout;
+    static final int REQUEST_IMAGE_CAPTURE = 1234;
     public ArrayAdapter<ListItem> adapter;
     public DragSortListView listView;
+    private RelativeLayout layout;
     private List<ListItem> list;
-
-    static final int REQUEST_IMAGE_CAPTURE = 1234;
-
     private Application hdewContext;
+    private DragSortListView.DropListener onDrop = new DragSortListView.DropListener() {
+        @Override
+        public void drop(int from, int to) {
+            try {
+                ListItem item = adapter.getItem(from);
+                adapter.remove(item);
+                adapter.insert(item, to);
+
+                SerializableArrayList<Integer> ids = new SerializableArrayList<>();
+                for (int i = 0; i < adapter.getCount(); i++) {
+                    ids.add(adapter.getItem(i).get_id());
+                }
+                Intent intent = new Intent(getActivity(), UpdateRowNumService.class);
+                intent.putExtra("ids", ids);
+                getActivity().startService(intent);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+
+        }
+    };
+    private DragSortListView.RemoveListener onRemove = new DragSortListView.RemoveListener() {
+        @Override
+        public void remove(int which) {
+            adapter.remove(adapter.getItem(which));
+        }
+    };
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
@@ -51,6 +75,7 @@ public class ListHomeFragment extends Fragment {
         }
         return layout;
     }
+
     public void goTo(int position) {
         listView.setSelection(position);
     }
@@ -60,43 +85,13 @@ public class ListHomeFragment extends Fragment {
         adapter.notifyDataSetChanged();
         listView.setSelection(listView.getAdapter().getCount()-1);
     }
+
     public void addItemToList(ListItem item) {
 
         list.add(item);
         adapter.notifyDataSetChanged();
         listView.setSelection(listView.getAdapter().getCount()-1);
     }
-
-
-    private DragSortListView.DropListener onDrop = new DragSortListView.DropListener() {
-        @Override
-        public void drop(int from, int to) {
-            try {
-                ListItem item = adapter.getItem(from);
-                adapter.remove(item);
-                adapter.insert(item, to);
-
-                SerializableArrayList<Integer> ids = new SerializableArrayList<>();
-                for(int i=0 ; i<adapter.getCount() ; i++){
-                    ids.add(adapter.getItem(i).get_id());
-                }
-                Intent intent = new Intent(getActivity(), UpdateRowNumService.class);
-                intent.putExtra("ids",ids);
-                getActivity().startService(intent);
-            }
-            catch(Exception e) {
-                e.printStackTrace();
-            }
-
-        }
-    };
-
-    private DragSortListView.RemoveListener onRemove = new DragSortListView.RemoveListener() {
-        @Override
-        public void remove(int which) {
-            adapter.remove(adapter.getItem(which));
-        }
-    };
 
     protected class LoadListAsyncTask extends AsyncTask<Integer, Void, Boolean> {
 
@@ -164,18 +159,7 @@ public class ListHomeFragment extends Fragment {
         private void createListAdapter(boolean showErrors) {
             //reload data here
             list = hdewContext.getCurrentList().getItems(showErrors);
-
-            if(hdewContext.getCurrentList().getListTypeId() == Constants.SHOPPING_LIST_TYPE_CDE) {
-
-                adapter = new ListHomeAdapter(getActivity(), R.layout.listrow, list);
-            }
-            else if(hdewContext.getCurrentList().getListTypeId() == Constants.TODO_LIST_TYPE_CDE) {
-                adapter = new ListHomeAdapter(getActivity(),R.layout.listrow,  list);
-            }
-            else {
-                adapter = new NoteAdapter((BasicActivity)getActivity(),R.layout.notesrow,  list);
-            }
-
+            adapter = new ListHomeAdapter(getActivity(), R.layout.listrow, list);
         }
 
 
