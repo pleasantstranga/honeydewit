@@ -8,8 +8,8 @@ import android.content.Context;
 import android.content.Intent;
 import android.support.v4.app.NotificationCompat;
 
-import com.ajbtechnologies.ExceptionReportHandler;
 import com.ajbtechnologies.Application;
+import com.ajbtechnologies.ExceptionReportHandler;
 import com.ajbtechnologies.ImportError;
 import com.ajbtechnologies.ImportedList;
 import com.ajbtechnologies.ListHomeActivity;
@@ -32,15 +32,15 @@ import java.util.Map;
 import java.util.Random;
 
 public class TextImportService extends IntentService {
+    private static Map<String, Integer> importedSheetNotificationIds;
+    protected ImportedListValidator importedListValidator;
+    protected ListItemImportValidator listItemImportValidator;
     private ArrayList<ImportedList> sheets;
     private File tempFiles;
     private String fileName;
-    protected ImportedListValidator importedListValidator;
-    protected ListItemImportValidator listItemImportValidator;
     private Application app;
     private NotificationManager notificationManager;
     private int mainNotification = 0;
-    private static Map<String, Integer> importedSheetNotificationIds;
     public TextImportService() {
         super("ExcelImportService");
         importedSheetNotificationIds = new HashMap<String,Integer>();
@@ -129,7 +129,7 @@ public class TextImportService extends IntentService {
     public void showInitialMessage(Collection<String> sheet) {
         NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(this)
                 .setSmallIcon(R.drawable.honeydewit_icon)
-                .setContentTitle("HoneyDew Import Started")
+                .setContentTitle(getText(R.string.app_name) + " import started")
                 .setContentText("The import process has started for the following lists");
 
         NotificationCompat.InboxStyle inboxStyle =

@@ -23,6 +23,7 @@ public class ImportInstructionsActivity extends OptionsMenuActivity  {
 			//TextView headerText = (TextView)findViewById(R.id.headerTxt);
 			TextView importMessage =  (TextView)findViewById(R.id.importMessage);
 			//headerText.setText(getResources().getText(R.string.importing));
+		 importMessage.setText(getText(R.string.app_name) + " " + getText(R.string.importMessage));
 			importMessage.setText(importMessage.getText().toString().replace(Constants.STRING_REPLACE_CHAR, Constants.SPLIT));
 			
 			TableRow checkboxRow = (TableRow)findViewById(R.id.checkBoxRow);

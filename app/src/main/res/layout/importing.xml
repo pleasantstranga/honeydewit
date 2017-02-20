@@ -12,19 +12,44 @@
 		
 		<TableLayout android:id="@+id/importTable" android:layout_width="match_parent" android:layout_height="wrap_content">
 			<TableRow android:id="@+id/titleHeaderRow" >
-	   	 		<TextView android:id="@+id/importMessage" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/importMessage" android:textAppearance="?android:attr/textAppearanceMedium" />
+
+				<TextView
+					android:id="@+id/importMessage"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:textAppearance="?android:attr/textAppearanceMedium" />
 			</TableRow>
 		    <TableRow android:id="@+id/excelRow" >
-				<TextView android:textStyle="bold" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/xlsFile"/>
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="@string/xlsFile"
+					android:textStyle="bold" />
 			</TableRow>
 			 <TableRow android:id="@+id/excelImgRow" >
-				<ImageView android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/excel_screenshot" android:contentDescription="@string/txtCsvFile"/>
+
+				 <ImageView
+					 android:layout_width="fill_parent"
+					 android:layout_height="wrap_content"
+					 android:contentDescription="@string/txtCsvFile"
+					 android:src="@drawable/excel_screenshot" />
 			</TableRow>
 			 <TableRow android:id="@+id/textCsvRow" >
-				<TextView android:textStyle="bold"  android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/txtCsvFile"/>
+
+				 <TextView
+					 android:layout_width="wrap_content"
+					 android:layout_height="wrap_content"
+					 android:text="@string/txtCsvFile"
+					 android:textStyle="bold" />
 			</TableRow>
 			 <TableRow android:id="@+id/textCsvImgRow" >
-				<ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/csv_txt_screenshot" android:contentDescription="@string/txtCsvFile"/>
+
+				 <ImageView
+					 android:layout_width="wrap_content"
+					 android:layout_height="wrap_content"
+					 android:contentDescription="@string/txtCsvFile"
+					 android:src="@drawable/csv_txt_screenshot" />
 			</TableRow>
 			<TableRow android:id="@+id/checkBoxRow" >
 				<CheckBox android:id="@+id/hideImporting" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/hideImportDialog"/>
@@ -35,6 +60,12 @@
 		</TableLayout>
 	</ScrollView>
 	<LinearLayout  android:id="@+id/footerView" android:layout_width="fill_parent" android:layout_height="wrap_content" android:baselineAligned="true">
-        <Button android:layout_height="match_parent" android:layout_width="0dip" android:id="@+id/saveBtn" android:text="@android:string/ok" android:layout_weight="1" />
+
+		<Button
+			android:id="@+id/saveBtn"
+			android:layout_width="0dip"
+			android:layout_height="match_parent"
+			android:layout_weight="1"
+			android:text="@android:string/ok" />
     </LinearLayout>
 </LinearLayout>

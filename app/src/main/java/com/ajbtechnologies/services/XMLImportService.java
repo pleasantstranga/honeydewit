@@ -118,7 +118,7 @@ public class XMLImportService extends IntentService {
     public void showInitialMessage(Collection<String> sheet) {
         NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(this)
                 .setSmallIcon(R.drawable.honeydewit_icon)
-                .setContentTitle("HoneyDew Import Started");
+                .setContentTitle(getText(R.string.app_name) + " Started");
 
         NotificationCompat.InboxStyle inboxStyle =
                 new NotificationCompat.InboxStyle();

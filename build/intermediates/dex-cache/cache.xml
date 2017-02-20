@@ -2,319 +2,319 @@
 <items version="2" >
 
     <item
-        jar="/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/libs/ormlite-android-4.48.jar"
-        jumboMode="false"
-        revision="22.0.0"
-        sha1="afa06f539a4026c10b247386312aa67404b80a16">
-        <dex dex="/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/build/intermediates/pre-dexed/debug/ormlite-android-4.48-115db2faa9c9cefa46cc4d716db99cce196113a2.jar" />
-    </item>
-    <item
-        jar="/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/7.0.0/jars/classes.jar"
-        jumboMode="false"
+        is-multidex="true"
+        jar="/Users/aaronbernstein/Documents/workspace/honeydewit/app/libs/mail.jar"
+        jumboMode="true"
+        optimize="true"
         revision="22.0.1"
-        sha1="e3d791b42eaa90416cd0b2d2e608092794a3baa4">
-        <dex dex="/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/build/intermediates/pre-dexed/debug/classes-cd139d749b1b36575d3feea19de391436f911f9c.jar" />
-    </item>
-    <item
-        jar="/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-fitness/7.0.0/jars/classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="3c0b099f9de16b265ecd6122fcb603e7d0d29f90">
-        <dex dex="/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/build/intermediates/pre-dexed/debug/classes-2632be76a2b5fb05979ba0857a196248911f2a5f.jar" />
-    </item>
-    <item
-        jar="/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-games/7.0.0/jars/classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="055783146ba9654a725442563be78cad303aad1f">
-        <dex dex="/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/build/intermediates/pre-dexed/debug/classes-c63c638cb0e2742b4b65e22d9543589db58941a1.jar" />
-    </item>
-    <item
-        jar="/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/libs/jxl.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="7faf62e0697f7a88954622dfe8c8de33ed142ac7">
-        <dex dex="/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/build/intermediates/pre-dexed/debug/jxl-ad91606a96752375a6ed0387b5dd7e6513ffc626.jar" />
-    </item>
-    <item
-        jar="/Users/aaronbernstein/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/22.0.0/support-annotations-22.0.0.jar"
-        jumboMode="false"
-        revision="22.0.0"
-        sha1="685d0b2c590447e85284ed84712cb363ba04eff8">
-        <dex dex="/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/build/intermediates/pre-dexed/debug/support-annotations-22.0.0-ca6f9d6e2b5f674469b5ef4a2fca64a2c34c11e4.jar" />
-    </item>
-    <item
-        jar="/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-analytics/7.0.0/jars/classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="29fd6d3794b71491c2789708cd8d03c71feb8954">
-        <dex dex="/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/build/intermediates/pre-dexed/debug/classes-cfad820d874fed557fd619d26d8b4b2031edccf7.jar" />
-    </item>
-    <item
-        jar="/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/libs/activation.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="d1257cbff6faa44c1f325ae0d9413522d4644383">
-        <dex dex="/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/build/intermediates/pre-dexed/debug/activation-6a83ee9c801bd553ffda53179b6f2d6b22441496.jar" />
-    </item>
-    <item
-        jar="/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/libs/mail.jar"
-        jumboMode="false"
-        revision="22.0.0"
         sha1="428e267abff0d10802ccde86b915da2c20471160">
-        <dex dex="/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/build/intermediates/pre-dexed/debug/mail-420116bfe55f14242738dafa9c72188fdea8f0e9.jar" />
+        <dex dex="/Users/aaronbernstein/Documents/workspace/honeydewit/app/build/intermediates/transforms/dex/debug/folders/1000/2/mail_f0d969a6daf194aecd6b56a10fa0fe40a84fc3be/classes.dex" />
     </item>
     <item
-        jar="/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-plus/7.0.0/jars/classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="0e8228b4bc69c6a2c8d7c18498a77e53417d2574">
-        <dex dex="/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/build/intermediates/pre-dexed/debug/classes-2dfe1daab48b789bf401fb33ffa19af2f155ec97.jar" />
-    </item>
-    <item
-        jar="/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-identity/7.0.0/jars/classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="fb04b12526b0073c7fb1ebb70c5842d82ee95596">
-        <dex dex="/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/build/intermediates/pre-dexed/debug/classes-50c5454b472dcd5aa3dd389cef58bc34faba07c1.jar" />
-    </item>
-    <item
-        jar="/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/libs/core-2.3.0.jar"
-        jumboMode="false"
-        revision="22.0.0"
-        sha1="80a402b12accd66d4be7e5dbcb44e42baa0bdd7c">
-        <dex dex="/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/build/intermediates/pre-dexed/debug/core-2.3.0-090013052e1f5f5b01acf8dc41997e35127a8ac4.jar" />
-    </item>
-    <item
-        jar="/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/libs/jxl.jar"
-        jumboMode="false"
-        revision="22.0.0"
-        sha1="7faf62e0697f7a88954622dfe8c8de33ed142ac7">
-        <dex dex="/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/build/intermediates/pre-dexed/debug/jxl-ad91606a96752375a6ed0387b5dd7e6513ffc626.jar" />
-    </item>
-    <item
-        jar="/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.0.0/jars/libs/internal_impl-22.0.0.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="b5b92f469d515a13d778900f6d50c03d12f35504">
-        <dex dex="/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/build/intermediates/pre-dexed/debug/internal_impl-22.0.0-4f4516c214c0c9625b68c2adb08e86a781903783.jar" />
-    </item>
-    <item
-        jar="/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/libs/activation.jar"
-        jumboMode="false"
-        revision="22.0.0"
-        sha1="d1257cbff6faa44c1f325ae0d9413522d4644383">
-        <dex dex="/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/build/intermediates/pre-dexed/debug/activation-6a83ee9c801bd553ffda53179b6f2d6b22441496.jar" />
-    </item>
-    <item
-        jar="/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.0.0/jars/classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="4e86306289ace4aa0cfec44a05ed2b410d36989d">
-        <dex dex="/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/build/intermediates/pre-dexed/debug/classes-a80e1375d40076af5f4bf34161486abcc16cffe3.jar" />
-    </item>
-    <item
-        jar="/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/libs/exp4j-0.3.11.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="150e7b4a77af47b03a1b65be7a01bd663ea64420">
-        <dex dex="/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/build/intermediates/pre-dexed/debug/exp4j-0.3.11-449e50df0283cb3ce2bb3c0f423ef3fcae392b10.jar" />
-    </item>
-    <item
-        jar="/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/libs/simple-xml-2.7.1.jar"
-        jumboMode="false"
-        revision="22.0.0"
-        sha1="083623424bcfa03bd598e709765bad0816c2375d">
-        <dex dex="/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/build/intermediates/pre-dexed/debug/simple-xml-2.7.1-e4e0550aec9426741f4edabdd47e1031eb2f5777.jar" />
-    </item>
-    <item
-        jar="/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-appindexing/7.0.0/jars/classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="a08d65794b844d8e7540bf9a33859bf3b2482d7f">
-        <dex dex="/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/build/intermediates/pre-dexed/debug/classes-3bdcd0bad137807015f46e1d575a7775c8f747e4.jar" />
-    </item>
-    <item
-        jar="/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-wearable/7.0.0/jars/classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="3033cc3a2c68dff3e5b646d6d084bdbdf7d00b25">
-        <dex dex="/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/build/intermediates/pre-dexed/debug/classes-0b70fb6f5b4a45e0b3e997f0be02e51a56fec178.jar" />
-    </item>
-    <item
-        jar="/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-drive/7.0.0/jars/classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="41b3870cbe5fa546d8095b5b89d42cb69f3dd175">
-        <dex dex="/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/build/intermediates/pre-dexed/debug/classes-c9f01696b20eda744a77e48bf005182a7ba27f4f.jar" />
-    </item>
-    <item
-        jar="/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/jars/classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="4c93d99d454c975536bbe3b42283eee847f03ea3">
-        <dex dex="/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/build/intermediates/pre-dexed/debug/classes-298400feb7bd447c1b9bc206b5634b845caf9438.jar" />
-    </item>
-    <item
-        jar="/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-appstate/7.0.0/jars/classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="7ff613bf78ab057293892fdbd4169eda899c89b9">
-        <dex dex="/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/build/intermediates/pre-dexed/debug/classes-31cfacd43e1f3482a27729eea59ee7b9fa5c627c.jar" />
-    </item>
-    <item
-        jar="/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/7.0.0/jars/classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="73ccb92b70112f2e463e415ef8d7275de7da6516">
-        <dex dex="/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/build/intermediates/pre-dexed/debug/classes-681a1f43f787942ef16c43eff435ef220cf28fb2.jar" />
-    </item>
-    <item
-        jar="/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/libs/simple-xml-2.7.1.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="083623424bcfa03bd598e709765bad0816c2375d">
-        <dex dex="/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/build/intermediates/pre-dexed/debug/simple-xml-2.7.1-e4e0550aec9426741f4edabdd47e1031eb2f5777.jar" />
-    </item>
-    <item
-        jar="/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/libs/ormlite-core-4.48.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="e579bd2905d0399af5029aaaf9817d5fa0ca88a5">
-        <dex dex="/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/build/intermediates/pre-dexed/debug/ormlite-core-4.48-7d642196fc50cd5f3939bcded5c03946ac60fe8c.jar" />
-    </item>
-    <item
-        jar="/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/libs/additionnal.jar"
-        jumboMode="false"
-        revision="22.0.0"
-        sha1="bd9e8dc422bb8c8405359947fe9f4282b49f57f4">
-        <dex dex="/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/build/intermediates/pre-dexed/debug/additionnal-ce7a85658a38f97e27491d3105d8b2037341979b.jar" />
-    </item>
-    <item
-        jar="/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-wallet/7.0.0/jars/classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="a96b762bde4139de855735f175ec4d17dca55a6d">
-        <dex dex="/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/build/intermediates/pre-dexed/debug/classes-322b75b76c66debfe543f2c0e5d99691863650af.jar" />
-    </item>
-    <item
-        jar="/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/libs/android-integration-2.3.0.jar"
-        jumboMode="false"
-        revision="22.0.0"
-        sha1="5db9e9818724a2d8d392ae25c658bfe552a8cbc1">
-        <dex dex="/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/build/intermediates/pre-dexed/debug/android-integration-2.3.0-f4e9e2de9e0716debe576e3cbcd30c08a585ee5c.jar" />
-    </item>
-    <item
-        jar="/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/libs/android-integration-2.3.0.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="5db9e9818724a2d8d392ae25c658bfe552a8cbc1">
-        <dex dex="/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/build/intermediates/pre-dexed/debug/android-integration-2.3.0-f4e9e2de9e0716debe576e3cbcd30c08a585ee5c.jar" />
-    </item>
-    <item
-        jar="/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/libs/exp4j-0.3.11.jar"
-        jumboMode="false"
-        revision="22.0.0"
-        sha1="150e7b4a77af47b03a1b65be7a01bd663ea64420">
-        <dex dex="/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/build/intermediates/pre-dexed/debug/exp4j-0.3.11-449e50df0283cb3ce2bb3c0f423ef3fcae392b10.jar" />
-    </item>
-    <item
-        jar="/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/libs/ormlite-core-4.48.jar"
-        jumboMode="false"
-        revision="22.0.0"
-        sha1="e579bd2905d0399af5029aaaf9817d5fa0ca88a5">
-        <dex dex="/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/build/intermediates/pre-dexed/debug/ormlite-core-4.48-7d642196fc50cd5f3939bcded5c03946ac60fe8c.jar" />
-    </item>
-    <item
-        jar="/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-gcm/7.0.0/jars/classes.jar"
-        jumboMode="false"
+        is-multidex="true"
+        jar="/Users/aaronbernstein/Documents/workspace/honeydewit/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-gcm/7.0.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
         revision="22.0.1"
         sha1="9224bc4c54ba95147c7eabd874573763c07cb6be">
-        <dex dex="/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/build/intermediates/pre-dexed/debug/classes-4a033eca4dc8398d424e9b1112c18053aad73483.jar" />
+        <dex dex="/Users/aaronbernstein/Documents/workspace/honeydewit/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-gcm-7.0.0_746bc0b4a6c159cc3d627a22fc470177a68a415b/classes.dex" />
     </item>
     <item
-        jar="/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-panorama/7.0.0/jars/classes.jar"
-        jumboMode="false"
+        is-multidex="true"
+        jar="/Users/aaronbernstein/Documents/workspace/honeydewit/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
         revision="22.0.1"
-        sha1="1c5a76debf0c2857ccad422c4a80ed785982f8df">
-        <dex dex="/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/build/intermediates/pre-dexed/debug/classes-da14656168dbbc1f8c82938356da56b076c79e9f.jar" />
+        sha1="4c93d99d454c975536bbe3b42283eee847f03ea3">
+        <dex dex="/Users/aaronbernstein/Documents/workspace/honeydewit/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-base-7.0.0_48d66b8923c03e559b084fd56d1468840e507ec6/classes.dex" />
     </item>
     <item
-        jar="/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast/7.0.0/jars/classes.jar"
-        jumboMode="false"
+        is-multidex="true"
+        jar="/Users/aaronbernstein/Documents/workspace/honeydewit/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-drive/7.0.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
         revision="22.0.1"
-        sha1="4cd0b093824b3228fffc21ea369b98d0b1db6566">
-        <dex dex="/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/build/intermediates/pre-dexed/debug/classes-58fa4f5d2b83e38c2c6fd37d401922d35146a3b2.jar" />
+        sha1="41b3870cbe5fa546d8095b5b89d42cb69f3dd175">
+        <dex dex="/Users/aaronbernstein/Documents/workspace/honeydewit/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-drive-7.0.0_36df154cb0db20fc31faa6aafb5db328ad4b0ef1/classes.dex" />
     </item>
     <item
-        jar="/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/libs/additionnal.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="bd9e8dc422bb8c8405359947fe9f4282b49f57f4">
-        <dex dex="/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/build/intermediates/pre-dexed/debug/additionnal-ce7a85658a38f97e27491d3105d8b2037341979b.jar" />
-    </item>
-    <item
-        jar="/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/7.0.0/jars/classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="17f8750d5c0749e44dd7c54aa390d9c937803825">
-        <dex dex="/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/build/intermediates/pre-dexed/debug/classes-5b66fabc6bc0bb761e9db7eaa5a57cfbea815207.jar" />
-    </item>
-    <item
-        jar="/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/libs/core-2.3.0.jar"
-        jumboMode="false"
+        is-multidex="true"
+        jar="/Users/aaronbernstein/Documents/workspace/honeydewit/app/libs/core-2.3.0.jar"
+        jumboMode="true"
+        optimize="true"
         revision="22.0.1"
         sha1="80a402b12accd66d4be7e5dbcb44e42baa0bdd7c">
-        <dex dex="/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/build/intermediates/pre-dexed/debug/core-2.3.0-090013052e1f5f5b01acf8dc41997e35127a8ac4.jar" />
+        <dex dex="/Users/aaronbernstein/Documents/workspace/honeydewit/app/build/intermediates/transforms/dex/debug/folders/1000/2/core-2.3.0_040ab00adb889e1863873deef87f5351aff29d7d/classes.dex" />
     </item>
     <item
-        jar="/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/libs/mail.jar"
-        jumboMode="false"
+        is-multidex="true"
+        jar="/Users/aaronbernstein/Documents/workspace/honeydewit/app/libs/android-integration-2.3.0.jar"
+        jumboMode="true"
+        optimize="true"
         revision="22.0.1"
-        sha1="428e267abff0d10802ccde86b915da2c20471160">
-        <dex dex="/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/build/intermediates/pre-dexed/debug/mail-420116bfe55f14242738dafa9c72188fdea8f0e9.jar" />
+        sha1="5db9e9818724a2d8d392ae25c658bfe552a8cbc1">
+        <dex dex="/Users/aaronbernstein/Documents/workspace/honeydewit/app/build/intermediates/transforms/dex/debug/folders/1000/2/android-integration-2.3.0_816304ae18de693b2732f60a4c304068e48f7407/classes.dex" />
     </item>
     <item
-        jar="/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/libs/file-util-v1.jar"
-        jumboMode="false"
+        is-multidex="true"
+        jar="/Users/aaronbernstein/Documents/workspace/honeydewit/app/libs/activation.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="d1257cbff6faa44c1f325ae0d9413522d4644383">
+        <dex dex="/Users/aaronbernstein/Documents/workspace/honeydewit/app/build/intermediates/transforms/dex/debug/folders/1000/2/activation_d381b00eb1237bd252ba4c0f0224fdec5d578ecb/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/aaronbernstein/Documents/workspace/honeydewit/app/libs/ormlite-core-4.48.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="e579bd2905d0399af5029aaaf9817d5fa0ca88a5">
+        <dex dex="/Users/aaronbernstein/Documents/workspace/honeydewit/app/build/intermediates/transforms/dex/debug/folders/1000/2/ormlite-core-4.48_e29c99ea5a06b2892ace2da35deda5de2dc66462/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/aaronbernstein/Documents/workspace/honeydewit/app/libs/jxl.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="7faf62e0697f7a88954622dfe8c8de33ed142ac7">
+        <dex dex="/Users/aaronbernstein/Documents/workspace/honeydewit/app/build/intermediates/transforms/dex/debug/folders/1000/2/jxl_b72cf3d1413a0f4be5769e1358fd899c703084cf/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/aaronbernstein/Documents/workspace/honeydewit/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-wallet/7.0.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="a96b762bde4139de855735f175ec4d17dca55a6d">
+        <dex dex="/Users/aaronbernstein/Documents/workspace/honeydewit/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-wallet-7.0.0_b23c41824bd0dc149e497bfaabb1ee62ec5108bf/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/aaronbernstein/Documents/workspace/honeydewit/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.0.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="4e86306289ace4aa0cfec44a05ed2b410d36989d">
+        <dex dex="/Users/aaronbernstein/Documents/workspace/honeydewit/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-22.0.0_31fe37ab7d8a4f0e3fa03f94838049427ed4c0e4/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/aaronbernstein/Documents/workspace/honeydewit/app/libs/exp4j-0.3.11.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="150e7b4a77af47b03a1b65be7a01bd663ea64420">
+        <dex dex="/Users/aaronbernstein/Documents/workspace/honeydewit/app/build/intermediates/transforms/dex/debug/folders/1000/2/exp4j-0.3.11_785801357fbd4edaf0d8b5f032fe691b5ad16533/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/aaronbernstein/Documents/workspace/honeydewit/app/libs/file-util-v1.jar"
+        jumboMode="true"
+        optimize="true"
         revision="22.0.1"
         sha1="ca7f48228fae0d9d86c1c93fd1cc07d0e75d3f10">
-        <dex dex="/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/build/intermediates/pre-dexed/debug/file-util-v1-f45584f9b206b767d137fd220e3b70fab899454e.jar" />
+        <dex dex="/Users/aaronbernstein/Documents/workspace/honeydewit/app/build/intermediates/transforms/dex/debug/folders/1000/2/file-util-v1_0cccf629f4e5860abd9bbbf94afc16f1b800dd6a/classes.dex" />
     </item>
     <item
-        jar="/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-safetynet/7.0.0/jars/classes.jar"
-        jumboMode="false"
+        is-multidex="true"
+        jar="/Users/aaronbernstein/Documents/workspace/honeydewit/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-wearable/7.0.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="3033cc3a2c68dff3e5b646d6d084bdbdf7d00b25">
+        <dex dex="/Users/aaronbernstein/Documents/workspace/honeydewit/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-wearable-7.0.0_a41ac4fe11e56171de23246e3a29a101877481e0/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/aaronbernstein/Documents/workspace/honeydewit/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-identity/7.0.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="fb04b12526b0073c7fb1ebb70c5842d82ee95596">
+        <dex dex="/Users/aaronbernstein/Documents/workspace/honeydewit/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-identity-7.0.0_e4c9d2ada2ee136e5ebb753eaac835eec3991acb/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/aaronbernstein/Documents/workspace/honeydewit/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-fitness/7.0.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="3c0b099f9de16b265ecd6122fcb603e7d0d29f90">
+        <dex dex="/Users/aaronbernstein/Documents/workspace/honeydewit/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-fitness-7.0.0_05e937e26b60d77d69b406b0998946ea1d70d7ce/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/aaronbernstein/Documents/workspace/honeydewit/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/7.0.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="17f8750d5c0749e44dd7c54aa390d9c937803825">
+        <dex dex="/Users/aaronbernstein/Documents/workspace/honeydewit/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-maps-7.0.0_672612161027bbb8dfb149af482b37b5034801d7/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/aaronbernstein/Documents/workspace/honeydewit/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-safetynet/7.0.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
         revision="22.0.1"
         sha1="c976518693e89ad44fbfccfc654941eaec198d08">
-        <dex dex="/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/build/intermediates/pre-dexed/debug/classes-c919abf8cfd5d2cfc029da97b9b0dccee1a18572.jar" />
+        <dex dex="/Users/aaronbernstein/Documents/workspace/honeydewit/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-safetynet-7.0.0_fbda6c8c9a0919917b087c1680fd0fb6217c3c29/classes.dex" />
     </item>
     <item
-        jar="/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-nearby/7.0.0/jars/classes.jar"
-        jumboMode="false"
+        is-multidex="true"
+        jar="/Users/aaronbernstein/Documents/workspace/honeydewit/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/7.0.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
         revision="22.0.1"
-        sha1="ef5f051e7308febe289dc93c67c5f32785b4260a">
-        <dex dex="/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/build/intermediates/pre-dexed/debug/classes-30f3b03c8041f4d1533712747348cb89a330a39f.jar" />
+        sha1="e3d791b42eaa90416cd0b2d2e608092794a3baa4">
+        <dex dex="/Users/aaronbernstein/Documents/workspace/honeydewit/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-ads-7.0.0_4a8ea4a50f586d4a27fa20a1e77cbf5649e6b959/classes.dex" />
     </item>
     <item
-        jar="/Users/aaronbernstein/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/22.0.0/support-annotations-22.0.0.jar"
-        jumboMode="false"
+        is-multidex="true"
+        jar="/Users/aaronbernstein/Documents/workspace/honeydewit/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-games/7.0.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
         revision="22.0.1"
-        sha1="685d0b2c590447e85284ed84712cb363ba04eff8">
-        <dex dex="/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/build/intermediates/pre-dexed/debug/support-annotations-22.0.0-ca6f9d6e2b5f674469b5ef4a2fca64a2c34c11e4.jar" />
+        sha1="055783146ba9654a725442563be78cad303aad1f">
+        <dex dex="/Users/aaronbernstein/Documents/workspace/honeydewit/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-games-7.0.0_2a3821cb7c60be7c09a9622e9a5d16b03d6bc30d/classes.dex" />
     </item>
     <item
-        jar="/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/libs/ormlite-android-4.48.jar"
-        jumboMode="false"
+        is-multidex="true"
+        jar="/Users/aaronbernstein/Documents/workspace/honeydewit/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-appindexing/7.0.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="a08d65794b844d8e7540bf9a33859bf3b2482d7f">
+        <dex dex="/Users/aaronbernstein/Documents/workspace/honeydewit/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-appindexing-7.0.0_3e466317fb904d7d988f6775312be4d9ec608f42/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/aaronbernstein/Documents/workspace/honeydewit/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="aa66e888db6f731093403e40577a91f151d3cc5c">
+        <dex dex="/Users/aaronbernstein/Documents/workspace/honeydewit/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_3360b2d723c6b9ad559a7132aea34f83862d1496/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/aaronbernstein/Documents/workspace/honeydewit/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-analytics/7.0.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="29fd6d3794b71491c2789708cd8d03c71feb8954">
+        <dex dex="/Users/aaronbernstein/Documents/workspace/honeydewit/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-analytics-7.0.0_6fdeee47c6d978974dcd806d8ec0f8d7d7a0f84b/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/aaronbernstein/Documents/workspace/honeydewit/app/libs/simple-xml-2.7.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="083623424bcfa03bd598e709765bad0816c2375d">
+        <dex dex="/Users/aaronbernstein/Documents/workspace/honeydewit/app/build/intermediates/transforms/dex/debug/folders/1000/2/simple-xml-2.7.1_22a5a28700a8c7f2e1046baf53b7f1bd847af9a8/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/aaronbernstein/Documents/workspace/honeydewit/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.0.0/jars/libs/internal_impl-22.0.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="b5b92f469d515a13d778900f6d50c03d12f35504">
+        <dex dex="/Users/aaronbernstein/Documents/workspace/honeydewit/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-22.0.0_9882bb2204104dc177368562b058d006c4769205/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/aaronbernstein/Documents/workspace/honeydewit/app/libs/ormlite-android-4.48.jar"
+        jumboMode="true"
+        optimize="true"
         revision="22.0.1"
         sha1="afa06f539a4026c10b247386312aa67404b80a16">
-        <dex dex="/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/build/intermediates/pre-dexed/debug/ormlite-android-4.48-115db2faa9c9cefa46cc4d716db99cce196113a2.jar" />
+        <dex dex="/Users/aaronbernstein/Documents/workspace/honeydewit/app/build/intermediates/transforms/dex/debug/folders/1000/2/ormlite-android-4.48_6b3de876dcb2b339cc9ee35060fa8e2f1df806a4/classes.dex" />
     </item>
     <item
-        jar="/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/libs/file-util-v1.jar"
-        jumboMode="false"
-        revision="22.0.0"
-        sha1="ca7f48228fae0d9d86c1c93fd1cc07d0e75d3f10">
-        <dex dex="/Users/aaronbernstein/Documents/workspace/HoneyDewIt/app/build/intermediates/pre-dexed/debug/file-util-v1-f45584f9b206b767d137fd220e3b70fab899454e.jar" />
+        is-multidex="true"
+        jar="/Users/aaronbernstein/Documents/workspace/honeydewit/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast/7.0.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="4cd0b093824b3228fffc21ea369b98d0b1db6566">
+        <dex dex="/Users/aaronbernstein/Documents/workspace/honeydewit/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-cast-7.0.0_bf1f905d54c116485179bc45b551abbc9aca1234/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/aaronbernstein/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/22.0.0/support-annotations-22.0.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="685d0b2c590447e85284ed84712cb363ba04eff8">
+        <dex dex="/Users/aaronbernstein/Documents/workspace/honeydewit/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-22.0.0_ca6f9d6e2b5f674469b5ef4a2fca64a2c34c11e4/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/aaronbernstein/Documents/workspace/honeydewit/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-appstate/7.0.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="7ff613bf78ab057293892fdbd4169eda899c89b9">
+        <dex dex="/Users/aaronbernstein/Documents/workspace/honeydewit/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-appstate-7.0.0_70a1a3984b502f44239abfe74a1f948caf68feff/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/aaronbernstein/Documents/workspace/honeydewit/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="63f0c7ce64040d92463dbdea07391ae19a161852">
+        <dex dex="/Users/aaronbernstein/Documents/workspace/honeydewit/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_d345aa3bf2de00b0d34ed5f03ae94f971233815c/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/aaronbernstein/Documents/workspace/honeydewit/app/libs/additionnal.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="bd9e8dc422bb8c8405359947fe9f4282b49f57f4">
+        <dex dex="/Users/aaronbernstein/Documents/workspace/honeydewit/app/build/intermediates/transforms/dex/debug/folders/1000/2/additionnal_87bb6fad8fea3a6c35e75e64939c1b10a2d647cb/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/aaronbernstein/Documents/workspace/honeydewit/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/7.0.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="73ccb92b70112f2e463e415ef8d7275de7da6516">
+        <dex dex="/Users/aaronbernstein/Documents/workspace/honeydewit/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-location-7.0.0_0d1848d03c8c04bb3e072a0f4a308b967de0455b/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/aaronbernstein/Documents/workspace/honeydewit/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-plus/7.0.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="0e8228b4bc69c6a2c8d7c18498a77e53417d2574">
+        <dex dex="/Users/aaronbernstein/Documents/workspace/honeydewit/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-plus-7.0.0_211d8dfe06ec84b6350d5a1ece338d2527e2c265/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/aaronbernstein/Documents/workspace/honeydewit/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-panorama/7.0.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="1c5a76debf0c2857ccad422c4a80ed785982f8df">
+        <dex dex="/Users/aaronbernstein/Documents/workspace/honeydewit/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-panorama-7.0.0_180a8c1fab4fe4ed2ba703751e14ea35fccc43aa/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/aaronbernstein/Documents/workspace/honeydewit/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-nearby/7.0.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="ef5f051e7308febe289dc93c67c5f32785b4260a">
+        <dex dex="/Users/aaronbernstein/Documents/workspace/honeydewit/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-nearby-7.0.0_62b88a84bff6c58c21152e7b63f2538ea48bd423/classes.dex" />
     </item>
 
 </items>

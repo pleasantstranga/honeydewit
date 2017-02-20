@@ -21,9 +21,9 @@ import java.io.InputStream;
 import java.io.OutputStream;
 
 public class ProgramInitializer extends OrmLiteSqliteOpenHelper {
-	private SQLiteDatabase myDataBase;
 	static final int DATABASE_VERSION = 2;
     static final String DATABASE_NAME = "conversions";
+	private SQLiteDatabase myDataBase;
 	
 	public ProgramInitializer(Context context,
 			CursorFactory factory) {
@@ -82,22 +82,22 @@ public class ProgramInitializer extends OrmLiteSqliteOpenHelper {
     	} 
     }
     private static void initLogDirectory(Application context) throws Exception{
-    	 File myDir = new File(context.getStorageDirectory().toString() + "/HoneyDewIt");
-    	 if(!myDir.exists()) {
+		File myDir = new File(context.getStorageDirectory().toString() + "/" + context.getString(R.string.app_name));
+		if(!myDir.exists()) {
     		 myDir.mkdirs();
     	 }
     	
     }
     private static void initImagesDirectory(Application context) throws Exception{
-   	 File myDir = new File(context.getStorageDirectory().toString() + "/HoneyDewIt/images");
-   	 if(!myDir.exists()) {
+		File myDir = new File(context.getStorageDirectory().toString() + "/" + context.getString(R.string.app_name) + "/images");
+		if(!myDir.exists()) {
    		 myDir.mkdirs();
    	 }
    	
    }
     private static void initImportsTempDirectory(Application context) throws Exception {
-      	 File myDir = new File(context.getStorageDirectory().toString() +  "/HoneyDewIt/temp/imports/");
-      	 if(!myDir.exists()) {
+		File myDir = new File(context.getStorageDirectory().toString() + "/" + context.getString(R.string.app_name) + "/temp/imports/");
+		if(!myDir.exists()) {
       		 myDir.mkdirs();
       	 }
       	

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:android="http://schemas.android.com/apk/res/android">
-    <style name="defaultTitle" parent="HoneyDewActionBarTheme">
+
+    <style name="defaultTitle" parent="ApplicationActionBarTheme">
         <item name="android:windowBackground">@drawable/background_gradient</item>
         <item name="android:dialogTheme">@style/defaultDialog</item>
         <item name="android:editTextStyle">@style/edittext_style</item>
@@ -14,7 +15,8 @@
         <item name="android:checkboxStyle">@style/CheckboxStyle</item>
         <item name="android:radioButtonStyle">@style/RadioButtonStyle</item>
     </style>
-    <style name="largeTitle" parent="HoneyDewActionBarThemeLarge">
+
+    <style name="largeTitle" parent="ApplicationActionBarThemeLarge">
         <item name="android:windowBackground">@drawable/background_gradient</item>
         <item name="android:dialogTheme">@style/defaultDialog</item>
         <item name="android:editTextStyle">@style/edittext_style</item>
@@ -29,7 +31,8 @@
         <item name="android:radioButtonStyle">@style/RadioButtonStyle</item>
 
     </style>
-    <style name="calculatorStyle" parent="HoneyDewActionBarTheme">
+
+    <style name="calculatorStyle" parent="ApplicationActionBarTheme">
         <item name="android:windowBackground">@drawable/background_gradient</item>
         <item name="android:dialogTheme">@style/defaultDialog</item>
         <item name="android:editTextStyle">@style/edittext_style</item>
@@ -59,8 +62,9 @@
 
 
     </style>
-    <style name="HoneyDewActionBarTheme" parent="@android:style/Theme.Holo.Light.DarkActionBar">
-        <item name="android:actionBarStyle">@style/HoneyDewActionBar</item>
+
+    <style name="ApplicationActionBarTheme" parent="@android:style/Theme.Holo.Light.DarkActionBar">
+        <item name="android:actionBarStyle">@style/ApplicationActionBar</item>
         <item name="android:actionMenuTextColor">@color/edit_text_color</item>
         <item name="android:layout_margin">@dimen/margin</item>
         <item name="android:listViewStyle">@style/listViewStyle</item>
@@ -68,8 +72,9 @@
         <item name="android:radioButtonStyle">@style/RadioButtonStyle</item>
 
     </style>
-    <style name="HoneyDewActionBarThemeLarge" parent="@android:style/Theme.Holo.Light.DarkActionBar">
-        <item name="android:actionBarStyle">@style/HoneyDewActionBarLarge</item>
+
+    <style name="ApplicationActionBarThemeLarge" parent="@android:style/Theme.Holo.Light.DarkActionBar">
+        <item name="android:actionBarStyle">@style/ApplicationActionBarLarge</item>
         <item name="android:actionMenuTextColor">@color/edit_text_color</item>
         <item name="android:layout_margin">@dimen/margin</item>
         <item name="android:listViewStyle">@style/listViewStyle</item>

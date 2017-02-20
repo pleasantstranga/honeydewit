@@ -6,11 +6,11 @@
 
 
     <ScrollView
-        style="@style/scrollbar_shape_style"
         android:id="@+id/itemContent"
-        android:layout_below="@+id/header"
+        style="@style/scrollbar_shape_style"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/header"
         android:layout_centerHorizontal="true"
         android:scrollbars="vertical" >
 
@@ -26,23 +26,55 @@
                     android:id="@+id/noteText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/noteText" 
-                    android:layout_weight="2"/>
-                
-            </TableRow>
-			<TableRow>
+                    android:text="@string/name" />
+
                 <EditText
-                    android:id="@+id/note"
+                    android:id="@+id/itemName"
                     android:layout_width="0dp"
-                    android:hint="@string/enterNote"
-                    android:lines="4"
-                    android:layout_weight="2"
-                    />
+                    android:layout_weight="1"
+                    android:hint="@string/enterItemName" />
+                
             </TableRow>
 
             <TableRow>
-				<Button style="?android:attr/buttonBarButtonStyle" android:layout_height="wrap_content" android:layout_width="0dp" android:layout_weight="1"  android:id="@+id/cancelBtn"   android:text="@string/cancel"/>
-	     		<Button style="?android:attr/buttonBarButtonStyle"  android:layout_height="wrap_content" android:layout_width="0dp" android:layout_weight="1" android:id="@+id/saveBtn"     android:text="@string/save"/>
+
+                <TextView
+                    android:id="@+id/descriptionTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="@string/descriptionTxt" />
+
+            </TableRow>
+
+            <TableRow>
+                <EditText
+                    android:id="@+id/description"
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:hint="@string/enterDescription"
+                    android:lines="4"
+                    />
+            </TableRow>
+
+
+            <TableRow>
+
+                <Button
+                    android:id="@+id/cancelBtn"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/cancel" />
+
+                <Button
+                    android:id="@+id/saveBtn"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/save" />
             </TableRow>
         </TableLayout>
     </ScrollView>

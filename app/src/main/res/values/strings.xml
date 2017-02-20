@@ -74,7 +74,6 @@
     <string name="replace">Replace</string>
     <string name="xlsFile">XLS\\XLSX file:</string>
     <string name="txtCsvFile">Text or csv files:</string>
-    <string name="importing">HoneyDewIt is Importing:</string>
     <string name="hideImportDialog">Click to hide this dialog next time.</string>
     <string name="menuImg">Menu Image</string>
     <string name="button0">0</string>

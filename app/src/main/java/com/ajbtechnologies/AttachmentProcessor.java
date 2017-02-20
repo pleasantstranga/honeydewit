@@ -32,7 +32,7 @@ public class AttachmentProcessor extends BasicActivity   {
         dialog.show();
 
         ProgramInitializer.initialize(getApplicationContext());
-        ((TextView)findViewById(R.id.headerTxt)).setText(getResources().getText(R.string.honeDewItImporting));
+        ((TextView) findViewById(R.id.headerTxt)).setText(getString(R.string.app_name) + getResources().getText(R.string.appImporting));
         File files = null;
         try {
 
@@ -142,7 +142,7 @@ public class AttachmentProcessor extends BasicActivity   {
 
                 this.dialog = params[0];
                 dialog.setTitle("Generating Temp Files...");
-                dialog.setMessage("HoneyDewIt is creating temp files for import");
+                dialog.setMessage(getString(R.string.app_name) + " is creating temp files for import");
                 tempFiles = generateTempFiles();
 
             } catch (Exception e) {

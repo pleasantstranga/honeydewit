@@ -35,7 +35,7 @@ public class ExceptionActivity extends BasicActivity {
                 if (error != null) {
                     Intent emailIntent = new Intent(android.content.Intent.ACTION_SEND);
                     emailIntent.putExtra(android.content.Intent.EXTRA_EMAIL,emailAddresses);
-                    emailIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, "HoneyDewIt Error Report");
+                    emailIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, getString(R.string.app_name) + " Error Report");
                     emailIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                     emailIntent.setType("plain/text");
                     emailIntent.putExtra(android.content.Intent.EXTRA_TEXT,error);

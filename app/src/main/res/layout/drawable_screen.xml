@@ -2,10 +2,28 @@
 	xmlns:tools="http://schemas.android.com/tools"
 	android:layout_width="match_parent"
 	android:layout_height="match_parent"
-	android:orientation="vertical"
-	tools:context=".MainActivity"
 	android:layout_margin="@dimen/margin"
+	android:orientation="vertical"
+	tools:context=".DrawNoteActivity"
 	 >
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_gravity="center"
+		android:orientation="horizontal">
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="fill_parent"
+			android:text="@string/name" />
+
+		<EditText
+			android:id="@+id/itemName"
+			android:layout_width="match_parent"
+			android:layout_height="fill_parent"
+			android:hint="@string/enterItemName" />
+	</LinearLayout>
 
 	<LinearLayout
 		android:layout_width="wrap_content"
@@ -17,25 +35,25 @@
 			android:id="@+id/draw_btn"
 			android:layout_width="wrap_content"
 			android:layout_height="fill_parent"
+			android:background="@drawable/no_background"
 			android:contentDescription="@string/brush"
-			android:src="@drawable/brush"
-			android:background="@drawable/no_background"/>
+			android:src="@drawable/brush" />
 
 		<ImageButton
 			android:id="@+id/erase_btn"
 			android:layout_width="wrap_content"
 			android:layout_height="fill_parent"
+			android:background="@drawable/no_background"
 			android:contentDescription="@string/erase"
-			android:src="@drawable/eraser"
-			android:background="@drawable/no_background"/>
+			android:src="@drawable/eraser" />
 	</LinearLayout>
 
 	<LinearLayout
 		android:id="@+id/paint_shader"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
-		android:orientation="horizontal"
-		android:layout_gravity="center">
+		android:layout_gravity="center"
+		android:orientation="horizontal">
 
 		<ImageButton
 			android:layout_width="@dimen/paint_color_size"
@@ -133,12 +151,12 @@
 	<ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+		android:layout_gravity="right"
         android:background="#FF787878"
         android:contentDescription="@string/paint"
         android:onClick="paintClicked"
         android:src="@drawable/paint"
-        android:tag="#FF787878"
-		android:layout_gravity="right" />
+		android:tag="#FF787878" />
 
 	<com.ajbtechnologies.customviews.DrawingView
 		android:id="@+id/drawing"
@@ -159,9 +177,26 @@
 		android:orientation="horizontal"
 		android:weightSum="3">
 
-		<Button android:layout_weight="1" android:layout_height="wrap_content" android:layout_width="wrap_content" android:id="@+id/cancelBtn"   android:text="@string/cancel"/>
-		<Button android:layout_weight="1" android:layout_height="wrap_content" android:layout_width="wrap_content" android:id="@+id/clearBtn"   android:text="@string/clear"/>
-		<Button android:layout_weight="1" android:layout_height="wrap_content" android:layout_width="wrap_content" android:id="@+id/saveBtn"   android:text="@string/save"/>
+		<Button
+			android:id="@+id/cancelBtn"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:text="@string/cancel" />
+
+		<Button
+			android:id="@+id/clearBtn"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:text="@string/clear" />
+
+		<Button
+			android:id="@+id/saveBtn"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:text="@string/save" />
 
 	</LinearLayout>
 </LinearLayout>

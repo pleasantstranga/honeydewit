@@ -12,12 +12,12 @@ import android.preference.PreferenceManager;
 import android.telephony.TelephonyManager;
 import android.widget.Toast;
 
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdView;
 import com.ajbtechnologies.calendar.CalendarDbHelper;
 import com.ajbtechnologies.dataaccess.DbHelperImpl;
 import com.ajbtechnologies.pojos.BasicList;
 import com.ajbtechnologies.pojos.ListItem;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -27,14 +27,14 @@ import java.util.Set;
 
 public class Application extends android.app.Application {
 
-	private BasicList currentList;
-	private ListItem currentItem;
-
 	private static Typeface typeface;
 	private static DbHelperImpl shoppingListDbHelper;
 	private static CalendarDbHelper calDbHelper;
+	private BasicList currentList;
+	private ListItem currentItem;
 	private File storageDirectory = Environment.getExternalStorageDirectory();
 	private List<Integer> listsIdsToDelete = new ArrayList<Integer>();
+	private Set<Integer> currentNotifications = new HashSet<>();
 
 	public Set<Integer> getCurrentNotifications() {
 		return currentNotifications;
@@ -43,8 +43,6 @@ public class Application extends android.app.Application {
 	public void setCurrentNotifications(Set<Integer> currentNotifications) {
 		this.currentNotifications = currentNotifications;
 	}
-
-	private Set<Integer> currentNotifications = new HashSet<>();
 
 	public List<Integer> getListsIdsToDelete() {
 		return listsIdsToDelete;
@@ -83,14 +81,16 @@ public class Application extends android.app.Application {
 		Application.shoppingListDbHelper = ShoppingListDbHelper;
 
 	}
-	public void setCalDbHelper(CalendarDbHelper calDbHelper) {
-		Application.calDbHelper = calDbHelper;
-	}
+
 	public CalendarDbHelper getCalDbHelper() {
 		if(null == calDbHelper) {
 			setCalDbHelper(new CalendarDbHelper());
 		}
 		return calDbHelper;
+	}
+
+	public void setCalDbHelper(CalendarDbHelper calDbHelper) {
+		Application.calDbHelper = calDbHelper;
 	}
 
 	public void saveDialogVisibilityPreferences(String key, boolean value) {
@@ -131,7 +131,7 @@ public class Application extends android.app.Application {
 	}
 
 	public String getImagesDirectory() {
-		String imagesDirectory = storageDirectory.toString() + "/HoneyDewIt/images/";
+		String imagesDirectory = storageDirectory.toString() + "/" + getString(R.string.app_name) + "/images/";
 
 
 		File myDir = new File(imagesDirectory);
@@ -142,7 +142,7 @@ public class Application extends android.app.Application {
 
 	}
 	public String getZipDirectory() {
-		String imagesDirectory = storageDirectory.toString() + "/HoneyDewIt/temp/zipFiles/";
+		String imagesDirectory = storageDirectory.toString() + "/" + getString(R.string.app_name) + "/temp/zipFiles/";
 
 
 		File myDir = new File(imagesDirectory);
@@ -157,7 +157,7 @@ public class Application extends android.app.Application {
 	 * @return
 	 */
 	public File getImportDirectory() {
-		File folder = new File(storageDirectory.toString() + "/HoneyDewIt/temp/imports/");
+		File folder = new File(storageDirectory.toString() + "/" + getString(R.string.app_name) + "/temp/imports/");
 		if(!folder.exists()){
 			folder.mkdirs();
 		}
@@ -167,10 +167,10 @@ public class Application extends android.app.Application {
 		if (uri != null) {
 			Intent emailIntent = new Intent(android.content.Intent.ACTION_SEND);
 			emailIntent.putExtra(android.content.Intent.EXTRA_EMAIL,emailAddresses);
-			emailIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, "HoneyDewIt List Share");
+			emailIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, getString(R.string.app_name) + " List Share");
 			emailIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 			emailIntent.setType("plain/text");
-			emailIntent.putExtra(android.content.Intent.EXTRA_TEXT, "Someone wants to share a list with you. Please click on the attachment and open it with the HoneyDew application. If you do not have the HoneyDewIt application please download it from the Google Play store.");
+			emailIntent.putExtra(android.content.Intent.EXTRA_TEXT, "Someone wants to share a list with you. Please click on the attachment and open it with the " + getString(R.string.app_name) + " application. If you do not have the " + getString(R.string.app_name) + " application please download it from the Google Play store.");
 			emailIntent.putExtra(Intent.EXTRA_STREAM, uri);
 			startActivity(emailIntent);
 		}
@@ -181,7 +181,7 @@ public class Application extends android.app.Application {
 	}
 
 	public File getExportTempDirectory() {
-		File folder = new File(storageDirectory.toString() + "/HoneyDewIt/temp/export/");
+		File folder = new File(storageDirectory.toString() + "/" + getString(R.string.app_name) + "/temp/export/");
 		if(!folder.exists()){
 			folder.mkdirs();
 		}

@@ -29,7 +29,7 @@ public class ExcelImportActivity extends BasicActivity implements Importer {
 
         ProgressDialog dialog = new ProgressDialog(this);
         dialog.show();
-        ((TextView)findViewById(R.id.headerTxt)).setText("HoneyDew-It");
+        ((TextView) findViewById(R.id.headerTxt)).setText(getString(R.string.app_name));
         tempFiles = new File(getIntent().getStringExtra("tempDirectory"));
         fileName = getIntent().getStringExtra("fileName");
 

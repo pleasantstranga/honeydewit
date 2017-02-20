@@ -17,10 +17,10 @@ import java.util.List;
 
 
 public class TextImportActivity extends BasicActivity implements Importer {
-    private String fileName;
-    private File tempFiles;
     protected ImportedListValidator importedListValidator;
     protected ListItemImportValidator listItemImportValidator;
+    private String fileName;
+    private File tempFiles;
     private ArrayList<ImportedList> sheets = new SerializableArrayList<ImportedList>();
 
     @Override
@@ -30,7 +30,7 @@ public class TextImportActivity extends BasicActivity implements Importer {
 
         ProgressDialog dialog = new ProgressDialog(this);
         dialog.show();
-        ((TextView)findViewById(R.id.headerTxt)).setText("HoneyDew-It");
+        ((TextView) findViewById(R.id.headerTxt)).setText(getText(R.string.app_name));
         tempFiles = new File(getIntent().getStringExtra("tempDirectory"));
         fileName = getIntent().getStringExtra("fileName");
         importedListValidator = new ImportedListValidator(getApplicationContext().getShoppingListDbHelper());

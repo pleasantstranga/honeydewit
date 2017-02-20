@@ -53,12 +53,14 @@
         <item name="android:gravity">center</item>
         <item name="android:background">@drawable/button_background</item>
     </style>
-    <style name="HoneyDewActionBar" parent="@android:style/Widget.Holo.Light.ActionBar.Solid.Inverse">
+
+    <style name="ApplicationActionBar" parent="@android:style/Widget.Holo.Light.ActionBar.Solid.Inverse">
         <item name="android:background">@drawable/actionbar_background</item>
         <item name="android:titleTextStyle">@style/actionbartext</item>
         <item name="android:actionMenuTextColor">@color/edit_text_color</item>
     </style>
-    <style name="HoneyDewActionBarLarge" parent="@android:style/Widget.Holo.Light.ActionBar.Solid.Inverse">
+
+    <style name="ApplicationActionBarLarge" parent="@android:style/Widget.Holo.Light.ActionBar.Solid.Inverse">
         <item name="android:background">@drawable/actionbar_background</item>
         <item name="android:titleTextStyle">@style/actionbartextlarge</item>
         <item name="android:actionMenuTextColor">@color/edit_text_color</item>
