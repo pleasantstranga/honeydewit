@@ -98,6 +98,7 @@ public class ListHomeAdapter extends ArrayAdapter<ListItem> implements Serializa
 				vh.bottomRowValue.setText(NumberUtil.returnNumberString(item.getQuantity()));
 
 			} else if (listTypeId == Constants.NOTES_LIST_TYP_CODE) {
+
 				if (!StringUtils.isEmpty(item.getDescription())) {
 					vh.bottomRowTitle.setText(R.string.descriptionTxt);
 					vh.bottomRowValue.setText(item.getDescription().trim());
@@ -108,6 +109,9 @@ public class ListHomeAdapter extends ArrayAdapter<ListItem> implements Serializa
 					vh.bottomRowValue.setMarqueeRepeatLimit(-1);
 					vh.bottomRowValue.setSelected(true);
 					vh.bottomRowValue.requestFocus();
+				} else {
+					vh.bottomRowTitle.setText("");
+					vh.bottomRowValue.setText("");
 				}
 			}
 			else if(listTypeId == Constants.TODO_LIST_TYPE_CDE) {
