@@ -33,6 +33,32 @@ public class CalendarView extends LinearLayout implements OnClickListener {
 	private List<OnClickListener> calendarNavigationOnClickListeners = new ArrayList<View.OnClickListener>();
 	private ArrayList<OnDateSetListener> dateSetListeners = new ArrayList<OnDateSetListener>();
 	private Context context;
+	private DatePickerDialog.OnDateSetListener datePickerListener = new DatePickerDialog.OnDateSetListener() {
+
+		public void onDateSet(DatePicker view, int selectedYear,
+							  int selectedMonth, int selectedDay) {
+			GregorianCalendar newCal = new GregorianCalendar();
+			newCal.set(Calendar.MONTH, selectedMonth);
+			newCal.set(Calendar.DAY_OF_MONTH, 1);
+			newCal.set(Calendar.YEAR, selectedYear);
+			calendarGridView.setMonth(newCal, selectedDay);
+			currentMonthBtn.setText(DateUtil.monthYear.format(calendarGridView.getMonth().getTime()));
+			currentMonthBtn.setEnabled(true);
+			prevMonth.setText(DateUtil.getPreviousMonthAbbreviated(calendarGridView.getMonth()));
+			nextMonth.setText(DateUtil.getNextMonthAbbreviated(calendarGridView.getMonth()));
+
+			for (OnDateSetListener listener : dateSetListeners) {
+				listener.onDateSet(view, selectedYear, selectedMonth, selectedDay);
+			}
+		}
+
+	};
+	private DialogInterface.OnDismissListener datePickerDismissListener =
+			new DialogInterface.OnDismissListener() {
+				public void onDismiss(DialogInterface dialog) {
+					currentMonthBtn.setEnabled(true);
+				}
+			};
 
 	public CalendarView(Context context, AttributeSet attrs) {
 		super(context, attrs);
@@ -40,7 +66,7 @@ public class CalendarView extends LinearLayout implements OnClickListener {
 
 		prevMonth = (Button) layout.findViewById(R.id.previous);
 		prevMonth.setOnClickListener(this);
-		
+
 
 		nextMonth = (Button) layout.findViewById(R.id.next);
 		nextMonth.setOnClickListener( this);
@@ -52,12 +78,11 @@ public class CalendarView extends LinearLayout implements OnClickListener {
 		prevMonth.setText(DateUtil.getPreviousMonthAbbreviated(calendarGridView.getMonth()));
 		nextMonth.setText(DateUtil.getNextMonthAbbreviated(calendarGridView.getMonth()));
 
-		saveOnConfigChange = attrs.getAttributeBooleanValue("http://schemas.android.com/apk/res/com.honeydewit", "saveMonthOnConfigChange", true);
+		saveOnConfigChange = attrs.getAttributeBooleanValue("http://schemas.android.com/apk/res/com.ajbtechnologies", "saveMonthOnConfigChange", true);
 
 		addView(layout);
 
 	}
-
 
 	@Override
 	public Parcelable onSaveInstanceState() {
@@ -95,6 +120,7 @@ public class CalendarView extends LinearLayout implements OnClickListener {
 		}
 		super.onRestoreInstanceState(BaseSavedState.EMPTY_STATE);
 	}
+
 	public void setDateSelected(GregorianCalendar cal) {
 		calendarGridView.setMonth(cal, cal.get(Calendar.DAY_OF_MONTH));
 		currentMonthBtn.setText(DateUtil.monthYear.format(calendarGridView.getMonth().getTime()));
@@ -102,13 +128,7 @@ public class CalendarView extends LinearLayout implements OnClickListener {
 		nextMonth.setText(DateUtil.getNextMonthAbbreviated(calendarGridView.getMonth()));
 
 	}
-	public void setMonth(GregorianCalendar cal) {
-		calendarGridView.setMonth(DateUtil.getBeginningOfMonth(cal));
-		currentMonthBtn.setText(DateUtil.monthYear.format(calendarGridView.getMonth().getTime()));
-		prevMonth.setText(DateUtil.getPreviousMonthAbbreviated(calendarGridView.getMonth()));
-		nextMonth.setText(DateUtil.getNextMonthAbbreviated(calendarGridView.getMonth()));
 
-	}
 	@Override
 	public void onClick(View v) {
 		if(null != calendarGridView && null != calendarGridView.getSelectedDateView() && null != calendarGridView.getSelectedDateView().getTag()) {
@@ -130,7 +150,7 @@ public class CalendarView extends LinearLayout implements OnClickListener {
 				nextMonth.setText(DateUtil.getNextMonthAbbreviated(calendarGridView.getMonth()));
 
 			}
-			if(v == currentMonthBtn) {	
+			if (v == currentMonthBtn) {
 				currentMonthBtn.setEnabled(false);
 				DatePickerDialog dialog = new DatePickerDialog(getContext(), datePickerListener,  Integer.valueOf(cellTag[2]), Integer.valueOf(cellTag[0])-1,Integer.valueOf(cellTag[1]));
 				dialog.setOnDismissListener(datePickerDismissListener);
@@ -142,42 +162,25 @@ public class CalendarView extends LinearLayout implements OnClickListener {
 			}
 		}
 	}
-
-	private DatePickerDialog.OnDateSetListener datePickerListener = new DatePickerDialog.OnDateSetListener() {
-
-		public void onDateSet(DatePicker view, int selectedYear,
-				int selectedMonth, int selectedDay) {
-			GregorianCalendar newCal = new GregorianCalendar();
-			newCal.set(Calendar.MONTH, selectedMonth);
-			newCal.set(Calendar.DAY_OF_MONTH, 1);
-			newCal.set(Calendar.YEAR, selectedYear);
-			calendarGridView.setMonth(newCal, selectedDay);
-			currentMonthBtn.setText(DateUtil.monthYear.format(calendarGridView.getMonth().getTime()));
-			currentMonthBtn.setEnabled(true);
-			prevMonth.setText(DateUtil.getPreviousMonthAbbreviated(calendarGridView.getMonth()));
-			nextMonth.setText(DateUtil.getNextMonthAbbreviated(calendarGridView.getMonth()));
-
-			for(OnDateSetListener listener : dateSetListeners) {
-				listener.onDateSet(view, selectedYear, selectedMonth, selectedDay);
-			}
-		}
-
-	};
 	
-	private DialogInterface.OnDismissListener datePickerDismissListener =
-			new DialogInterface.OnDismissListener() {
-		public void onDismiss(DialogInterface dialog) {
-			currentMonthBtn.setEnabled(true);
-		}
-	};
 	public void addDateCellOnClickListener(OnClickListener listener){
 		calendarGridView.addOnClickListener(listener);
 	}
+
 	public void addDateCellOnLongClickListener(OnLongClickListener listener){
 		calendarGridView.addOnLongClickListener(listener);
 	}
+
 	public GregorianCalendar getMonth() {
 		return calendarGridView.getMonth();
+	}
+
+	public void setMonth(GregorianCalendar cal) {
+		calendarGridView.setMonth(DateUtil.getBeginningOfMonth(cal));
+		currentMonthBtn.setText(DateUtil.monthYear.format(calendarGridView.getMonth().getTime()));
+		prevMonth.setText(DateUtil.getPreviousMonthAbbreviated(calendarGridView.getMonth()));
+		nextMonth.setText(DateUtil.getNextMonthAbbreviated(calendarGridView.getMonth()));
+
 	}
 	
 	public void addNavigationOnClickListener(OnClickListener onClickListener) {
@@ -201,13 +204,15 @@ public class CalendarView extends LinearLayout implements OnClickListener {
 	public MonthlyEventInstances getMonthlyEvents() {
 		return calendarGridView.getMonthlyEvents();
 	}
-	public GregorianCalendar getCurrentMonthStart() {
-		return calendarGridView.getMonth();
-	}
-	
+
 	public void setMonthlyEvents(MonthlyEventInstances monthlyEvents) {
 		calendarGridView.setMonthlyEvents(monthlyEvents);
 	}
+
+	public GregorianCalendar getCurrentMonthStart() {
+		return calendarGridView.getMonth();
+	}
+
 	public boolean isCurrentMonthButtonClicked(View view) {
 		return view == currentMonthBtn;
 	}

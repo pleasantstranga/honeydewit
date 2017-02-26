@@ -36,12 +36,12 @@ import java.util.concurrent.Callable;
 
 public class DbHelperImpl extends DbHelper {
 
-    
+
     public DbHelperImpl(Context context) {
         super(context);
     }
-   
-	
+
+
 	public int addUpdateListItem(ListItem listItem) {
 		int id = -1;
 		try {
@@ -51,47 +51,47 @@ public class DbHelperImpl extends DbHelper {
 				int rowNumber = getNextListItemRowNumber(listItem.getList().get_id()).intValue();
 				listItem.setRowNumber(rowNumber);
 			}
-			
+
 			getListItemDao().createOrUpdate(listItem);
-			
-			id =  getListItemDao().extractId(listItem);	
+
+			id = getListItemDao().extractId(listItem);
 
 		}
-		
+
 		catch(SQLException e) {
 			e.printStackTrace();
 		}
 		catch(Exception e) {
-			
+
 			e.printStackTrace();
 		}
 		finally {
 			try {
-				
+
 				getListItemDao().closeLastIterator();
 			}
 			catch(SQLException e) {
 				e.printStackTrace();
 			}
 		}
-		return id;   
+		return id;
 	}
 	public boolean setListChecked(boolean checked, Integer listId) {
 		int update = 0;
 		try {
 			Integer checkedInt = checked ? Constants.TRUE : Constants.FALSE;
 			ContentValues cv = new ContentValues();
-			cv.put("CHECKED",checkedInt.toString()); 
-			
+			cv.put("CHECKED", checkedInt.toString());
+
 			SQLiteDatabase db = this.getReadableDatabase();
 		    update = db.update("LISTS", cv, "_id = " + listId, null);
-			
+
 		}
 		catch(Exception e) {
 			e.printStackTrace();
-		}  
+		}
 		return update > 0;
-    
+
 	}
 	public void addUpdateShoppingList(BasicList list, boolean isReplaceAllListWithSameName) {
 		try {
@@ -107,23 +107,24 @@ public class DbHelperImpl extends DbHelper {
 				long rowNumber = getNextListRowNumber(true);
 				list.setRowNumber((int)rowNumber);
 			}
-			getListDao().createOrUpdate(list);	
-			
+			getListDao().createOrUpdate(list);
+
 		}
 		catch(SQLException e) {
 			e.printStackTrace();
-		}  
+		}
 		finally {
 			try {
-				getListDao().closeLastIterator(); 
+				getListDao().closeLastIterator();
 			}
 			catch(Exception e) {
 				e.printStackTrace();
 			}
 		}
-	    
+
 	}
-	public void addUpdateShoppingList(BasicList list)  {	
+
+	public void addUpdateShoppingList(BasicList list) {
 		try {
 			addAuditData(list, null != list.get_id());
 			if(list.get_id() == null) {
@@ -139,11 +140,11 @@ public class DbHelperImpl extends DbHelper {
 				list.setItems(items);
 			}
 
-			
+
 		}
 		catch(SQLException e) {
 			e.printStackTrace();
-		}  
+		}
 		finally {
 			try {
 				getListDao().closeLastIterator();
@@ -152,7 +153,7 @@ public class DbHelperImpl extends DbHelper {
 				e.printStackTrace();
 			}
 		}
-	    
+
 	}
     public void deleteErrorListItems(BasicList list)  {
 
@@ -182,7 +183,7 @@ public class DbHelperImpl extends DbHelper {
 			// there should be 1 result
 			String[] resultArray = rawResults.getResults().get(0);
 			isExists = Integer.valueOf(resultArray[0]) > 0;
-			
+
 		}
 		catch(SQLException e) {
 			e.printStackTrace();
@@ -191,7 +192,7 @@ public class DbHelperImpl extends DbHelper {
 			e.printStackTrace();
 		}
 		finally {
-			
+
 			if(rawResults!= null) {
 				try {
 					getListDao().closeLastIterator();
@@ -200,24 +201,24 @@ public class DbHelperImpl extends DbHelper {
 				catch(Exception e) {
 					e.printStackTrace();
 				}
-				
+
 			}
-				
-			
+
+
 		}
 	    return isExists;
-	    
+
 	}
 	public boolean isListErrorsExist(int listId)  {
 		boolean isExists = false;
 		GenericRawResults<String[]> rawResults = null;
 		try {
-			
+
 			rawResults = getListDao().queryRaw("select count("+ BasicList.ID_CMN +") from " + ImportError.TABLE_NAME + " where "+ ImportError.LIST_ID_CLMN + " = '" + listId + "'");
 			// there should be 1 result
 			String[] resultArray = rawResults.getResults().get(0);
 			isExists = Integer.valueOf(resultArray[0]) > 0;
-			
+
 		}
 		catch(SQLException e) {
 			e.printStackTrace();
@@ -237,24 +238,24 @@ public class DbHelperImpl extends DbHelper {
 			}
 		}
 	    return isExists;
-	    
+
 	}
 	public BasicList getListById(Integer listId)  {
 		BasicList list = null;
 		Where<BasicList, Integer> queryBuilder = null;
 		try {
 			queryBuilder = getListDao().queryBuilder().where().eq(BasicList.ID_CMN, listId);
-			
+
 			List<BasicList> lists = queryBuilder.query();
-			
+
 			if(lists != null && lists.size() > 0) {
 				list = lists.get(0);
 			}
-			
+
 		}
 		catch(SQLException e) {
 			e.printStackTrace();
-			
+
 		}
 		finally {
 			try {
@@ -264,8 +265,8 @@ public class DbHelperImpl extends DbHelper {
 			catch(Exception e) {
 				e.printStackTrace();
 			}
-			
-			
+
+
 		}
 		return list;
 	}
@@ -275,14 +276,14 @@ public class DbHelperImpl extends DbHelper {
     		QueryBuilder<BasicList, ?> queryBuilder = getListDao().queryBuilder();
         	if(getEnabledOnly) {
     	       queryBuilder.where().eq(BasicList.ENABLED_CLM, Constants.TRUE).and().eq(BasicList.LIST_TYPE_ID_CLM, listTypeCode);
-    	       
-        	}
+
+			}
         	queryBuilder.where().eq(BasicList.LIST_TYPE_ID_CLM, listTypeCode);
-        	
-    		list = queryBuilder.query();
-    		
-    		
-    	}
+
+			list = queryBuilder.query();
+
+
+		}
     	catch(SQLException e) {
     		e.printStackTrace();
     	}
@@ -302,14 +303,14 @@ public class DbHelperImpl extends DbHelper {
     		QueryBuilder<BasicListLight, ?> queryBuilder = getLightListDao().queryBuilder();
         	if(getEnabledOnly) {
     	       queryBuilder.where().eq(BasicListLight.ENABLED_CLM, Constants.TRUE).and().eq(BasicListLight.LIST_TYPE_ID_CLM, listTypeCode);
-    	       
-        	}
+
+			}
         	queryBuilder.where().eq(BasicListLight.LIST_TYPE_ID_CLM, listTypeCode);
-        	
-    		list = queryBuilder.query();
-    		
-    		
-    	}
+
+			list = queryBuilder.query();
+
+
+		}
     	catch(SQLException e) {
     		e.printStackTrace();
     	}
@@ -371,7 +372,7 @@ public class DbHelperImpl extends DbHelper {
     	}
     	return listItem;
     }
-	
+
 	public List<Unit> getUnitsOfMeasurements(Integer convTypeCde) {
 		List<Unit> units = null;
 		QueryBuilder<Unit, ?> queryBuilder = null;
@@ -398,7 +399,7 @@ public class DbHelperImpl extends DbHelper {
 		return units;
 	}
 	public void deleteList(int listId)  {
-		
+
 		try {
 			BasicList list = getListDao().queryForId(listId);
 			getListDao().delete(list);
@@ -406,7 +407,7 @@ public class DbHelperImpl extends DbHelper {
 		catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}	
+		}
 		finally {
     		try {
     			getListDao().closeLastIterator();
@@ -417,8 +418,8 @@ public class DbHelperImpl extends DbHelper {
     	}
 	}
 public void deleteList(BasicList list)  {
-		
-		try {
+
+	try {
 			deleteImportErrors(list);
 			getListDao().delete(list);
 
@@ -426,7 +427,7 @@ public void deleteList(BasicList list)  {
 		catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}	
+		}
 		finally {
     		try {
     			getListDao().closeLastIterator();
@@ -444,14 +445,14 @@ public void deleteList(BasicList list)  {
 			if(listItem != null) {
 				int currentRowNum = listItem.getRowNumber();
 				getListItemDao().delete(listItem);
-				
-				String updateRowNum = "UPDATE " + ListItem.TABLE_NAME + " SET " + ListItem.ROW_NUM_CMN + " = " + 
+
+				String updateRowNum = "UPDATE " + ListItem.TABLE_NAME + " SET " + ListItem.ROW_NUM_CMN + " = " +
 				ListItem.ROW_NUM_CMN + " - 1 WHERE " +  ListItem.ROW_NUM_CMN + " > " + currentRowNum;
 
-				
+
 				db.execSQL(updateRowNum);
 			}
-			
+
 		}
 		catch (SQLException e) {
 			// TODO Auto-generated catch block
@@ -467,7 +468,7 @@ public void deleteList(BasicList list)  {
     	}
 	}
 	public void deleteImportErrors(final ListItem listItem)  {
-		
+
 		try {
 			 getImportErrorsDao().callBatchTasks(new Callable<Integer>() {
 				 public Integer call() throws Exception {
@@ -478,7 +479,7 @@ public void deleteList(BasicList list)  {
 					 return 1;
 				 }
 			 });
-			
+
 		}
 		catch (SQLException e) {
 			// TODO Auto-generated catch block
@@ -532,9 +533,8 @@ public void deleteList(BasicList list)  {
 		}
 		return rowNumber;
 	}
-	
-	
-	
+
+
 	public ListEvent saveListEvent(ListEvent listEvent)  {
 		try {
 			getListEventsDao().createOrUpdate(listEvent);
@@ -552,7 +552,7 @@ public void deleteList(BasicList list)  {
     		}
     	}
 		return listEvent;
-		
+
 	}
 	public ListEvent getListEventByListId(Long listId) {
 		ListEvent event = null;
@@ -607,20 +607,20 @@ public void deleteList(BasicList list)  {
 	}
 	public List<Links> getLinks(Integer linksTypeCode, Integer[] exclusions)  {
 		List<Links> links = new ArrayList<Links>();
-		
+
 		Where<Links, Integer> queryBuilder = null;
 		try {
 			queryBuilder = getLinksDao().queryBuilder().where().eq(Links.LINKS_TYPE_CDE_CLMN, linksTypeCode);
 			if(exclusions != null && exclusions.length > 0) {
 				queryBuilder.and().notIn("_id", Arrays.asList(exclusions));
 			}
-			
+
 			links = queryBuilder.query();
-			
+
 		}
 		catch(SQLException e) {
 			e.printStackTrace();
-			
+
 		}
 		finally {
 			try {
@@ -630,8 +630,8 @@ public void deleteList(BasicList list)  {
 			catch(Exception e) {
 				e.printStackTrace();
 			}
-			
-			
+
+
 		}
 		return links;
 	}
@@ -662,11 +662,11 @@ public void deleteList(BasicList list)  {
 	public List<ImportHeader> getImportHeaders()  {
 		List<ImportHeader> headers = new ArrayList<ImportHeader>();
 		try {
-			headers = getImportHeadersDao().queryBuilder().query();	
+			headers = getImportHeadersDao().queryBuilder().query();
 		}
 		catch(SQLException e) {
 			e.printStackTrace();
-			
+
 		}
 		finally {
 			try {
@@ -690,8 +690,8 @@ public void deleteList(BasicList list)  {
 		            	listItem.setList(parent);
 		            	addAuditData(listItem, false);
 		             	getListItemDao().create(listItem);
-		             	
-		             }
+
+					 }
 		             return 1;
 		         }
 			});
@@ -708,7 +708,7 @@ public void deleteList(BasicList list)  {
 				e.printStackTrace();
 			}
 		}
-	   
+
 	}
 	private void createListItems(BasicList list)  throws Exception{
 		if(list.getItems() == null) {
@@ -747,15 +747,15 @@ public void deleteList(BasicList list)  {
 				queryBuilder.and().eq(BasicList.ENABLED_CLM, Constants.TRUE);
 			}
 			List<BasicList> lists = queryBuilder.query();
-			
+
 			if(lists != null && lists.size() > 0) {
 				list = lists.get(0);
 			}
-			
+
 		}
 		catch(SQLException e) {
 			e.printStackTrace();
-			
+
 		}
 		finally {
 			try {
@@ -769,8 +769,8 @@ public void deleteList(BasicList list)  {
 			catch(Exception e) {
 				e.printStackTrace();
 			}
-			
-			
+
+
 		}
 		return list;
 	}
@@ -786,15 +786,15 @@ public void deleteList(BasicList list)  {
 				queryBuilder.and().eq(BasicList.ENABLED_CLM, Constants.TRUE);
 			}
 			List<BasicList> lists = queryBuilder.query();
-			
+
 			if(lists != null && lists.size() > 0) {
 				list = lists.get(0);
 			}
-			
+
 		}
 		catch(SQLException e) {
 			e.printStackTrace();
-			
+
 		}
 		finally {
 			try {
@@ -803,13 +803,13 @@ public void deleteList(BasicList list)  {
 					queryBuilder.reset();
 
 				}
-					
+
 			}
 			catch(Exception e) {
 				e.printStackTrace();
 			}
-			
-			
+
+
 		}
 		return list;
 	}
@@ -827,8 +827,8 @@ public void deleteList(BasicList list)  {
                 if(excludeList != null && excludeList.size() > 0) {
                     selectQuery += "AND LISTS._ID NOT IN (" + TextUtils.join(",", excludeList) + ") ";
                 }
-                selectQuery += "GROUP BY LISTS.LIST_NAME, LISTS._id "
-                + "ORDER BY LISTS.ROW_NUM asc";
+		selectQuery += "GROUP BY LISTS.LIST_NAME, LISTS._id,LISTS.LIST_TYPE_ID "
+				+ "ORDER BY LISTS.ROW_NUM asc";
 	    SQLiteDatabase db = this.getReadableDatabase();
 
 	    Cursor mCursor = db.rawQuery(selectQuery, null);
@@ -865,12 +865,12 @@ public void deleteList(BasicList list)  {
 		Map<Integer,Integer> rowNumbers = new HashMap<Integer, Integer>();
 		SQLiteDatabase db = this.getReadableDatabase();
 	    Cursor mCursor = db.rawQuery(sql, null);
-	    
-	    // looping through all rows and adding to list
+
+		// looping through all rows and adding to list
 	    if (mCursor.moveToFirst()) {
             do {
-            	
-            	Integer id = mCursor.getInt(0);
+
+				Integer id = mCursor.getInt(0);
             	Log.d("DbHelperImpl", "Row Number: " + id);
             } while (mCursor.moveToNext());
         }
@@ -879,7 +879,7 @@ public void deleteList(BasicList list)  {
         }
 	    // return contact list
 	    return rowNumbers;
-	    
+
 	}
     public void toggleEnabledList(int listId, boolean isEnable)  {
         SQLiteDatabase db = null;

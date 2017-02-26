@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/aaronbernstein/Documents/workspace/honeydewit/app/src/main/AndroidManifest.xml:2:1-344:12
+ADDED from /Users/aaronbernstein/Documents/workspace/honeydewit/app/src/main/AndroidManifest.xml:2:1-333:12
 	package
 		ADDED from /Users/aaronbernstein/Documents/workspace/honeydewit/app/src/main/AndroidManifest.xml:3:5-34
 		INJECTED from /Users/aaronbernstein/Documents/workspace/honeydewit/app/src/main/AndroidManifest.xml
@@ -107,7 +107,7 @@ ADDED from /Users/aaronbernstein/Documents/workspace/honeydewit/app/src/main/And
 	android:name
 		ADDED from /Users/aaronbernstein/Documents/workspace/honeydewit/app/src/main/AndroidManifest.xml:29:22-81
 application
-ADDED from /Users/aaronbernstein/Documents/workspace/honeydewit/app/src/main/AndroidManifest.xml:31:5-342:19
+ADDED from /Users/aaronbernstein/Documents/workspace/honeydewit/app/src/main/AndroidManifest.xml:31:5-331:19
 MERGED from [com.google.android.gms:play-services:7.0.0] /Users/aaronbernstein/Documents/workspace/honeydewit/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/7.0.0/AndroidManifest.xml:19:5-20
 MERGED from [com.google.android.gms:play-services-ads:7.0.0] /Users/aaronbernstein/Documents/workspace/honeydewit/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/7.0.0/AndroidManifest.xml:19:5-20
 MERGED from [com.google.android.gms:play-services-analytics:7.0.0] /Users/aaronbernstein/Documents/workspace/honeydewit/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-analytics/7.0.0/AndroidManifest.xml:19:5-20
@@ -136,7 +136,7 @@ MERGED from [com.android.support:support-v4:22.0.0] /Users/aaronbernstein/Docume
 	android:allowBackup
 		ADDED from /Users/aaronbernstein/Documents/workspace/honeydewit/app/src/main/AndroidManifest.xml:33:9-36
 	android:icon
-		ADDED from /Users/aaronbernstein/Documents/workspace/honeydewit/app/src/main/AndroidManifest.xml:34:9-49
+		ADDED from /Users/aaronbernstein/Documents/workspace/honeydewit/app/src/main/AndroidManifest.xml:34:9-50
 	android:theme
 		ADDED from /Users/aaronbernstein/Documents/workspace/honeydewit/app/src/main/AndroidManifest.xml:37:9-44
 	android:name
@@ -501,88 +501,84 @@ ADDED from /Users/aaronbernstein/Documents/workspace/honeydewit/app/src/main/And
 	android:name
 		ADDED from /Users/aaronbernstein/Documents/workspace/honeydewit/app/src/main/AndroidManifest.xml:219:13-73
 activity#com.ajbtechnologies.AttachmentProcessor
-ADDED from /Users/aaronbernstein/Documents/workspace/honeydewit/app/src/main/AndroidManifest.xml:225:9-312:20
+ADDED from /Users/aaronbernstein/Documents/workspace/honeydewit/app/src/main/AndroidManifest.xml:225:9-301:20
 	android:screenOrientation
-		ADDED from /Users/aaronbernstein/Documents/workspace/honeydewit/app/src/main/AndroidManifest.xml:229:13-49
-	android:launchMode
-		ADDED from /Users/aaronbernstein/Documents/workspace/honeydewit/app/src/main/AndroidManifest.xml:228:13-48
+		ADDED from /Users/aaronbernstein/Documents/workspace/honeydewit/app/src/main/AndroidManifest.xml:227:13-49
 	android:configChanges
-		ADDED from /Users/aaronbernstein/Documents/workspace/honeydewit/app/src/main/AndroidManifest.xml:227:13-63
+		ADDED from /Users/aaronbernstein/Documents/workspace/honeydewit/app/src/main/AndroidManifest.xml:228:13-63
 	android:name
-		ADDED from /Users/aaronbernstein/Documents/workspace/honeydewit/app/src/main/AndroidManifest.xml:226:13-67
+		ADDED from /Users/aaronbernstein/Documents/workspace/honeydewit/app/src/main/AndroidManifest.xml:226:13-48
 intent-filter#android.intent.action.VIEW+android.intent.category.BROWSABLE+android.intent.category.DEFAULT
-ADDED from /Users/aaronbernstein/Documents/workspace/honeydewit/app/src/main/AndroidManifest.xml:230:13-244:29
+ADDED from /Users/aaronbernstein/Documents/workspace/honeydewit/app/src/main/AndroidManifest.xml:229:13-238:29
 action#android.intent.action.VIEW
-ADDED from /Users/aaronbernstein/Documents/workspace/honeydewit/app/src/main/AndroidManifest.xml:231:17-69
+ADDED from /Users/aaronbernstein/Documents/workspace/honeydewit/app/src/main/AndroidManifest.xml:230:17-69
 	android:name
-		ADDED from /Users/aaronbernstein/Documents/workspace/honeydewit/app/src/main/AndroidManifest.xml:231:25-66
+		ADDED from /Users/aaronbernstein/Documents/workspace/honeydewit/app/src/main/AndroidManifest.xml:230:25-66
 category#android.intent.category.DEFAULT
-ADDED from /Users/aaronbernstein/Documents/workspace/honeydewit/app/src/main/AndroidManifest.xml:233:17-76
+ADDED from /Users/aaronbernstein/Documents/workspace/honeydewit/app/src/main/AndroidManifest.xml:232:17-76
 	android:name
-		ADDED from /Users/aaronbernstein/Documents/workspace/honeydewit/app/src/main/AndroidManifest.xml:233:27-73
+		ADDED from /Users/aaronbernstein/Documents/workspace/honeydewit/app/src/main/AndroidManifest.xml:232:27-73
 category#android.intent.category.BROWSABLE
-ADDED from /Users/aaronbernstein/Documents/workspace/honeydewit/app/src/main/AndroidManifest.xml:234:17-78
+ADDED from /Users/aaronbernstein/Documents/workspace/honeydewit/app/src/main/AndroidManifest.xml:233:17-78
 	android:name
-		ADDED from /Users/aaronbernstein/Documents/workspace/honeydewit/app/src/main/AndroidManifest.xml:234:27-75
+		ADDED from /Users/aaronbernstein/Documents/workspace/honeydewit/app/src/main/AndroidManifest.xml:233:27-75
 data
-ADDED from /Users/aaronbernstein/Documents/workspace/honeydewit/app/src/main/AndroidManifest.xml:236:17-238:45
-	android:scheme
-		ADDED from /Users/aaronbernstein/Documents/workspace/honeydewit/app/src/main/AndroidManifest.xml:238:21-42
+ADDED from /Users/aaronbernstein/Documents/workspace/honeydewit/app/src/main/AndroidManifest.xml:235:17-69
 	android:mimeType
-		ADDED from /Users/aaronbernstein/Documents/workspace/honeydewit/app/src/main/AndroidManifest.xml:237:21-64
+		ADDED from /Users/aaronbernstein/Documents/workspace/honeydewit/app/src/main/AndroidManifest.xml:235:23-66
 intent-filter#android.intent.action.EDIT+android.intent.action.VIEW+android.intent.category.DEFAULT
-ADDED from /Users/aaronbernstein/Documents/workspace/honeydewit/app/src/main/AndroidManifest.xml:287:13-295:29
+ADDED from /Users/aaronbernstein/Documents/workspace/honeydewit/app/src/main/AndroidManifest.xml:276:13-284:29
 action#android.intent.action.EDIT
-ADDED from /Users/aaronbernstein/Documents/workspace/honeydewit/app/src/main/AndroidManifest.xml:289:17-69
+ADDED from /Users/aaronbernstein/Documents/workspace/honeydewit/app/src/main/AndroidManifest.xml:278:17-69
 	android:name
-		ADDED from /Users/aaronbernstein/Documents/workspace/honeydewit/app/src/main/AndroidManifest.xml:289:25-66
+		ADDED from /Users/aaronbernstein/Documents/workspace/honeydewit/app/src/main/AndroidManifest.xml:278:25-66
 service#com.ajbtechnologies.services.DeleteListService
-ADDED from /Users/aaronbernstein/Documents/workspace/honeydewit/app/src/main/AndroidManifest.xml:314:9-316:40
+ADDED from /Users/aaronbernstein/Documents/workspace/honeydewit/app/src/main/AndroidManifest.xml:303:9-305:40
 	android:exported
-		ADDED from /Users/aaronbernstein/Documents/workspace/honeydewit/app/src/main/AndroidManifest.xml:316:13-37
+		ADDED from /Users/aaronbernstein/Documents/workspace/honeydewit/app/src/main/AndroidManifest.xml:305:13-37
 	android:name
-		ADDED from /Users/aaronbernstein/Documents/workspace/honeydewit/app/src/main/AndroidManifest.xml:315:13-74
+		ADDED from /Users/aaronbernstein/Documents/workspace/honeydewit/app/src/main/AndroidManifest.xml:304:13-74
 service#com.ajbtechnologies.services.ExcelImportService
-ADDED from /Users/aaronbernstein/Documents/workspace/honeydewit/app/src/main/AndroidManifest.xml:317:9-319:40
+ADDED from /Users/aaronbernstein/Documents/workspace/honeydewit/app/src/main/AndroidManifest.xml:306:9-308:40
 	android:exported
-		ADDED from /Users/aaronbernstein/Documents/workspace/honeydewit/app/src/main/AndroidManifest.xml:319:13-37
+		ADDED from /Users/aaronbernstein/Documents/workspace/honeydewit/app/src/main/AndroidManifest.xml:308:13-37
 	android:name
-		ADDED from /Users/aaronbernstein/Documents/workspace/honeydewit/app/src/main/AndroidManifest.xml:318:13-75
+		ADDED from /Users/aaronbernstein/Documents/workspace/honeydewit/app/src/main/AndroidManifest.xml:307:13-75
 service#com.ajbtechnologies.services.TextImportService
-ADDED from /Users/aaronbernstein/Documents/workspace/honeydewit/app/src/main/AndroidManifest.xml:320:9-322:40
+ADDED from /Users/aaronbernstein/Documents/workspace/honeydewit/app/src/main/AndroidManifest.xml:309:9-311:40
 	android:exported
-		ADDED from /Users/aaronbernstein/Documents/workspace/honeydewit/app/src/main/AndroidManifest.xml:322:13-37
+		ADDED from /Users/aaronbernstein/Documents/workspace/honeydewit/app/src/main/AndroidManifest.xml:311:13-37
 	android:name
-		ADDED from /Users/aaronbernstein/Documents/workspace/honeydewit/app/src/main/AndroidManifest.xml:321:13-74
+		ADDED from /Users/aaronbernstein/Documents/workspace/honeydewit/app/src/main/AndroidManifest.xml:310:13-74
 service#com.ajbtechnologies.services.XMLImportService
-ADDED from /Users/aaronbernstein/Documents/workspace/honeydewit/app/src/main/AndroidManifest.xml:323:9-325:40
+ADDED from /Users/aaronbernstein/Documents/workspace/honeydewit/app/src/main/AndroidManifest.xml:312:9-314:40
 	android:exported
-		ADDED from /Users/aaronbernstein/Documents/workspace/honeydewit/app/src/main/AndroidManifest.xml:325:13-37
+		ADDED from /Users/aaronbernstein/Documents/workspace/honeydewit/app/src/main/AndroidManifest.xml:314:13-37
 	android:name
-		ADDED from /Users/aaronbernstein/Documents/workspace/honeydewit/app/src/main/AndroidManifest.xml:324:13-73
+		ADDED from /Users/aaronbernstein/Documents/workspace/honeydewit/app/src/main/AndroidManifest.xml:313:13-73
 service#com.ajbtechnologies.services.UpdateRowNumService
-ADDED from /Users/aaronbernstein/Documents/workspace/honeydewit/app/src/main/AndroidManifest.xml:326:9-328:40
+ADDED from /Users/aaronbernstein/Documents/workspace/honeydewit/app/src/main/AndroidManifest.xml:315:9-317:40
 	android:exported
-		ADDED from /Users/aaronbernstein/Documents/workspace/honeydewit/app/src/main/AndroidManifest.xml:328:13-37
+		ADDED from /Users/aaronbernstein/Documents/workspace/honeydewit/app/src/main/AndroidManifest.xml:317:13-37
 	android:name
-		ADDED from /Users/aaronbernstein/Documents/workspace/honeydewit/app/src/main/AndroidManifest.xml:327:13-76
+		ADDED from /Users/aaronbernstein/Documents/workspace/honeydewit/app/src/main/AndroidManifest.xml:316:13-76
 service#com.ajbtechnologies.services.UpdateListsRowNumService
-ADDED from /Users/aaronbernstein/Documents/workspace/honeydewit/app/src/main/AndroidManifest.xml:329:9-331:40
+ADDED from /Users/aaronbernstein/Documents/workspace/honeydewit/app/src/main/AndroidManifest.xml:318:9-320:40
 	android:exported
-		ADDED from /Users/aaronbernstein/Documents/workspace/honeydewit/app/src/main/AndroidManifest.xml:331:13-37
+		ADDED from /Users/aaronbernstein/Documents/workspace/honeydewit/app/src/main/AndroidManifest.xml:320:13-37
 	android:name
-		ADDED from /Users/aaronbernstein/Documents/workspace/honeydewit/app/src/main/AndroidManifest.xml:330:13-81
+		ADDED from /Users/aaronbernstein/Documents/workspace/honeydewit/app/src/main/AndroidManifest.xml:319:13-81
 activity#com.ajbtechnologies.NoteImageActivity
-ADDED from /Users/aaronbernstein/Documents/workspace/honeydewit/app/src/main/AndroidManifest.xml:333:9-340:20
+ADDED from /Users/aaronbernstein/Documents/workspace/honeydewit/app/src/main/AndroidManifest.xml:322:9-329:20
 	android:screenOrientation
-		ADDED from /Users/aaronbernstein/Documents/workspace/honeydewit/app/src/main/AndroidManifest.xml:338:13-49
+		ADDED from /Users/aaronbernstein/Documents/workspace/honeydewit/app/src/main/AndroidManifest.xml:327:13-49
 	android:label
-		ADDED from /Users/aaronbernstein/Documents/workspace/honeydewit/app/src/main/AndroidManifest.xml:336:13-62
+		ADDED from /Users/aaronbernstein/Documents/workspace/honeydewit/app/src/main/AndroidManifest.xml:325:13-62
 	android:launchMode
-		ADDED from /Users/aaronbernstein/Documents/workspace/honeydewit/app/src/main/AndroidManifest.xml:337:13-43
+		ADDED from /Users/aaronbernstein/Documents/workspace/honeydewit/app/src/main/AndroidManifest.xml:326:13-43
 	android:configChanges
-		ADDED from /Users/aaronbernstein/Documents/workspace/honeydewit/app/src/main/AndroidManifest.xml:335:13-74
+		ADDED from /Users/aaronbernstein/Documents/workspace/honeydewit/app/src/main/AndroidManifest.xml:324:13-74
 	android:theme
-		ADDED from /Users/aaronbernstein/Documents/workspace/honeydewit/app/src/main/AndroidManifest.xml:339:13-48
+		ADDED from /Users/aaronbernstein/Documents/workspace/honeydewit/app/src/main/AndroidManifest.xml:328:13-48
 	android:name
-		ADDED from /Users/aaronbernstein/Documents/workspace/honeydewit/app/src/main/AndroidManifest.xml:334:13-65
+		ADDED from /Users/aaronbernstein/Documents/workspace/honeydewit/app/src/main/AndroidManifest.xml:323:13-65
