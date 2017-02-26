@@ -31,7 +31,7 @@
     <application
         android:name="com.ajbtechnologies.Application"
         android:allowBackup="false"
-        android:icon="@drawable/honeydewit_icon"
+        android:icon="@drawable/application_icon"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/defaultTitle" >
@@ -223,9 +223,8 @@
             android:theme="@android:style/Theme.DeviceDefault.Dialog" />
         <!-- Import Activities -->
         <activity
-            android:name="com.ajbtechnologies.AttachmentProcessor"
+            android:name=".AttachmentProcessor"
             android:configChanges="orientation|keyboardHidden"
-            android:launchMode="singleInstance"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
@@ -233,12 +232,7 @@
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
 
-                <data
-                    android:mimeType="application/vnd.ms-excel"
-                    android:scheme="file" />
-                <data
-                    android:mimeType="application/vnd.ms-excel"
-                    android:scheme="content" />
+                <data android:mimeType="application/vnd.ms-excel" />
                 <data android:pathPattern="/.*\\.xls" />
                 <data android:host="*" />
             </intent-filter>
@@ -248,12 +242,7 @@
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
 
-                <data
-                    android:mimeType="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
-                    android:scheme="file" />
-                <data
-                    android:mimeType="application/vnd.ms-excel"
-                    android:scheme="content" />
+                <data android:mimeType="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" />
                 <data android:pathPattern="/.*\\.xlsx" />
                 <data android:host="*" />
             </intent-filter>
