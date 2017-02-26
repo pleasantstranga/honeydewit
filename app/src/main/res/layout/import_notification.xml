@@ -8,7 +8,7 @@
         android:layout_height="fill_parent"
         android:layout_alignParentLeft="true"
         android:layout_marginRight="10dp"
-        android:src="@drawable/honeydewit_icon"/>
+        android:src="@drawable/application_icon" />
     <TextView android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -16,11 +16,11 @@
     <TextView android:id="@+id/text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_toRightOf="@id/image"
-        android:layout_below="@id/title" />
+        android:layout_below="@id/title"
+        android:layout_toRightOf="@id/image" />
     <ListView android:id="@+id/list"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_toRightOf="@id/image"
-        android:layout_below="@id/text" />
+        android:layout_below="@id/text"
+        android:layout_toRightOf="@id/image" />
 </RelativeLayout>

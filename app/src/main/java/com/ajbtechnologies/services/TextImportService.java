@@ -25,7 +25,6 @@ import com.ajbtechnologies.validate.ListItemImportValidator;
 
 import java.io.File;
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -71,7 +70,6 @@ public class TextImportService extends IntentService {
 
         }
         //show notification for all sheets
-        showInitialMessage(sheetNames);
 
         try {
 
@@ -126,34 +124,10 @@ public class TextImportService extends IntentService {
         }
 
     }
-    public void showInitialMessage(Collection<String> sheet) {
-        NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(this)
-                .setSmallIcon(R.drawable.honeydewit_icon)
-                .setContentTitle(getText(R.string.app_name) + " import started")
-                .setContentText("The import process has started for the following lists");
 
-        NotificationCompat.InboxStyle inboxStyle =
-                new NotificationCompat.InboxStyle();
-
-        // Sets a title for the Inbox in expanded layout
-        inboxStyle.setBigContentTitle("The import process has started for:");
-
-        // Moves events into the expanded layout
-
-        for (String sheetName : sheet) {
-            inboxStyle.addLine(sheetName);
-        }
-        // Moves the expanded layout object into the notification object.
-        mBuilder.setStyle(inboxStyle);
-
-        Notification notification = mBuilder.build();
-
-
-        notificationManager.notify(mainNotification, notification);
-    }
     public void initNotification(BasicList list) {
         NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(this)
-                .setSmallIcon(R.drawable.honeydewit_icon)
+                .setSmallIcon(R.drawable.application_icon)
                 .setContentTitle(list.getListName())
                 .setContentText("The list is being imported");
 
@@ -182,7 +156,7 @@ public class TextImportService extends IntentService {
         PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, notificationIntent, 0);
 
         NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(this)
-                .setSmallIcon(R.drawable.honeydewit_icon)
+                .setSmallIcon(R.drawable.application_icon)
                 .setContentTitle(list.getListName())
                 .setContentText("The list has been imported")
                 .setContentIntent(pendingIntent);

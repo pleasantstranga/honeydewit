@@ -7,19 +7,42 @@
 	
 	<include
 	    android:id="@+id/headerInclude"
-	    android:layout_alignParentTop="true" 
+		layout="@layout/header"
 		android:layout_width="fill_parent"
    		android:layout_height="wrap_content"
-   		layout="@layout/header" />
- 	
+		android:layout_alignParentTop="true" />
+
+
+	<LinearLayout
+		android:id="@+id/buttonsRow"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:layout_alignParentBottom="true"
+		android:orientation="horizontal">
+
+		<Button
+			android:id="@+id/cancelBtn"
+			style="?android:attr/buttonBarButtonStyle"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_gravity="start"
+			android:layout_weight=".5"
+			android:text="@string/cancel" />
+
+		<Button
+			android:id="@+id/importBtn"
+			style="?android:attr/buttonBarButtonStyle"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_gravity="end"
+			android:layout_weight=".5"
+			android:text="@string/importList" />
+	</LinearLayout>
 	<ListView
-	    android:layout_below="@+id/headerInclude"
-	    android:id="@+id/importList"
-	    android:layout_width="fill_parent"
-	    android:layout_height="fill_parent" 
-	   />
-	<LinearLayout android:id="@+id/buttonsRow" android:layout_alignParentBottom="true" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
-	     <Button android:layout_gravity="start" android:layout_weight=".5"  style="?android:attr/buttonBarButtonStyle" android:id="@+id/cancelBtn" android:layout_height="wrap_content" android:layout_width="0dp" android:text="@string/cancel"/>
-	     <Button android:layout_gravity="end" android:layout_weight=".5"  style="?android:attr/buttonBarButtonStyle" android:id="@+id/importBtn" android:layout_width="0dp" android:layout_height="wrap_content" android:text="@string/importList"/>
-	</LinearLayout>  
+		android:id="@+id/importList"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_above="@id/buttonsRow"
+		android:layout_below="@+id/headerInclude"
+		android:fillViewport="true" />
 </RelativeLayout>

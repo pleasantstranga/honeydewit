@@ -32,10 +32,8 @@ public class XMLImportActivity extends BasicActivity implements Importer {
 	}
 
     public void startImport() {
-		int indexOfExtension = tempDirectory.getName().lastIndexOf(Constants.HDEW_EXT);
-		String listName = tempDirectory.getName().substring(0, indexOfExtension);
-		if(getApplicationContext().getShoppingListDbHelper().isListExists(listName, Constants.SHOPPING_LIST_TYPE_CDE, true)) {
-			showImportChoicesDialog(listName, false,true, false,Constants.XML_CHECK_REQ);
+		if (getApplicationContext().getShoppingListDbHelper().isListExists(fileName, Constants.SHOPPING_LIST_TYPE_CDE, true)) {
+			showImportChoicesDialog(fileName, false, true, false, Constants.XML_CHECK_REQ);
 		}
 		else {
 			try {

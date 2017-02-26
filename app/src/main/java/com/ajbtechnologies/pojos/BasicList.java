@@ -2,8 +2,8 @@ package com.ajbtechnologies.pojos;
 
 import android.content.Context;
 
-import com.ajbtechnologies.Constants;
 import com.ajbtechnologies.Application;
+import com.ajbtechnologies.Constants;
 import com.ajbtechnologies.ImportError;
 import com.ajbtechnologies.converter.Sheet;
 import com.ajbtechnologies.dataaccess.ListDaoImpl;
@@ -23,7 +23,6 @@ import java.util.List;
 @Root
 public class BasicList extends BaseObject {
 	
-	private static final long serialVersionUID = 1L;
 	public static final String LIST_NAME_CLM = "LIST_NAME";
 	public static final String LIST_TYPE_ID_CLM = "LIST_TYPE_ID";
 	public static final String ENABLED_CLM = "ENABLED";
@@ -39,76 +38,70 @@ public class BasicList extends BaseObject {
 	public static final String IS_SHOW_ERROR_IND_CLM = "IS_SHOW_ERROR_IND";
 	public static final String IS_SHOW_ERROR_DIALOG_IND_CLM = "IS_SHOW_ERROR_DIALOG_IND";
 	public static final String ROW_NUM_CMN = "ROW_NUM";
-
+	private static final long serialVersionUID = 1L;
 	public transient Sheet importSheet;
-	
+	@ElementList
+	@ForeignCollectionField(eager = true, orderColumnName = ListItem.ROW_NUM_CMN, orderAscending = true)
+	public ForeignCollection<ListItem> items;
+	@ElementList
+	@ForeignCollectionField(eager = true)
+	public ForeignCollection<ImportError> errors;
+	@ElementList
+	@ForeignCollectionField(eager = false)
+	ForeignCollection<ListEvent> events;
 	@Attribute
 	@DatabaseField(columnName = LIST_NAME_CLM)
 	private String listName;
-	
 	@Attribute
 	@DatabaseField(columnName = LIST_TYPE_ID_CLM)
 	private int listTypeId;
-	
 	@Attribute
 	@DatabaseField(columnName = ENABLED_CLM)
-	private int enabled;
-	
+	private int enabled = Constants.TRUE;
 	@Attribute(required = false)
 	@DatabaseField(columnName = DATE_FILLED_CLM)
 	private String dateFilled;
-	
 	@Attribute(required=false)
 	@DatabaseField(columnName = STORES_ID_CLM)
 	private int store_id;
-	
 	@Attribute(required=false)
 	@DatabaseField(columnName = DESC_CLM)
 	private String description;
-	
 	@Attribute
 	@DatabaseField(columnName = CHECKED_CLM)
 	private Integer checked = 0;
-	
-	
 	@Attribute
 	@DatabaseField(columnName = IS_SHOW_ERROR_IND_CLM)
 	private Integer isShowErrorInd = Constants.TRUE;
-	
 	@Attribute
 	@DatabaseField(columnName = IS_SHOW_ERROR_DIALOG_IND_CLM)
 	private Integer isShowErrorDialogInd = Constants.TRUE;
-
-
 	@Attribute(required=false)
 	@DatabaseField(columnName = ROW_NUM_CMN)
 	private Integer rowNumber;
 
-	@ElementList
-	@ForeignCollectionField(eager = true, orderColumnName = ListItem.ROW_NUM_CMN, orderAscending = true)
-    public ForeignCollection<ListItem> items;
-	
-	@ElementList
-	@ForeignCollectionField(eager = false)
-    ForeignCollection<ListEvent> events;
-	
-	@ElementList
-	@ForeignCollectionField(eager = true)
-	public ForeignCollection<ImportError> errors;
-	
-	
+
+	public BasicList() {
+
+	}
+
 	public ForeignCollection<ListItem> getItems() {
-		
+
 		return items;
 	}
+
+	public void setItems(ForeignCollection<ListItem> items) {
+		this.items = items;
+	}
+
 	public List<ListItem> getItems(boolean showErrors) {
 	    List<ListItem> listItems = new ArrayList<ListItem>();
 		if(showErrors) {
 			if(items != null) {
 				for(ListItem item : items) {
-					
-						listItems.add(item);
-					
+
+					listItems.add(item);
+
 				}
 			}
 		}
@@ -118,30 +111,25 @@ public class BasicList extends BaseObject {
 						listItems.add(item);
 					}
 				}
-		
+
 			return listItems;
 		}
 		return listItems;
 	}
+
 	public List<ImportError> getErrorsList() {
 	    List<ImportError> errors = new ArrayList<ImportError>();
-		
-			if(getErrors() != null) {
+
+		if (getErrors() != null) {
 				for(ImportError error : getErrors()) {
-					
-						errors.add(error);
-					
+
+					errors.add(error);
+
 				}
 			}
 			return errors;
 		}
-	public void setItems(ForeignCollection<ListItem> items) {
-		this.items = items;
-	}
 
-	public BasicList() {
-		
-	}
 	public int getListTypeId() {
 		return listTypeId;
 	}
@@ -249,12 +237,12 @@ public class BasicList extends BaseObject {
 		return listName;
 	}
 
-	public Integer getChecked() {
-		return checked;
-	}
-
 	public void setListName(String listName) {
 		this.listName = listName;
+	}
+
+	public Integer getChecked() {
+		return checked;
 	}
 
 	public void setChecked(Integer checked) {

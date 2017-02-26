@@ -173,6 +173,7 @@
     <string name="selectAll">Select All</string>
     <string name="unselectAll">Unselect All</string>
     <string name="dontCancel">Don\'t Cancel</string>
+    <string name="importStarted">import started for list:</string>
 
 
 </resources>

@@ -2,46 +2,51 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
-    android:orientation="horizontal"
     android:background="@drawable/item_background"
+	android:orientation="horizontal"
     >
- 	<CheckBox android:id="@+id/checked" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+
+	<CheckBox
+		android:id="@+id/checkbox"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:clickable="true" />
  	 	
  	<LinearLayout
-        android:orientation="vertical"
+		android:id="@+id/checkboxinfo"
         android:layout_width="0dip"
+		android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:layout_height="wrap_content">
+		android:orientation="vertical">
          
  	     <TextView
- 	        android:textIsSelectable="false"
-            android:id="@+id/topRow"
+			 android:id="@+id/topRow"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:singleLine="true"
-            android:ellipsize="marquee" 
+			 android:ellipsize="marquee"
+			 android:fadingEdge="horizontal"
             android:marqueeRepeatLimit="marquee_forever"
-            android:scrollHorizontally="true"  
-            android:fadingEdge="horizontal"         
+			 android:scrollHorizontally="true"
+			 android:textIsSelectable="true"
         />
  	     
         <TextView
-            android:textIsSelectable="false"
             android:id="@+id/bottomRow"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+			android:textIsSelectable="false"
             android:visibility="gone"
         />
        
     </LinearLayout>
 	
 	<ImageButton
-	    android:contentDescription="@string/editSheetBtn"
-        android:id="@+id/editSheetBtn"
+		android:id="@+id/editSheetBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/edit_small"
         android:background="@drawable/no_background"
+		android:contentDescription="@string/editSheetBtn"
+		android:src="@drawable/edit_small"
         />
   
 </LinearLayout>

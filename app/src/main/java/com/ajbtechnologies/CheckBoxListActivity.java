@@ -39,8 +39,10 @@ public class CheckBoxListActivity extends OptionsMenuActivity implements OnClick
 		cancelBtn.setOnClickListener(this);
 		importButton = (Button)findViewById(R.id.importBtn);
 		importButton.setOnClickListener(this);
-		
+
+
 		ListView listView = (ListView)findViewById(R.id.importList);
+
 		listAdapter = new CheckListAdapter(this, R.layout.checkboxlistrow,items);
 		listView.setAdapter(listAdapter);
 	}

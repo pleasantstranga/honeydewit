@@ -26,7 +26,6 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Random;
@@ -76,11 +75,6 @@ public class XMLImportService extends IntentService {
             tempFiles = (File) intent.getExtras().get(Constants.tempDirectory);
             fileName = intent.getStringExtra(Constants.fileName);
 
-            ArrayList checkedSheetNames = new ArrayList();
-            checkedSheetNames.add(fileName);
-
-            showInitialMessage(checkedSheetNames);
-
             XMLMarshaller marshaller = new XMLMarshaller(this);
 
             BasicList list = marshaller.writeListFromXML(getXmlFile(), fileName);
@@ -115,45 +109,13 @@ public class XMLImportService extends IntentService {
         }
     }
 
-    public void showInitialMessage(Collection<String> sheet) {
-        NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(this)
-                .setSmallIcon(R.drawable.honeydewit_icon)
-                .setContentTitle(getText(R.string.app_name) + " Started");
-
-        NotificationCompat.InboxStyle inboxStyle =
-                new NotificationCompat.InboxStyle();
-
-        // Sets a title for the Inbox in expanded layout
-        inboxStyle.setBigContentTitle("The import process has started for:");
-
-        // Moves events into the expanded layout
-
-        for (String sheetName : sheet) {
-            inboxStyle.addLine(sheetName);
-        }
-        // Moves the expanded layout object into the notification object.
-        mBuilder.setStyle(inboxStyle);
-
-        Notification notification = mBuilder.build();
-
-
-        notificationManager.notify(mainNotification, notification);
-    }
 
     public void initNotification(BasicList list) {
         NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(this)
-                .setSmallIcon(R.drawable.honeydewit_icon)
-                .setContentTitle(list.getListName())
-                .setContentText("The list is being imported");
+                .setSmallIcon(R.drawable.application_icon)
+                .setContentTitle(getText(R.string.app_name) + " " + getText(R.string.importStarted))
+                .setContentText(list.getListName());
 
-        NotificationCompat.InboxStyle inboxStyle =
-                new NotificationCompat.InboxStyle();
-
-        // Sets a title for the Inbox in expanded layout
-        inboxStyle.setBigContentTitle("The list is being imported");
-
-        // Moves the expanded layout object into the notification object.
-        mBuilder.setStyle(inboxStyle);
 
         Notification notification = mBuilder.build();
 
@@ -172,7 +134,7 @@ public class XMLImportService extends IntentService {
         PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, notificationIntent, 0);
 
         NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(this)
-                .setSmallIcon(R.drawable.honeydewit_icon)
+                .setSmallIcon(R.drawable.application_icon)
                 .setContentTitle(list.getListName())
                 .setContentText("Click here to view list")
                 .setContentIntent(pendingIntent);

@@ -10,16 +10,15 @@ import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.CompoundButton.OnCheckedChangeListener;
 import android.widget.ImageButton;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.ajbtechnologies.BasicActivity;
+import com.ajbtechnologies.Application;
 import com.ajbtechnologies.CheckBoxListActivity;
 import com.ajbtechnologies.Constants;
-import com.ajbtechnologies.Application;
 import com.ajbtechnologies.ImportedList;
 import com.ajbtechnologies.R;
-import com.ajbtechnologies.SerializableArrayList;
 import com.ajbtechnologies.listeners.OneOffClickListener;
 
 import java.util.ArrayList;
@@ -39,13 +38,6 @@ public class CheckListAdapter extends ArrayAdapter<ImportedList> {
         this.resourceId = resource;
     }
 
-    public CheckListAdapter(BasicActivity context, int resource, SerializableArrayList<ImportedList> sheets, OnCheckedChangeListener checkBoxListener) {
-        super(context, resource, sheets);
-        this.context = context;
-        this.sheets = sheets;
-        this.checkboxListener = checkBoxListener;
-        this.resourceId = resource;
-    }
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
@@ -55,14 +47,20 @@ public class CheckListAdapter extends ArrayAdapter<ImportedList> {
             LayoutInflater vi = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             v = vi.inflate(resourceId, null);
         }
-        final CheckBox checkbox = (CheckBox) v.findViewById(R.id.checked);
-
-        if (checkboxListener != null) {
-            checkbox.setOnCheckedChangeListener(checkboxListener);
-        }
         final ImportedList importedList = sheets.get(position);
+        final CheckBox checkbox = (CheckBox) v.findViewById(R.id.checkbox);
 
-
+        LinearLayout checkboxinfo = (LinearLayout) v.findViewById(R.id.checkboxinfo);
+        checkboxinfo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (checkbox.isChecked()) {
+                    checkbox.setChecked(false);
+                } else {
+                    checkbox.setChecked(true);
+                }
+            }
+        });
         if (importedList.isChecked()) {
             checkbox.setChecked(true);
         }
@@ -108,7 +106,6 @@ public class CheckListAdapter extends ArrayAdapter<ImportedList> {
                     importedList.setChecked(true);
                     boolean isExists = ((Application) context.getApplicationContext()).getShoppingListDbHelper().isListExists(importedList.getCurrentName(), Constants.SHOPPING_LIST_TYPE_CDE, true);
                     boolean isEmpty = (importedList.getCurrentName() == null || importedList.getCurrentName().length() < 3);
-
                     if(isExists || isEmpty) {
                         ((CheckBoxListActivity) context).showImportChoicesDialog(importedList, isEmpty, isExists, true,buttonView);
                     }
@@ -116,10 +113,10 @@ public class CheckListAdapter extends ArrayAdapter<ImportedList> {
                 else {
                     importedList.setChecked(false);
                 }
-
             }
 
         });
+
 
         return v;
     }
