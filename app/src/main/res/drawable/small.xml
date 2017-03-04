@@ -4,12 +4,12 @@
 	android:shape="oval" >
 
 	<size
-		android:height="@dimen/small_brush"
-		android:width="@dimen/small_brush" />
+        android:width="@dimen/small_brush"
+        android:height="@dimen/small_brush" />
 
 	<gradient
-		android:startColor="@color/brush_chooser_color"
+        android:angle="270"
 		android:endColor="@color/brush_chooser_color"
-		android:angle="270" />
+        android:startColor="@color/brush_chooser_color" />
 
 </shape>

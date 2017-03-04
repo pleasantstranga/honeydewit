@@ -19,6 +19,7 @@ import java.util.ArrayList;
 import java.util.List;
 
  public class CalculatorsDialogActivity extends BasicActivity implements View.OnClickListener{
+     private static final int REQUEST_CODE = 32;
      TextView messageView;
      String title;
      String message;
@@ -28,7 +29,6 @@ import java.util.List;
      Button cancelBtn;
      List<Links> links;
 
-     private static final int REQUEST_CODE = 32;
      @Override
      public void onCreate(Bundle savedInstanceState) {
          super.onCreate(savedInstanceState);

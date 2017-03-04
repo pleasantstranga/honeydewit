@@ -31,9 +31,15 @@ public class BaseObject extends Observable implements Serializable {
 		}
 		return _id;
 	}
+
 	public void set_id(Integer _id) {
 		this._id = _id;
 	}
+
+    public boolean isUpdate() {
+        return _id != null && _id != -1;
+    }
+
 	public String getDateCreated() {
 		return dateCreated;
 	}

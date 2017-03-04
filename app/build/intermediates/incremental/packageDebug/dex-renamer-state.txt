@@ -1,0 +1,7 @@
+#Sun Mar 05 13:57:14 CST 2017
+base.0=/Users/aaronbernstein/Documents/workspaces/honeydewit/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_6f7f549aad92f513e7ad2f21f2aea8dba06ad78c
+renamed.1=classes.dex
+renamed.0=classes2.dex
+file.1=/Users/aaronbernstein/Documents/workspaces/honeydewit/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_baf2d5d51094430d9cb8df3bc04066b24fec9836/classes.dex
+base.1=/Users/aaronbernstein/Documents/workspaces/honeydewit/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_baf2d5d51094430d9cb8df3bc04066b24fec9836
+file.0=/Users/aaronbernstein/Documents/workspaces/honeydewit/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_6f7f549aad92f513e7ad2f21f2aea8dba06ad78c/classes.dex

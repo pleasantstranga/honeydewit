@@ -1,0 +1,38 @@
+[
+    {
+        "merged": "/Users/aaronbernstein/Documents/workspaces/honeydewit/app/build/intermediates/res/merged/debug/menu/action_bar_back.xml",
+        "source": "/Users/aaronbernstein/Documents/workspaces/honeydewit/app/src/main/res/menu/action_bar_back.xml"
+    },
+    {
+        "merged": "/Users/aaronbernstein/Documents/workspaces/honeydewit/app/build/intermediates/res/merged/debug/menu/action_bar_add_item_menu.xml",
+        "source": "/Users/aaronbernstein/Documents/workspaces/honeydewit/app/src/main/res/menu/action_bar_add_item_menu.xml"
+    },
+    {
+        "merged": "/Users/aaronbernstein/Documents/workspaces/honeydewit/app/build/intermediates/res/merged/debug/menu/action_bar_calendar_menu.xml",
+        "source": "/Users/aaronbernstein/Documents/workspaces/honeydewit/app/src/main/res/menu/action_bar_calendar_menu.xml"
+    },
+    {
+        "merged": "/Users/aaronbernstein/Documents/workspaces/honeydewit/app/build/intermediates/res/merged/debug/menu/drawer_menu.xml",
+        "source": "/Users/aaronbernstein/Documents/workspaces/honeydewit/app/src/main/res/menu/drawer_menu.xml"
+    },
+    {
+        "merged": "/Users/aaronbernstein/Documents/workspaces/honeydewit/app/build/intermediates/res/merged/debug/menu/action_bar_save_item_menu.xml",
+        "source": "/Users/aaronbernstein/Documents/workspaces/honeydewit/app/src/main/res/menu/action_bar_save_item_menu.xml"
+    },
+    {
+        "merged": "/Users/aaronbernstein/Documents/workspaces/honeydewit/app/build/intermediates/res/merged/debug/menu/action_bar_list_home_menu.xml",
+        "source": "/Users/aaronbernstein/Documents/workspaces/honeydewit/app/src/main/res/menu/action_bar_list_home_menu.xml"
+    },
+    {
+        "merged": "/Users/aaronbernstein/Documents/workspaces/honeydewit/app/build/intermediates/res/merged/debug/menu/action_bar_draw_note_menu.xml",
+        "source": "/Users/aaronbernstein/Documents/workspaces/honeydewit/app/src/main/res/menu/action_bar_draw_note_menu.xml"
+    },
+    {
+        "merged": "/Users/aaronbernstein/Documents/workspaces/honeydewit/app/build/intermediates/res/merged/debug/menu/action_bar_import_lists_menu.xml",
+        "source": "/Users/aaronbernstein/Documents/workspaces/honeydewit/app/src/main/res/menu/action_bar_import_lists_menu.xml"
+    },
+    {
+        "merged": "/Users/aaronbernstein/Documents/workspaces/honeydewit/app/build/intermediates/res/merged/debug/menu/action_bar_note_menu.xml",
+        "source": "/Users/aaronbernstein/Documents/workspaces/honeydewit/app/src/main/res/menu/action_bar_note_menu.xml"
+    }
+]

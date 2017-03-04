@@ -20,14 +20,13 @@ import java.util.Calendar;
 
 
 public class NoteImageActivity extends OptionsMenuActivity implements View.OnClickListener {
+    private static final int REQUEST_CAPTURE_IMAGE = 12344;
     EditText description = null;
     ImageButton imageButton;
     ListItem listItem = null;
     Button takePicButton = null;
     Button saveButton = null;
     Button cancelButton = null;
-    private static final int REQUEST_CAPTURE_IMAGE = 12344;
-
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -123,7 +122,7 @@ public class NoteImageActivity extends OptionsMenuActivity implements View.OnCli
     public void save() {
         if(validate()) {
 
-            boolean isUpdate = listItem.get_id() != null;
+            boolean isUpdate = listItem.isUpdate();
             getApplicationContext().getShoppingListDbHelper().addUpdateListItem(listItem);
             getIntent().putExtra("isUpdate", isUpdate);
             getApplicationContext().setCurrentItem(listItem);

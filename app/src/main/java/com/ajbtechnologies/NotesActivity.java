@@ -62,7 +62,7 @@ public class NotesActivity extends OptionsMenuActivity implements OnClickListene
 		populateListItem();
 
 		if (noteValidator.validate(this, listItem)) {
-			boolean isUpdate = listItem.get_id() != null;
+            boolean isUpdate = listItem.isUpdate();
 
 			int listId = getApplicationContext().getShoppingListDbHelper().addUpdateListItem(listItem);
 

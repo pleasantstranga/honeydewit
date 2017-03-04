@@ -5,46 +5,63 @@ android:orientation="vertical" >
 
     <ImageButton
 
-        android:layout_alignParentTop="true"
-        android:layout_above="@id/descriptionTxt"
-        android:background="@drawable/no_background"
         android:id="@+id/imageButton"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:contentDescription="@string/image"
-        android:layout_alignParentEnd="true" />
+        android:layout_above="@id/descriptionTxt"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/no_background"
+        android:contentDescription="@string/image" />
 
     <TextView
+        android:id="@+id/descriptionTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/descriptionTxt"
-        android:text="@string/descriptionTxt"
         android:layout_above="@+id/description"
-        android:layout_alignStart="@+id/description" />
+        android:layout_alignStart="@+id/description"
+        android:text="@string/descriptionTxt" />
 
     <EditText
-        android:lines="2"
-        android:maxLines="2"
-        android:maxLength="200"
+        android:id="@+id/description"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/description"
         android:layout_above="@+id/buttonBar"
         android:layout_alignStart="@+id/imageButton"
-        android:inputType="text" />
+        android:inputType="text"
+        android:lines="2"
+        android:maxLength="200"
+        android:maxLines="2" />
 
 
     <LinearLayout
         android:id="@+id/buttonBar"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
         android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
         android:weightSum="3">
 
-        <Button android:layout_weight="1" android:layout_height="wrap_content" android:layout_width="wrap_content" android:id="@+id/cancelBtn"   android:text="@string/cancel"/>
-        <Button android:layout_weight="1" android:layout_height="wrap_content" android:layout_width="wrap_content" android:id="@+id/takePictureButton"   android:text="@string/takePhoto"/>
-        <Button android:layout_weight="1" android:layout_height="wrap_content" android:layout_width="wrap_content" android:id="@+id/saveBtn"   android:text="@string/save"/>
+        <Button
+            android:id="@+id/cancelBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/cancel" />
+
+        <Button
+            android:id="@+id/takePictureButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/takePhoto" />
+
+        <Button
+            android:id="@+id/saveBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/save" />
 
     </LinearLayout>
 

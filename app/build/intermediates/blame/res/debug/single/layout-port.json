@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/Users/aaronbernstein/Documents/workspaces/honeydewit/app/build/intermediates/res/merged/debug/layout-port/calculator.xml",
+        "source": "/Users/aaronbernstein/Documents/workspaces/honeydewit/app/src/main/res/layout-port/calculator.xml"
+    },
+    {
+        "merged": "/Users/aaronbernstein/Documents/workspaces/honeydewit/app/build/intermediates/res/merged/debug/layout-port/monthtab.xml",
+        "source": "/Users/aaronbernstein/Documents/workspaces/honeydewit/app/src/main/res/layout-port/monthtab.xml"
+    }
+]

@@ -35,10 +35,11 @@ import java.util.concurrent.Callable;
 
 
 public class ItemActivity extends OptionsMenuActivity implements OnClickListener {
-	private String valueFromCalculator;
-	private Button saveButton;
-	private Button cancelButton;
-	private Button cameraButton;
+    static final int REQUEST_IMAGE_CAPTURE = 1234;
+    private String valueFromCalculator;
+    private Button saveButton;
+    private Button cancelButton;
+    private Button cameraButton;
     private ImageButton calculateQtyButton;
 	private ImageButton calculateUnitPriceBtn;
 	private ImageButton cameraImage;
@@ -52,7 +53,6 @@ public class ItemActivity extends OptionsMenuActivity implements OnClickListener
 	private BaseValidator listItemValidator;
 	private String tempImageName = null;
 	private String calcType = null;
-	static final int REQUEST_IMAGE_CAPTURE = 1234;
 	private ListView errorListView;
 	private ArrayAdapter<String> errorsAdapter = null;
 	private List<String> errors = new ArrayList<>();
@@ -145,7 +145,7 @@ public class ItemActivity extends OptionsMenuActivity implements OnClickListener
 		populateListItem();
 
 		if(listItemValidator.validate(this,listItem)) {
-			boolean isUpdate = listItem.get_id() != null;
+            boolean isUpdate = listItem.isUpdate();
 
 			int listId =getApplicationContext().getShoppingListDbHelper().addUpdateListItem(listItem);
 

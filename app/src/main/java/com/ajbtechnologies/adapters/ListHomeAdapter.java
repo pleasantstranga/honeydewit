@@ -41,19 +41,18 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ListHomeAdapter extends ArrayAdapter<ListItem> implements Serializable{
-	Integer listTypeId;
+
 	private ListItemWatcher watcher;
 
 	public ListHomeAdapter(Context context, int layoutId, List<ListItem> items) {
 		super(context, R.layout.listrow, R.id.topRow, items);
-		if(items != null && items.size() > 0) {
-			listTypeId = items.get(0).getList().getListTypeId();
-		}
+
 	}
 
 	public View getView(int position, View convertView, ViewGroup parent) {
 		View linearLayout = null;
 		final ViewHolder vh;
+
 		if(convertView==null){
 			LayoutInflater li = ((BasicActivity)getContext()).getLayoutInflater();
 			linearLayout = li.inflate(R.layout.listrow, null);
@@ -74,7 +73,6 @@ public class ListHomeAdapter extends ArrayAdapter<ListItem> implements Serializa
 		final ListItem item = getItem(position);
 
 
-
 		if(watcher == null) {
 			TextView numItemsText = (TextView) ((RelativeLayout)parent.getParent()).findViewById(R.id.numItems);
 			TextView totalPriceText =  (TextView) ((RelativeLayout)parent.getParent()).findViewById(R.id.totalPrice);
@@ -93,11 +91,13 @@ public class ListHomeAdapter extends ArrayAdapter<ListItem> implements Serializa
 			vh.name.requestFocus();
 			vh.name.setText(item.getName());
 
-			if(listTypeId== Constants.SHOPPING_LIST_TYPE_CDE ) {
-				vh.bottomRowTitle.setText(R.string.numItemsUnique);
+
+            if (item.getList().getListTypeId() == Constants.SHOPPING_LIST_TYPE_CDE) {
+                vh.bottomRowTitle.setText(R.string.numItemsUnique);
 				vh.bottomRowValue.setText(NumberUtil.returnNumberString(item.getQuantity()));
 
-			} else if (listTypeId == Constants.NOTES_LIST_TYP_CODE) {
+            } else if (item.getList().getListTypeId() == Constants.NOTES_LIST_TYP_CODE) {
+            } else if (item.getList().getListTypeId() == Constants.NOTES_LIST_TYP_CODE) {
 
 				if (!StringUtils.isEmpty(item.getDescription())) {
 					vh.bottomRowTitle.setText(R.string.descriptionTxt);
@@ -109,13 +109,12 @@ public class ListHomeAdapter extends ArrayAdapter<ListItem> implements Serializa
 					vh.bottomRowValue.setMarqueeRepeatLimit(-1);
 					vh.bottomRowValue.setSelected(true);
 					vh.bottomRowValue.requestFocus();
-				} else {
-					vh.bottomRowTitle.setText("");
+                } else {
+                    vh.bottomRowTitle.setText("");
 					vh.bottomRowValue.setText("");
 				}
-			}
-			else if(listTypeId == Constants.TODO_LIST_TYPE_CDE) {
-				vh.bottomRowTitle.setText(R.string.descriptionTxt);
+			} else if (item.getList().getListTypeId() == Constants.TODO_LIST_TYPE_CDE) {
+                vh.bottomRowTitle.setText(R.string.descriptionTxt);
 				vh.bottomRowValue.setText(item.getDescription().trim());
 				vh.bottomRowValue.setEllipsize(TextUtils.TruncateAt.MARQUEE);
 				vh.bottomRowValue.setFocusable(true);
@@ -141,14 +140,12 @@ public class ListHomeAdapter extends ArrayAdapter<ListItem> implements Serializa
 			@Override
 			public void onClick(View v) {
 				Intent newListIntent = null;
-				if(listTypeId == Constants.SHOPPING_LIST_TYPE_CDE) {
-					newListIntent = new Intent(getContext(), ItemActivity.class);
-				}
-				else if(listTypeId == Constants.TODO_LIST_TYPE_CDE) {
-					newListIntent = new Intent(getContext(), ToDoItemActivity.class);
-				}
-				else if(listTypeId == Constants.NOTES_LIST_TYP_CODE) {
-					if(item.getImageName() == null) {
+                if (item.getList().getListTypeId() == Constants.SHOPPING_LIST_TYPE_CDE) {
+                    newListIntent = new Intent(getContext(), ItemActivity.class);
+				} else if (item.getList().getListTypeId() == Constants.TODO_LIST_TYPE_CDE) {
+                    newListIntent = new Intent(getContext(), ToDoItemActivity.class);
+				} else if (item.getList().getListTypeId() == Constants.NOTES_LIST_TYP_CODE) {
+                    if(item.getImageName() == null) {
 						newListIntent = new Intent(getContext(), NotesActivity.class);
 					}
 					else {

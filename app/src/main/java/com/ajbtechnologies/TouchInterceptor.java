@@ -38,6 +38,10 @@ import android.widget.ListView;
 
 public class TouchInterceptor extends ListView {
 
+    private static final int FLING = 0;
+    private static final int SLIDE = 1;
+    private static final int TRASH = 2;
+    private final int mTouchSlop;
     private ImageView mDragView;
     private WindowManager mWindowManager;
     private WindowManager.LayoutParams mWindowParams;
@@ -61,13 +65,9 @@ public class TouchInterceptor extends ListView {
     private int mLowerBound;
     private int mHeight;
     private GestureDetector mGestureDetector;
-    private static final int FLING = 0;
-    private static final int SLIDE = 1;
-    private static final int TRASH = 2;
     private int mRemoveMode = -1;
     private Rect mTempRect = new Rect();
     private Bitmap mDragBitmap;
-    private final int mTouchSlop;
     private int mItemHeightNormal;
     private int mItemHeightExpanded;
     private int mItemHeightHalf;

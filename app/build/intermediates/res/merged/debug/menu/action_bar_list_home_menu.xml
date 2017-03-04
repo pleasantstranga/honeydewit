@@ -1,0 +1,11 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item android:id="@+id/backBtn"
+        android:title="@string/back"
+        android:showAsAction="always" />
+    <item android:id="@+id/addItem"
+          android:title="@string/addItem"
+          android:showAsAction="always" />
+    <item android:id="@+id/shareItem"
+          android:title="@string/shareItem"
+          android:showAsAction="always" />
+</menu>

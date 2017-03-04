@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+    android:background="@drawable/header_style"
+    android:gravity="center_vertical"
+    android:padding="15dp"
+    >
+
+	<ImageView
+
+	    android:id="@+id/honeyDewHeader"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+		android:layout_alignParentTop="true"
+	    android:contentDescription="@string/menuImg"
+        android:scaleType="fitStart"
+		android:src="@drawable/application_header_no_title_small"
+
+        />
+        
+    <TextView
+        android:id="@+id/headerTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/honeyDewHeader"
+		android:ellipsize="end"
+		android:maxLines="2"
+		android:singleLine="false"
+        android:text="@string/app_name"
+		android:textIsSelectable="false"
+        />
+
+
+</RelativeLayout>

@@ -7,13 +7,10 @@
             <item android:bottom="5px">
                 <shape>
                     <padding android:bottom="10dp"/>
-                    <gradient
-                        android:startColor="@color/button_background"
-                        android:endColor="@color/button_background"
-                        android:angle="270" />
+                    <gradient android:angle="270" android:endColor="@color/button_background" android:startColor="@color/button_background" />
                     <corners
                         android:radius="5dp"/>
-                    <stroke android:color="@color/shadow_color" android:width="1dp"></stroke>
+                    <stroke android:width="1dp" android:color="@color/shadow_color"></stroke>
                 </shape>
             </item>
         </layer-list>
@@ -25,18 +22,11 @@
             <!-- BUTTON -->
             <item android:bottom="5px">
                 <shape>
-                    <gradient
-                        android:startColor="@color/backgroundStart"
-                        android:endColor="@color/backgroundEnd"
-                        android:angle="270" />
+                    <gradient android:angle="270" android:endColor="@color/backgroundEnd" android:startColor="@color/backgroundStart" />
                     <corners
                         android:radius="5dp"/>
-                    <padding
-                        android:left="10dp"
-                        android:top="10dp"
-                        android:right="10dp"
-                        android:bottom="10dp"/>
-                    <stroke android:color="@color/shadow_color" android:width="1dp"></stroke>
+                    <padding android:bottom="10dp" android:left="10dp" android:right="10dp" android:top="10dp" />
+                    <stroke android:width="1dp" android:color="@color/shadow_color"></stroke>
                 </shape>
             </item>
         </layer-list>

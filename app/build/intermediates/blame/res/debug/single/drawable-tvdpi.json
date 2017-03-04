@@ -1,0 +1,22 @@
+[
+    {
+        "merged": "/Users/aaronbernstein/Documents/workspaces/honeydewit/app/build/intermediates/res/merged/debug/drawable-tvdpi/ic_plusone_medium_off_client.png",
+        "source": "/Users/aaronbernstein/.android/build-cache/fa858de8951f739ff4ed9cf5c2c05b7b656b1b0b/output/res/drawable-tvdpi/ic_plusone_medium_off_client.png"
+    },
+    {
+        "merged": "/Users/aaronbernstein/Documents/workspaces/honeydewit/app/build/intermediates/res/merged/debug/drawable-tvdpi/common_full_open_on_phone.png",
+        "source": "/Users/aaronbernstein/.android/build-cache/fa858de8951f739ff4ed9cf5c2c05b7b656b1b0b/output/res/drawable-tvdpi/common_full_open_on_phone.png"
+    },
+    {
+        "merged": "/Users/aaronbernstein/Documents/workspaces/honeydewit/app/build/intermediates/res/merged/debug/drawable-tvdpi/ic_plusone_standard_off_client.png",
+        "source": "/Users/aaronbernstein/.android/build-cache/fa858de8951f739ff4ed9cf5c2c05b7b656b1b0b/output/res/drawable-tvdpi/ic_plusone_standard_off_client.png"
+    },
+    {
+        "merged": "/Users/aaronbernstein/Documents/workspaces/honeydewit/app/build/intermediates/res/merged/debug/drawable-tvdpi/ic_plusone_tall_off_client.png",
+        "source": "/Users/aaronbernstein/.android/build-cache/fa858de8951f739ff4ed9cf5c2c05b7b656b1b0b/output/res/drawable-tvdpi/ic_plusone_tall_off_client.png"
+    },
+    {
+        "merged": "/Users/aaronbernstein/Documents/workspaces/honeydewit/app/build/intermediates/res/merged/debug/drawable-tvdpi/ic_plusone_small_off_client.png",
+        "source": "/Users/aaronbernstein/.android/build-cache/fa858de8951f739ff4ed9cf5c2c05b7b656b1b0b/output/res/drawable-tvdpi/ic_plusone_small_off_client.png"
+    }
+]

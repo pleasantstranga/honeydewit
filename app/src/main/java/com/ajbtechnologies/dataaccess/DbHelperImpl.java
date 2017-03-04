@@ -45,11 +45,11 @@ public class DbHelperImpl extends DbHelper {
 	public int addUpdateListItem(ListItem listItem) {
 		int id = -1;
 		try {
-			boolean isUpdate = null != listItem.get_id();
-			addAuditData(listItem, isUpdate);
-			if(listItem.getRowNumber() == null) {
-				int rowNumber = getNextListItemRowNumber(listItem.getList().get_id()).intValue();
-				listItem.setRowNumber(rowNumber);
+            boolean isUpdate = listItem.isUpdate();
+            addAuditData(listItem, isUpdate);
+            if (listItem.getRowNumber() == null) {
+                int rowNumber = getNextListItemRowNumber(listItem.getList().get_id()).intValue();
+                listItem.setRowNumber(rowNumber);
 			}
 
 			getListItemDao().createOrUpdate(listItem);

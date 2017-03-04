@@ -237,9 +237,7 @@
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
 
-                <data
-                    android:mimeType="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
-                    android:scheme="http" />
+                <data android:mimeType="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" />
                 <data android:pathPattern="/.*\\.xlsx" />
                 <data android:host="*" />
             </intent-filter>

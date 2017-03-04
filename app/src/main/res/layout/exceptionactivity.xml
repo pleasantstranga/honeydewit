@@ -3,33 +3,35 @@
     android:layout_height="match_parent"
     tools:context="com.ajbtechnologies.errorhandling.ExceptionActivity">
 
-    <TextView android:text="@string/unexpectedError" android:layout_width="wrap_content"
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/textView" />
+        android:text="@string/unexpectedError" />
 
 
     <LinearLayout
+        style="?android:buttonBarStyle"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/textView"
-        android:weightSum="1.0"
-        style="?android:buttonBarStyle">
+        android:weightSum="1.0">
 
         <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/sendReport"
             android:id="@+id/sendReportBtn"
-            android:layout_weight=".5"
-            style="?android:buttonBarButtonStyle"/>
-
-        <Button
+            style="?android:buttonBarButtonStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/goHome"
-            android:id="@+id/goHomeBtn"
             android:layout_weight=".5"
-            style="?android:buttonBarButtonStyle"/>
+            android:text="@string/sendReport" />
+
+        <Button
+            android:id="@+id/goHomeBtn"
+            style="?android:buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight=".5"
+            android:text="@string/goHome" />
 
     </LinearLayout>
 

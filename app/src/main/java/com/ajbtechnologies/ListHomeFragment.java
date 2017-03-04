@@ -83,14 +83,13 @@ public class ListHomeFragment extends Fragment {
     public void refreshList(ListItem item) {
 
         adapter.notifyDataSetChanged();
-        listView.setSelection(listView.getAdapter().getCount()-1);
+        listView.setSelection(item.getRowNumber() - 1);
     }
 
     public void addItemToList(ListItem item) {
 
         list.add(item);
-        adapter.notifyDataSetChanged();
-        listView.setSelection(listView.getAdapter().getCount()-1);
+        refreshList(item);
     }
 
     protected class LoadListAsyncTask extends AsyncTask<Integer, Void, Boolean> {
@@ -159,7 +158,7 @@ public class ListHomeFragment extends Fragment {
         private void createListAdapter(boolean showErrors) {
             //reload data here
             list = hdewContext.getCurrentList().getItems(showErrors);
-            adapter = new ListHomeAdapter(getActivity(), R.layout.listrow, list);
+            adapter = new ListHomeAdapter(hdewContext, R.layout.listrow, list);
         }
 
 

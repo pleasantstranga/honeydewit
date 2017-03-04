@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "/Users/aaronbernstein/Documents/workspaces/honeydewit/app/build/intermediates/res/merged/debug/color/wallet_secondary_text_holo_dark.xml",
+        "source": "/Users/aaronbernstein/.android/build-cache/2d3c94bb2c58bdfaf8fe5ef301499ec5d72f1b2a/output/res/color/wallet_secondary_text_holo_dark.xml"
+    },
+    {
+        "merged": "/Users/aaronbernstein/Documents/workspaces/honeydewit/app/build/intermediates/res/merged/debug/color/common_signin_btn_text_light.xml",
+        "source": "/Users/aaronbernstein/.android/build-cache/fa858de8951f739ff4ed9cf5c2c05b7b656b1b0b/output/res/color/common_signin_btn_text_light.xml"
+    },
+    {
+        "merged": "/Users/aaronbernstein/Documents/workspaces/honeydewit/app/build/intermediates/res/merged/debug/color/common_signin_btn_text_dark.xml",
+        "source": "/Users/aaronbernstein/.android/build-cache/fa858de8951f739ff4ed9cf5c2c05b7b656b1b0b/output/res/color/common_signin_btn_text_dark.xml"
+    },
+    {
+        "merged": "/Users/aaronbernstein/Documents/workspaces/honeydewit/app/build/intermediates/res/merged/debug/color/wallet_primary_text_holo_light.xml",
+        "source": "/Users/aaronbernstein/.android/build-cache/2d3c94bb2c58bdfaf8fe5ef301499ec5d72f1b2a/output/res/color/wallet_primary_text_holo_light.xml"
+    }
+]
