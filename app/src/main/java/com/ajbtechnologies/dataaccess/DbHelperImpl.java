@@ -50,7 +50,7 @@ public class DbHelperImpl extends DbHelper {
             if (listItem.getRowNumber() == null) {
                 int rowNumber = getNextListItemRowNumber(listItem.getList().get_id()).intValue();
                 listItem.setRowNumber(rowNumber);
-			}
+            }
 
 			getListItemDao().createOrUpdate(listItem);
 
